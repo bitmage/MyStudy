@@ -6,7 +6,8 @@
 >* **Java程序性能优化**	-*葛一鸣著*
 
 >###算法列表
->* [**中缀表达式转后缀表达式**]()
+>* [**中缀表达式转后缀表达式**](https://github.com/MikeCoder/MyJavaStudy/blob/master/%E7%BB%8F%E5%85%B8%E7%9A%84%E7%AE%97%E6%B3%95%E5%AE%9E%E7%8E%B0/%E4%B8%AD%E7%BC%80%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%BD%AC%E5%90%8E%E7%BC%80%E8%A1%A8%E8%BE%BE%E5%BC%8F.java)
+>* [**计算后缀表达式**](https://github.com/MikeCoder/MyJavaStudy/blob/master/%E7%BB%8F%E5%85%B8%E7%9A%84%E7%AE%97%E6%B3%95%E5%AE%9E%E7%8E%B0/%E8%AE%A1%E7%AE%97%E5%90%8E%E7%BC%80%E8%A1%A8%E8%BE%BE%E5%BC%8F.java)
 
 
 Wish You a Happy Day!
