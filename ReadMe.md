@@ -10,4 +10,7 @@
 >* [**计算后缀表达式**](https://github.com/MikeCoder/MyJavaStudy/blob/master/%E7%BB%8F%E5%85%B8%E7%9A%84%E7%AE%97%E6%B3%95%E5%AE%9E%E7%8E%B0/%E8%AE%A1%E7%AE%97%E5%90%8E%E7%BC%80%E8%A1%A8%E8%BE%BE%E5%BC%8F.java)
 >* [**卡特兰数**](https://github.com/MikeCoder/MyJavaStudy/blob/master/%E7%BB%8F%E5%85%B8%E7%9A%84%E7%AE%97%E6%B3%95%E5%AE%9E%E7%8E%B0/%E5%8D%A1%E7%89%B9%E5%85%B0%E6%95%B0%28%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6%29.md)
 >* [**各种排序算法**](https://github.com/MikeCoder/MyJavaStudy/blob/master/%E7%BB%8F%E5%85%B8%E7%9A%84%E7%AE%97%E6%B3%95%E5%AE%9E%E7%8E%B0/%E5%90%84%E7%A7%8D%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95.java)
+
+>###我的一些编程配置
+>* [**我的GVIM**](https://github.com/MikeCoder/MyJavaStudy/tree/master/MyGVIM)
 Wish You a Happy Day!
