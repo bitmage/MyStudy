@@ -13,6 +13,6 @@
 
 >###我的一些编程配置
 >* [**我的GVIM**](https://github.com/MikeCoder/MyJavaStudy/tree/master/%E6%88%91%E7%9A%84%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/MyGVIM)
-
+>* [**我的Sublime2**](https://github.com/MikeCoder/MyJavaStudy/tree/master/%E6%88%91%E7%9A%84%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/MySublimeText)
 ---
 Wish You a Happy Day!
