@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[header('HTTP/1.1 303 See Other');
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>http303</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.php</scope>
+	<description>303 See Other</description>
+</snippet>

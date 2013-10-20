@@ -1,0 +1,861 @@
+{
+	"folder_history":
+	[
+		"/home/mike/Documents/Lab Report",
+		"/home/mike/Documents/实验室日报",
+		"/home/mike/WorkSpace/Just For Fun",
+		"/home/mike/WorkSpace/Eclipse_WorkSpace/MyJavaStudy"
+	],
+	"last_window_id": 7,
+	"settings":
+	{
+		"new_window_height": 0.0,
+		"new_window_settings":
+		{
+			"auto_complete":
+			{
+				"selected_items":
+				[
+					[
+						"de",
+						"Default"
+					],
+					[
+						"l",
+						"level"
+					],
+					[
+						"previ",
+						"prev_view"
+					],
+					[
+						"key",
+						"keys"
+					],
+					[
+						"ctrl",
+						"ctrl+y"
+					],
+					[
+						"titl",
+						"title"
+					],
+					[
+						"inc",
+						"inc	#include \"…\""
+					],
+					[
+						"print",
+						"printf	printf …"
+					]
+				]
+			},
+			"build_system": "",
+			"command_palette":
+			{
+				"height": 392.0,
+				"selected_items":
+				[
+					[
+						"pand",
+						"Pandoc: Render Markdown to PDF"
+					],
+					[
+						"in",
+						"Package Control: Install Package"
+					],
+					[
+						"re",
+						"Package Control: Remove Package"
+					],
+					[
+						"pandc",
+						"Pandoc: Render Markdown to HTML"
+					],
+					[
+						"pa",
+						"Pandoc: Render Markdown to temp HTML and View"
+					],
+					[
+						"pandoc",
+						"Pandoc: Render Markdown to PDF"
+					],
+					[
+						"pan",
+						"Pandoc: Render Markdown to HTML"
+					],
+					[
+						"",
+						"About"
+					],
+					[
+						"mar",
+						"Set Syntax: Markdown"
+					],
+					[
+						"ins",
+						"Package Control: Install Package"
+					],
+					[
+						"remo",
+						"Package Control: Remove Package"
+					],
+					[
+						"rem",
+						"Package Control: Remove Package"
+					],
+					[
+						"prev",
+						"Markdown Preview: Python Markdown: Preview in Browser"
+					],
+					[
+						"pre",
+						"Markdown Preview: Python Markdown: Preview in Browser"
+					],
+					[
+						"preview",
+						"Markdown Preview: Python Markdown: Preview in Browser"
+					],
+					[
+						"markdow",
+						"Pandoc: Render Markdown to HTML"
+					],
+					[
+						"mark",
+						"Markdown Preview: Python Markdown: Export HTML in Sublime Text"
+					],
+					[
+						"markd",
+						"Markdown Preview: Python Markdown: Preview in Browser"
+					],
+					[
+						"ma",
+						"Markdown Preview: Python Markdown: Preview in Browser"
+					],
+					[
+						"insta",
+						"Package Control: Install Package"
+					],
+					[
+						"py",
+						"Python Imports Sorter: sort imports"
+					],
+					[
+						"pdf",
+						"Pandoc: Render Markdown to PDF"
+					],
+					[
+						"inst",
+						"Package Control: Install Package"
+					],
+					[
+						"git push",
+						"Git: Push"
+					],
+					[
+						"remove",
+						"Package Control: Remove Package"
+					],
+					[
+						"com",
+						"Git: Commit"
+					],
+					[
+						"git add",
+						"Git: Add..."
+					],
+					[
+						"mp",
+						"Markdown Preview: Github Flavored Markdown: Preview in Browser"
+					],
+					[
+						"comm",
+						"Git: Commit"
+					],
+					[
+						"pando",
+						"Pandoc: Render Markdown to PDF"
+					],
+					[
+						"panco",
+						"Pandoc: Render Markdown to temp PDF and View"
+					],
+					[
+						"git com",
+						"Git: Commit"
+					],
+					[
+						"set py",
+						"Set Syntax: Python"
+					],
+					[
+						"git co",
+						"Git: Commit"
+					],
+					[
+						"set",
+						"Set Syntax: Markdown"
+					],
+					[
+						"g",
+						"Git: Init"
+					],
+					[
+						"install",
+						"Package Control: Install Package"
+					],
+					[
+						"git c",
+						"Git: Commit"
+					],
+					[
+						"git comm",
+						"Git: Commit"
+					],
+					[
+						"git",
+						"Git: Init"
+					],
+					[
+						"git ",
+						"Github: Blame"
+					],
+					[
+						"git init",
+						"Git: Init"
+					],
+					[
+						"instal",
+						"Package Control: Install Package"
+					],
+					[
+						"Package Control: ",
+						"Package Control: Install Package"
+					]
+				],
+				"width": 647.0
+			},
+			"console":
+			{
+				"height": 139.0
+			},
+			"distraction_free":
+			{
+				"menu_visible": true,
+				"show_minimap": false,
+				"show_open_files": false,
+				"show_tabs": false,
+				"side_bar_visible": false,
+				"status_bar_visible": false
+			},
+			"file_history":
+			[
+				"/home/mike/Documents/实验室日报/2013-10/唐冬鑫_20131019.mkd",
+				"/home/mike/WorkSpace/Just For Fun/ReadMe.md",
+				"/home/mike/.config/sublime-text-2/Packages/SublimePandoc/Pandoc.sublime-settings",
+				"/home/mike/.config/sublime-text-2/Packages/User/Pandoc.sublime-settings",
+				"/home/mike/.config/sublime-text-2/Packages/User/Default (Linux).sublime-keymap",
+				"/home/mike/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
+				"/home/mike/Documents/实验室日报/我的日报模板.mkd",
+				"/home/mike/.config/sublime-text-2/Packages/Default/Default (Linux).sublime-keymap",
+				"/home/mike/.config/sublime-text-2/Packages/User/MarkdownPreview.sublime-settings",
+				"/home/mike/.config/sublime-text-2/Packages/Markdown Preview/MarkdownPreview.sublime-settings",
+				"/home/mike/WorkSpace/Just For Fun/main.py",
+				"/home/mike/.config/sublime-text-2/Packages/Pandoc/Pandoc.sublime-settings",
+				"/home/mike/.config/sublime-text-2/Packages/Python Imports Sorter/Default (Linux).sublime-keymap",
+				"/home/mike/.config/sublime-text-2/Packages/Python Imports Sorter/Default.sublime-settings",
+				"/home/mike/.config/sublime-text-2/Packages/SmartMarkdown/Default.sublime-keymap",
+				"/home/mike/.config/sublime-text-2/Packages/Default/Preferences.sublime-settings",
+				"/home/mike/.config/sublime-text-2/Packages/SublimeCodeIntel/Default (Linux).sublime-keymap",
+				"/home/mike/.config/sublime-text-2/Packages/User/python_imports_sorter.sublime-settings",
+				"/extern/My_CODE/Just For Fun/.bashrc",
+				"/home/mike/.bashrc",
+				"/extern/My_CODE/Just For Fun/ReadMe.md",
+				"/home/mike/mike-template.tex",
+				"/home/mike/.config/sublime-text-2/Packages/User/SmartMarkdown.sublime-settings",
+				"/home/mike/WorkSpace/Just For Fun/main.c",
+				"/home/mike/.config/sublime-text-2/Packages/SmartMarkdown/SmartMarkdown.sublime-settings",
+				"/home/mike/WorkSpace/Just For Fun/ReadMe.html",
+				"/home/mike/.config/sublime-text-2/Packages/SyntaxChecker/SyntaxChecker.sublime-settings",
+				"/home/mike/WorkSpace/Just For Fun/makefile",
+				"/home/mike/.config/sublime-text-2/Packages/User/Markdown.sublime-settings",
+				"/home/mike/WorkSpace/Just For Fun/my.c",
+				"/home/mike/WorkSpace/Just For Fun/my.h",
+				"/home/mike/.config/sublime-text-2/Packages/SublimeCodeIntel/SublimeCodeIntel.sublime-settings",
+				"/home/mike/.config/sublime-text-2/Packages/Pylinter/Pylinter.sublime-settings",
+				"/home/mike/WorkSpace/Just For Fun/ReadMe.pdf",
+				"/home/mike/.config/sublime-text-2/Packages/SyntaxChecker/README.md",
+				"/home/mike/.config/sublime-text-2/Packages/User/SyntaxChecker.sublime-settings",
+				"/home/mike/.config/sublime-text-2/Packages/Git/Git.sublime-settings",
+				"/home/mike/.config/sublime-text-2/Packages/User/Git.sublime-settings",
+				"/home/mike/ReadMe.md",
+				"/home/mike/main.c",
+				"/home/mike/main.py",
+				"/home/mike/Public/sublime_text/sublime_text (copy)"
+			],
+			"find":
+			{
+				"height": 35.0
+			},
+			"find_in_files":
+			{
+				"height": 0.0,
+				"where_history":
+				[
+				]
+			},
+			"find_state":
+			{
+				"case_sensitive": false,
+				"find_history":
+				[
+					"alt+m",
+					"prev",
+					"markdown",
+					"js",
+					"enter",
+					"delete",
+					"command",
+					"ctrl+f",
+					"ctrl+",
+					"ctrl+f",
+					"replace",
+					"l",
+					"a",
+					"ctrl+shift+o",
+					"font",
+					"m",
+					"main",
+					"build",
+					"make",
+					"close",
+					"want",
+					"ctrl+shift+b",
+					"ctrl+b",
+					"ctrl+h",
+					"	\n",
+					"3342"
+				],
+				"highlight": true,
+				"in_selection": false,
+				"preserve_case": false,
+				"regex": false,
+				"replace_history":
+				[
+					"3242"
+				],
+				"reverse": true,
+				"show_context": true,
+				"use_buffer2": true,
+				"whole_word": false,
+				"wrap": true
+			},
+			"incremental_find":
+			{
+				"height": 35.0
+			},
+			"input":
+			{
+				"height": 33.0
+			},
+			"layout":
+			{
+				"cells":
+				[
+					[
+						0,
+						0,
+						1,
+						1
+					]
+				],
+				"cols":
+				[
+					0.0,
+					1.0
+				],
+				"rows":
+				[
+					0.0,
+					1.0
+				]
+			},
+			"menu_visible": true,
+			"output.exec":
+			{
+				"height": 112.0
+			},
+			"output.git":
+			{
+				"height": 112.0
+			},
+			"output.markdown":
+			{
+				"height": 124.0
+			},
+			"replace":
+			{
+				"height": 64.0
+			},
+			"save_all_on_build": true,
+			"select_file":
+			{
+				"height": 0.0,
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"select_project":
+			{
+				"height": 0.0,
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"show_minimap": true,
+			"show_open_files": false,
+			"show_tabs": true,
+			"side_bar_visible": true,
+			"side_bar_width": 179.0,
+			"status_bar_visible": true
+		},
+		"new_window_width": 0.0
+	},
+	"windows":
+	[
+		{
+			"auto_complete":
+			{
+				"selected_items":
+				[
+					[
+						"de",
+						"Default"
+					],
+					[
+						"l",
+						"level"
+					],
+					[
+						"previ",
+						"prev_view"
+					],
+					[
+						"key",
+						"keys"
+					],
+					[
+						"ctrl",
+						"ctrl+y"
+					],
+					[
+						"titl",
+						"title"
+					],
+					[
+						"inc",
+						"inc	#include \"…\""
+					],
+					[
+						"print",
+						"printf	printf …"
+					]
+				]
+			},
+			"buffers":
+			[
+			],
+			"build_system": "",
+			"command_palette":
+			{
+				"height": 392.0,
+				"selected_items":
+				[
+					[
+						"ins",
+						"Package Control: Install Package"
+					],
+					[
+						"",
+						"About"
+					],
+					[
+						"git com",
+						"Git: Commit"
+					],
+					[
+						"git add",
+						"Git: Add..."
+					],
+					[
+						"pand",
+						"Pandoc: Render Markdown to PDF"
+					],
+					[
+						"in",
+						"Package Control: Install Package"
+					],
+					[
+						"re",
+						"Package Control: Remove Package"
+					],
+					[
+						"pandc",
+						"Pandoc: Render Markdown to HTML"
+					],
+					[
+						"pa",
+						"Pandoc: Render Markdown to temp HTML and View"
+					],
+					[
+						"pandoc",
+						"Pandoc: Render Markdown to PDF"
+					],
+					[
+						"pan",
+						"Pandoc: Render Markdown to HTML"
+					],
+					[
+						"mar",
+						"Set Syntax: Markdown"
+					],
+					[
+						"remo",
+						"Package Control: Remove Package"
+					],
+					[
+						"rem",
+						"Package Control: Remove Package"
+					],
+					[
+						"prev",
+						"Markdown Preview: Python Markdown: Preview in Browser"
+					],
+					[
+						"pre",
+						"Markdown Preview: Python Markdown: Preview in Browser"
+					],
+					[
+						"preview",
+						"Markdown Preview: Python Markdown: Preview in Browser"
+					],
+					[
+						"markdow",
+						"Pandoc: Render Markdown to HTML"
+					],
+					[
+						"mark",
+						"Markdown Preview: Python Markdown: Export HTML in Sublime Text"
+					],
+					[
+						"markd",
+						"Markdown Preview: Python Markdown: Preview in Browser"
+					],
+					[
+						"ma",
+						"Markdown Preview: Python Markdown: Preview in Browser"
+					],
+					[
+						"insta",
+						"Package Control: Install Package"
+					],
+					[
+						"py",
+						"Python Imports Sorter: sort imports"
+					],
+					[
+						"pdf",
+						"Pandoc: Render Markdown to PDF"
+					],
+					[
+						"inst",
+						"Package Control: Install Package"
+					],
+					[
+						"git push",
+						"Git: Push"
+					],
+					[
+						"remove",
+						"Package Control: Remove Package"
+					],
+					[
+						"com",
+						"Git: Commit"
+					],
+					[
+						"mp",
+						"Markdown Preview: Github Flavored Markdown: Preview in Browser"
+					],
+					[
+						"comm",
+						"Git: Commit"
+					],
+					[
+						"pando",
+						"Pandoc: Render Markdown to PDF"
+					],
+					[
+						"panco",
+						"Pandoc: Render Markdown to temp PDF and View"
+					],
+					[
+						"set py",
+						"Set Syntax: Python"
+					],
+					[
+						"git co",
+						"Git: Commit"
+					],
+					[
+						"set",
+						"Set Syntax: Markdown"
+					],
+					[
+						"g",
+						"Git: Init"
+					],
+					[
+						"install",
+						"Package Control: Install Package"
+					],
+					[
+						"git c",
+						"Git: Commit"
+					],
+					[
+						"git comm",
+						"Git: Commit"
+					],
+					[
+						"git",
+						"Git: Init"
+					],
+					[
+						"git ",
+						"Github: Blame"
+					],
+					[
+						"git init",
+						"Git: Init"
+					],
+					[
+						"instal",
+						"Package Control: Install Package"
+					],
+					[
+						"Package Control: ",
+						"Package Control: Install Package"
+					]
+				],
+				"width": 647.0
+			},
+			"console":
+			{
+				"height": 139.0
+			},
+			"distraction_free":
+			{
+				"menu_visible": true,
+				"show_minimap": false,
+				"show_open_files": false,
+				"show_tabs": false,
+				"side_bar_visible": false,
+				"status_bar_visible": false
+			},
+			"file_history":
+			[
+				"/home/mike/WorkSpace/Just For Fun/main.py",
+				"/extern/Ubuntu/Documents/学习资料/Java深入学习/MyJavaStudy/我的配置文件/MySublimeText/Packages/User/Preferences.sublime-settings",
+				"/extern/Ubuntu/Documents/学习资料/Java深入学习/MyJavaStudy/我的配置文件/MySublimeText/Packages/User/Default (Linux).sublime-keymap",
+				"/home/mike/Documents/实验室日报/2013-10/唐冬鑫_20131019.mkd",
+				"/home/mike/WorkSpace/Just For Fun/ReadMe.md",
+				"/home/mike/.config/sublime-text-2/Packages/SublimePandoc/Pandoc.sublime-settings",
+				"/home/mike/.config/sublime-text-2/Packages/User/Pandoc.sublime-settings",
+				"/home/mike/.config/sublime-text-2/Packages/User/Default (Linux).sublime-keymap",
+				"/home/mike/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
+				"/home/mike/Documents/实验室日报/我的日报模板.mkd",
+				"/home/mike/.config/sublime-text-2/Packages/Default/Default (Linux).sublime-keymap",
+				"/home/mike/.config/sublime-text-2/Packages/User/MarkdownPreview.sublime-settings",
+				"/home/mike/.config/sublime-text-2/Packages/Markdown Preview/MarkdownPreview.sublime-settings",
+				"/home/mike/.config/sublime-text-2/Packages/Pandoc/Pandoc.sublime-settings",
+				"/home/mike/.config/sublime-text-2/Packages/Python Imports Sorter/Default (Linux).sublime-keymap",
+				"/home/mike/.config/sublime-text-2/Packages/Python Imports Sorter/Default.sublime-settings",
+				"/home/mike/.config/sublime-text-2/Packages/SmartMarkdown/Default.sublime-keymap",
+				"/home/mike/.config/sublime-text-2/Packages/Default/Preferences.sublime-settings",
+				"/home/mike/.config/sublime-text-2/Packages/SublimeCodeIntel/Default (Linux).sublime-keymap",
+				"/home/mike/.config/sublime-text-2/Packages/User/python_imports_sorter.sublime-settings",
+				"/extern/My_CODE/Just For Fun/.bashrc",
+				"/home/mike/.bashrc",
+				"/extern/My_CODE/Just For Fun/ReadMe.md",
+				"/home/mike/mike-template.tex",
+				"/home/mike/.config/sublime-text-2/Packages/User/SmartMarkdown.sublime-settings",
+				"/home/mike/WorkSpace/Just For Fun/main.c",
+				"/home/mike/.config/sublime-text-2/Packages/SmartMarkdown/SmartMarkdown.sublime-settings",
+				"/home/mike/WorkSpace/Just For Fun/ReadMe.html",
+				"/home/mike/.config/sublime-text-2/Packages/SyntaxChecker/SyntaxChecker.sublime-settings",
+				"/home/mike/WorkSpace/Just For Fun/makefile",
+				"/home/mike/.config/sublime-text-2/Packages/User/Markdown.sublime-settings",
+				"/home/mike/WorkSpace/Just For Fun/my.c",
+				"/home/mike/WorkSpace/Just For Fun/my.h",
+				"/home/mike/.config/sublime-text-2/Packages/SublimeCodeIntel/SublimeCodeIntel.sublime-settings",
+				"/home/mike/.config/sublime-text-2/Packages/Pylinter/Pylinter.sublime-settings",
+				"/home/mike/WorkSpace/Just For Fun/ReadMe.pdf",
+				"/home/mike/.config/sublime-text-2/Packages/SyntaxChecker/README.md",
+				"/home/mike/.config/sublime-text-2/Packages/User/SyntaxChecker.sublime-settings",
+				"/home/mike/.config/sublime-text-2/Packages/Git/Git.sublime-settings",
+				"/home/mike/.config/sublime-text-2/Packages/User/Git.sublime-settings",
+				"/home/mike/ReadMe.md",
+				"/home/mike/main.c",
+				"/home/mike/main.py",
+				"/home/mike/Public/sublime_text/sublime_text (copy)"
+			],
+			"find":
+			{
+				"height": 35.0
+			},
+			"find_in_files":
+			{
+				"height": 0.0,
+				"where_history":
+				[
+				]
+			},
+			"find_state":
+			{
+				"case_sensitive": false,
+				"find_history":
+				[
+					"alt+m",
+					"prev",
+					"markdown",
+					"js",
+					"enter",
+					"delete",
+					"command",
+					"ctrl+f",
+					"ctrl+",
+					"ctrl+f",
+					"replace",
+					"l",
+					"a",
+					"ctrl+shift+o",
+					"font",
+					"m",
+					"main",
+					"build",
+					"make",
+					"close",
+					"want",
+					"ctrl+shift+b",
+					"ctrl+b",
+					"ctrl+h",
+					"	\n",
+					"3342"
+				],
+				"highlight": true,
+				"in_selection": false,
+				"preserve_case": false,
+				"regex": false,
+				"replace_history":
+				[
+					"3242"
+				],
+				"reverse": true,
+				"show_context": true,
+				"use_buffer2": true,
+				"whole_word": false,
+				"wrap": true
+			},
+			"groups":
+			[
+				{
+					"sheets":
+					[
+					]
+				}
+			],
+			"incremental_find":
+			{
+				"height": 35.0
+			},
+			"input":
+			{
+				"height": 33.0
+			},
+			"layout":
+			{
+				"cells":
+				[
+					[
+						0,
+						0,
+						1,
+						1
+					]
+				],
+				"cols":
+				[
+					0.0,
+					1.0
+				],
+				"rows":
+				[
+					0.0,
+					1.0
+				]
+			},
+			"menu_visible": true,
+			"output.exec":
+			{
+				"height": 112.0
+			},
+			"output.git":
+			{
+				"height": 112.0
+			},
+			"output.markdown":
+			{
+				"height": 124.0
+			},
+			"position": "0,1,0,0,0,0,0,0,0,2390,1280",
+			"replace":
+			{
+				"height": 64.0
+			},
+			"save_all_on_build": true,
+			"select_file":
+			{
+				"height": 0.0,
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"select_project":
+			{
+				"height": 0.0,
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"show_minimap": true,
+			"show_open_files": false,
+			"show_tabs": true,
+			"side_bar_visible": true,
+			"side_bar_width": 179.0,
+			"status_bar_visible": true,
+			"window_id": 6,
+			"workspace_name": ""
+		}
+	],
+	"workspaces":
+	{
+		"recent_workspaces":
+		[
+		]
+	}
+}
