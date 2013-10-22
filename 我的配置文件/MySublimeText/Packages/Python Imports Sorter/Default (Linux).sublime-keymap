@@ -1,6 +1,0 @@
-[
-    {
-	    "keys": ["super+shift+o"], "command": "sort_imports"
-    }
-]
-

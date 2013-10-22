@@ -11,9 +11,9 @@
 		"Markdown Preview",
 		"Markdown Slideshow",
 		"Package Control",
-		"Pandoc",
+		"Pandoc (Markdown)",
+		"Pandoc Academic",
 		"Python Auto-Complete",
-		"Python Imports Sorter",
 		"SmartMarkdown"
 	]
 }

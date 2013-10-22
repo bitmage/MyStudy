@@ -1,0 +1,25 @@
+[
+  { "keys": ["ctrl+alt+h"],
+    "command":"pandoc_convertor",
+    "args":{"target":"html"},
+    "context":[{"key": "selector", "operator": "equal", "operand": "text.pandoc" }]},
+
+  { "keys": ["ctrl+alt+d"],
+    "command":"pandoc_convertor",
+    "args":{"target":"docx"},
+    "context":[{"key": "selector", "operator": "equal", "operand": "text.pandoc" }]},
+
+  { "keys": ["ctrl+alt+b"],
+    "command":"pandoc_convertor",
+    "args":{"target":"beamer"},
+    "context":[{"key": "selector", "operator": "equal", "operand": "text.pandoc" }]},
+
+  { "keys": ["ctrl+alt+c"],
+    "command":"pandoc_convertor",
+    "args":{"target":"pdf"},
+    "context":[{"key": "selector", "operator": "equal", "operand": "text.pandoc" }]},
+
+  { "keys": ["ctrl+alt+shift+t"],
+    "command":"pandoc_table",
+    "context":[{"key": "selector", "operator": "equal", "operand": "text.pandoc" }]}
+]

@@ -1,12 +1,14 @@
 {
 	"folder_history":
 	[
+		"/home/mike/Documents/学习资料/Java深入学习/MyJavaStudy/我的配置文件/MySublimeText",
+		"/extern/My_CODE/Just For Fun",
 		"/home/mike/Documents/Lab Report",
 		"/home/mike/Documents/实验室日报",
 		"/home/mike/WorkSpace/Just For Fun",
 		"/home/mike/WorkSpace/Eclipse_WorkSpace/MyJavaStudy"
 	],
-	"last_window_id": 7,
+	"last_window_id": 9,
 	"settings":
 	{
 		"new_window_height": 0.0,
@@ -57,51 +59,95 @@
 				"selected_items":
 				[
 					[
-						"pand",
-						"Pandoc: Render Markdown to PDF"
-					],
-					[
-						"in",
-						"Package Control: Install Package"
-					],
-					[
-						"re",
-						"Package Control: Remove Package"
-					],
-					[
-						"pandc",
-						"Pandoc: Render Markdown to HTML"
+						"pandoc",
+						"Pandoc: Convert a Pandoc file to PDF"
 					],
 					[
 						"pa",
-						"Pandoc: Render Markdown to temp HTML and View"
+						"Set Syntax: Pandoc"
 					],
 					[
-						"pandoc",
-						"Pandoc: Render Markdown to PDF"
+						"git com",
+						"Git: Commit"
 					],
 					[
-						"pan",
-						"Pandoc: Render Markdown to HTML"
+						"git add",
+						"Git: Add..."
 					],
 					[
-						"",
-						"About"
+						"git ",
+						"Github: Blame"
 					],
 					[
-						"mar",
-						"Set Syntax: Markdown"
+						"panco",
+						"Pandoc: Convert a Pandoc file to PDF"
+					],
+					[
+						"pand",
+						"Set Syntax: Pandoc"
 					],
 					[
 						"ins",
 						"Package Control: Install Package"
 					],
 					[
-						"remo",
-						"Package Control: Remove Package"
+						"mar",
+						"Markdown Slideshow: I/O 2012 theme"
+					],
+					[
+						"mark",
+						"Markdown Slideshow: I/O 2011 theme"
+					],
+					[
+						"markdown",
+						"Markdown Preview: Github Flavored Markdown: Export HTML in Sublime Text"
 					],
 					[
 						"rem",
+						"Package Control: Remove Package"
+					],
+					[
+						"pan",
+						"Pandoc"
+					],
+					[
+						"pdf",
+						"Snippet: <?php foreach (…) … <?php endforeach ?>"
+					],
+					[
+						"re",
+						"Package Control: Remove Package"
+					],
+					[
+						"p",
+						"Python Imports Sorter: sort imports"
+					],
+					[
+						"mp",
+						"Markdown Preview: Python Markdown: Preview in Browser"
+					],
+					[
+						"python",
+						"Set Syntax: Python"
+					],
+					[
+						"set",
+						"Set Syntax: Markdown"
+					],
+					[
+						"",
+						"About"
+					],
+					[
+						"in",
+						"Package Control: Install Package"
+					],
+					[
+						"pandc",
+						"Pandoc: Render Markdown to HTML"
+					],
+					[
+						"remo",
 						"Package Control: Remove Package"
 					],
 					[
@@ -121,10 +167,6 @@
 						"Pandoc: Render Markdown to HTML"
 					],
 					[
-						"mark",
-						"Markdown Preview: Python Markdown: Export HTML in Sublime Text"
-					],
-					[
 						"markd",
 						"Markdown Preview: Python Markdown: Preview in Browser"
 					],
@@ -139,10 +181,6 @@
 					[
 						"py",
 						"Python Imports Sorter: sort imports"
-					],
-					[
-						"pdf",
-						"Pandoc: Render Markdown to PDF"
 					],
 					[
 						"inst",
@@ -161,14 +199,6 @@
 						"Git: Commit"
 					],
 					[
-						"git add",
-						"Git: Add..."
-					],
-					[
-						"mp",
-						"Markdown Preview: Github Flavored Markdown: Preview in Browser"
-					],
-					[
 						"comm",
 						"Git: Commit"
 					],
@@ -177,24 +207,12 @@
 						"Pandoc: Render Markdown to PDF"
 					],
 					[
-						"panco",
-						"Pandoc: Render Markdown to temp PDF and View"
-					],
-					[
-						"git com",
-						"Git: Commit"
-					],
-					[
 						"set py",
 						"Set Syntax: Python"
 					],
 					[
 						"git co",
 						"Git: Commit"
-					],
-					[
-						"set",
-						"Set Syntax: Markdown"
 					],
 					[
 						"g",
@@ -217,10 +235,6 @@
 						"Git: Init"
 					],
 					[
-						"git ",
-						"Github: Blame"
-					],
-					[
 						"git init",
 						"Git: Init"
 					],
@@ -233,7 +247,7 @@
 						"Package Control: Install Package"
 					]
 				],
-				"width": 647.0
+				"width": 449.0
 			},
 			"console":
 			{
@@ -250,19 +264,27 @@
 			},
 			"file_history":
 			[
+				"/home/mike/.config/sublime-text-2/Packages/User/Default (OSX).sublime-keymap",
+				"/home/mike/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
+				"/extern/My_CODE/Just For Fun/main.py",
+				"/extern/My_CODE/Just For Fun/ReadMe.md",
+				"/home/mike/.config/sublime-text-2/Packages/SublimePandoc/Default (Linux).sublime-keymap",
+				"/home/mike/.config/sublime-text-2/Packages/Pandoc/Pandoc.sublime-settings",
+				"/home/mike/.config/sublime-text-2/Packages/Pandoc/Pandoc.py",
+				"/home/mike/.config/sublime-text-2/Packages/Python Imports Sorter/Default (Linux).sublime-keymap",
+				"/extern/Ubuntu/Documents/学习资料/Java深入学习/MyJavaStudy/我的配置文件/MySublimeText/Packages/User/Default (Linux).sublime-keymap",
+				"/extern/Ubuntu/Documents/学习资料/Java深入学习/MyJavaStudy/我的配置文件/MySublimeText/Packages/Markdown Preview/MarkdownPreview.sublime-settings",
+				"/home/mike/WorkSpace/Just For Fun/main.py",
+				"/extern/Ubuntu/Documents/学习资料/Java深入学习/MyJavaStudy/我的配置文件/MySublimeText/Packages/User/Preferences.sublime-settings",
 				"/home/mike/Documents/实验室日报/2013-10/唐冬鑫_20131019.mkd",
 				"/home/mike/WorkSpace/Just For Fun/ReadMe.md",
 				"/home/mike/.config/sublime-text-2/Packages/SublimePandoc/Pandoc.sublime-settings",
 				"/home/mike/.config/sublime-text-2/Packages/User/Pandoc.sublime-settings",
 				"/home/mike/.config/sublime-text-2/Packages/User/Default (Linux).sublime-keymap",
-				"/home/mike/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
 				"/home/mike/Documents/实验室日报/我的日报模板.mkd",
 				"/home/mike/.config/sublime-text-2/Packages/Default/Default (Linux).sublime-keymap",
 				"/home/mike/.config/sublime-text-2/Packages/User/MarkdownPreview.sublime-settings",
 				"/home/mike/.config/sublime-text-2/Packages/Markdown Preview/MarkdownPreview.sublime-settings",
-				"/home/mike/WorkSpace/Just For Fun/main.py",
-				"/home/mike/.config/sublime-text-2/Packages/Pandoc/Pandoc.sublime-settings",
-				"/home/mike/.config/sublime-text-2/Packages/Python Imports Sorter/Default (Linux).sublime-keymap",
 				"/home/mike/.config/sublime-text-2/Packages/Python Imports Sorter/Default.sublime-settings",
 				"/home/mike/.config/sublime-text-2/Packages/SmartMarkdown/Default.sublime-keymap",
 				"/home/mike/.config/sublime-text-2/Packages/Default/Preferences.sublime-settings",
@@ -270,7 +292,6 @@
 				"/home/mike/.config/sublime-text-2/Packages/User/python_imports_sorter.sublime-settings",
 				"/extern/My_CODE/Just For Fun/.bashrc",
 				"/home/mike/.bashrc",
-				"/extern/My_CODE/Just For Fun/ReadMe.md",
 				"/home/mike/mike-template.tex",
 				"/home/mike/.config/sublime-text-2/Packages/User/SmartMarkdown.sublime-settings",
 				"/home/mike/WorkSpace/Just For Fun/main.c",
@@ -309,6 +330,9 @@
 				"case_sensitive": false,
 				"find_history":
 				[
+					"bin",
+					"tex",
+					"texbin",
 					"alt+m",
 					"prev",
 					"markdown",
@@ -466,6 +490,13 @@
 			},
 			"buffers":
 			[
+				{
+					"settings":
+					{
+						"buffer_size": 0,
+						"line_ending": "Unix"
+					}
+				}
 			],
 			"build_system": "",
 			"command_palette":
@@ -474,12 +505,12 @@
 				"selected_items":
 				[
 					[
-						"ins",
-						"Package Control: Install Package"
+						"pandoc",
+						"Pandoc: Convert a Pandoc file to PDF"
 					],
 					[
-						"",
-						"About"
+						"pa",
+						"Set Syntax: Pandoc"
 					],
 					[
 						"git com",
@@ -490,43 +521,79 @@
 						"Git: Add..."
 					],
 					[
-						"pand",
-						"Pandoc: Render Markdown to PDF"
+						"git ",
+						"Github: Blame"
 					],
 					[
-						"in",
+						"panco",
+						"Pandoc: Convert a Pandoc file to PDF"
+					],
+					[
+						"pand",
+						"Set Syntax: Pandoc"
+					],
+					[
+						"ins",
 						"Package Control: Install Package"
+					],
+					[
+						"mar",
+						"Markdown Slideshow: I/O 2012 theme"
+					],
+					[
+						"mark",
+						"Markdown Slideshow: I/O 2011 theme"
+					],
+					[
+						"markdown",
+						"Markdown Preview: Github Flavored Markdown: Export HTML in Sublime Text"
+					],
+					[
+						"rem",
+						"Package Control: Remove Package"
+					],
+					[
+						"pan",
+						"Pandoc"
+					],
+					[
+						"pdf",
+						"Snippet: <?php foreach (…) … <?php endforeach ?>"
 					],
 					[
 						"re",
 						"Package Control: Remove Package"
 					],
 					[
+						"p",
+						"Python Imports Sorter: sort imports"
+					],
+					[
+						"mp",
+						"Markdown Preview: Python Markdown: Preview in Browser"
+					],
+					[
+						"python",
+						"Set Syntax: Python"
+					],
+					[
+						"set",
+						"Set Syntax: Markdown"
+					],
+					[
+						"",
+						"About"
+					],
+					[
+						"in",
+						"Package Control: Install Package"
+					],
+					[
 						"pandc",
 						"Pandoc: Render Markdown to HTML"
 					],
 					[
-						"pa",
-						"Pandoc: Render Markdown to temp HTML and View"
-					],
-					[
-						"pandoc",
-						"Pandoc: Render Markdown to PDF"
-					],
-					[
-						"pan",
-						"Pandoc: Render Markdown to HTML"
-					],
-					[
-						"mar",
-						"Set Syntax: Markdown"
-					],
-					[
 						"remo",
-						"Package Control: Remove Package"
-					],
-					[
-						"rem",
 						"Package Control: Remove Package"
 					],
 					[
@@ -546,10 +613,6 @@
 						"Pandoc: Render Markdown to HTML"
 					],
 					[
-						"mark",
-						"Markdown Preview: Python Markdown: Export HTML in Sublime Text"
-					],
-					[
 						"markd",
 						"Markdown Preview: Python Markdown: Preview in Browser"
 					],
@@ -564,10 +627,6 @@
 					[
 						"py",
 						"Python Imports Sorter: sort imports"
-					],
-					[
-						"pdf",
-						"Pandoc: Render Markdown to PDF"
 					],
 					[
 						"inst",
@@ -586,10 +645,6 @@
 						"Git: Commit"
 					],
 					[
-						"mp",
-						"Markdown Preview: Github Flavored Markdown: Preview in Browser"
-					],
-					[
 						"comm",
 						"Git: Commit"
 					],
@@ -598,20 +653,12 @@
 						"Pandoc: Render Markdown to PDF"
 					],
 					[
-						"panco",
-						"Pandoc: Render Markdown to temp PDF and View"
-					],
-					[
 						"set py",
 						"Set Syntax: Python"
 					],
 					[
 						"git co",
 						"Git: Commit"
-					],
-					[
-						"set",
-						"Set Syntax: Markdown"
 					],
 					[
 						"g",
@@ -634,10 +681,6 @@
 						"Git: Init"
 					],
 					[
-						"git ",
-						"Github: Blame"
-					],
-					[
 						"git init",
 						"Git: Init"
 					],
@@ -650,7 +693,7 @@
 						"Package Control: Install Package"
 					]
 				],
-				"width": 647.0
+				"width": 449.0
 			},
 			"console":
 			{
@@ -667,21 +710,28 @@
 			},
 			"file_history":
 			[
+				"/home/mike/.config/sublime-text-2/Packages/User/Plain text.sublime-settings",
+				"/home/mike/.config/sublime-text-2/Packages/User/Default (OSX).sublime-keymap",
+				"/home/mike/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
+				"/extern/My_CODE/Just For Fun/main.py",
+				"/extern/My_CODE/Just For Fun/ReadMe.md",
+				"/home/mike/.config/sublime-text-2/Packages/SublimePandoc/Default (Linux).sublime-keymap",
+				"/home/mike/.config/sublime-text-2/Packages/Pandoc/Pandoc.sublime-settings",
+				"/home/mike/.config/sublime-text-2/Packages/Pandoc/Pandoc.py",
+				"/home/mike/.config/sublime-text-2/Packages/Python Imports Sorter/Default (Linux).sublime-keymap",
+				"/extern/Ubuntu/Documents/学习资料/Java深入学习/MyJavaStudy/我的配置文件/MySublimeText/Packages/User/Default (Linux).sublime-keymap",
+				"/extern/Ubuntu/Documents/学习资料/Java深入学习/MyJavaStudy/我的配置文件/MySublimeText/Packages/Markdown Preview/MarkdownPreview.sublime-settings",
 				"/home/mike/WorkSpace/Just For Fun/main.py",
 				"/extern/Ubuntu/Documents/学习资料/Java深入学习/MyJavaStudy/我的配置文件/MySublimeText/Packages/User/Preferences.sublime-settings",
-				"/extern/Ubuntu/Documents/学习资料/Java深入学习/MyJavaStudy/我的配置文件/MySublimeText/Packages/User/Default (Linux).sublime-keymap",
 				"/home/mike/Documents/实验室日报/2013-10/唐冬鑫_20131019.mkd",
 				"/home/mike/WorkSpace/Just For Fun/ReadMe.md",
 				"/home/mike/.config/sublime-text-2/Packages/SublimePandoc/Pandoc.sublime-settings",
 				"/home/mike/.config/sublime-text-2/Packages/User/Pandoc.sublime-settings",
 				"/home/mike/.config/sublime-text-2/Packages/User/Default (Linux).sublime-keymap",
-				"/home/mike/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
 				"/home/mike/Documents/实验室日报/我的日报模板.mkd",
 				"/home/mike/.config/sublime-text-2/Packages/Default/Default (Linux).sublime-keymap",
 				"/home/mike/.config/sublime-text-2/Packages/User/MarkdownPreview.sublime-settings",
 				"/home/mike/.config/sublime-text-2/Packages/Markdown Preview/MarkdownPreview.sublime-settings",
-				"/home/mike/.config/sublime-text-2/Packages/Pandoc/Pandoc.sublime-settings",
-				"/home/mike/.config/sublime-text-2/Packages/Python Imports Sorter/Default (Linux).sublime-keymap",
 				"/home/mike/.config/sublime-text-2/Packages/Python Imports Sorter/Default.sublime-settings",
 				"/home/mike/.config/sublime-text-2/Packages/SmartMarkdown/Default.sublime-keymap",
 				"/home/mike/.config/sublime-text-2/Packages/Default/Preferences.sublime-settings",
@@ -689,7 +739,6 @@
 				"/home/mike/.config/sublime-text-2/Packages/User/python_imports_sorter.sublime-settings",
 				"/extern/My_CODE/Just For Fun/.bashrc",
 				"/home/mike/.bashrc",
-				"/extern/My_CODE/Just For Fun/ReadMe.md",
 				"/home/mike/mike-template.tex",
 				"/home/mike/.config/sublime-text-2/Packages/User/SmartMarkdown.sublime-settings",
 				"/home/mike/WorkSpace/Just For Fun/main.c",
@@ -728,6 +777,9 @@
 				"case_sensitive": false,
 				"find_history":
 				[
+					"bin",
+					"tex",
+					"texbin",
 					"alt+m",
 					"prev",
 					"markdown",
@@ -772,8 +824,34 @@
 			"groups":
 			[
 				{
+					"selected": 0,
 					"sheets":
 					[
+						{
+							"buffer": 0,
+							"settings":
+							{
+								"buffer_size": 0,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										0,
+										0
+									]
+								],
+								"settings":
+								{
+									"syntax": "Packages/Text/Plain text.tmLanguage"
+								},
+								"translation.x": 0.0,
+								"translation.y": 0.0,
+								"zoom_level": 1.0
+							},
+							"type": "text"
+						}
 					]
 				}
 			],
@@ -848,7 +926,7 @@
 			"side_bar_visible": true,
 			"side_bar_width": 179.0,
 			"status_bar_visible": true,
-			"window_id": 6,
+			"window_id": 9,
 			"workspace_name": ""
 		}
 	],
