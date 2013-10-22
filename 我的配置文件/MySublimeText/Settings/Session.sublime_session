@@ -1,6 +1,7 @@
 {
 	"folder_history":
 	[
+		"/extern/Ubuntu/Documents/学习资料/Java深入学习/MyJavaStudy",
 		"/home/mike/Documents/学习资料/Java深入学习/MyJavaStudy/我的配置文件/MySublimeText",
 		"/extern/My_CODE/Just For Fun",
 		"/home/mike/Documents/Lab Report",
@@ -8,7 +9,7 @@
 		"/home/mike/WorkSpace/Just For Fun",
 		"/home/mike/WorkSpace/Eclipse_WorkSpace/MyJavaStudy"
 	],
-	"last_window_id": 9,
+	"last_window_id": 10,
 	"settings":
 	{
 		"new_window_height": 0.0,
@@ -59,6 +60,22 @@
 				"selected_items":
 				[
 					[
+						"pan",
+						"Pandoc: Convert a Pandoc file to HTML"
+					],
+					[
+						"pand",
+						"Pandoc: Convert a Pandoc file to PDF"
+					],
+					[
+						"in",
+						"Package Control: Install Package"
+					],
+					[
+						"",
+						"About"
+					],
+					[
 						"pandoc",
 						"Pandoc: Convert a Pandoc file to PDF"
 					],
@@ -83,10 +100,6 @@
 						"Pandoc: Convert a Pandoc file to PDF"
 					],
 					[
-						"pand",
-						"Set Syntax: Pandoc"
-					],
-					[
 						"ins",
 						"Package Control: Install Package"
 					],
@@ -105,10 +118,6 @@
 					[
 						"rem",
 						"Package Control: Remove Package"
-					],
-					[
-						"pan",
-						"Pandoc"
 					],
 					[
 						"pdf",
@@ -133,14 +142,6 @@
 					[
 						"set",
 						"Set Syntax: Markdown"
-					],
-					[
-						"",
-						"About"
-					],
-					[
-						"in",
-						"Package Control: Install Package"
 					],
 					[
 						"pandc",
@@ -247,7 +248,7 @@
 						"Package Control: Install Package"
 					]
 				],
-				"width": 449.0
+				"width": 647.0
 			},
 			"console":
 			{
@@ -264,8 +265,11 @@
 			},
 			"file_history":
 			[
-				"/home/mike/.config/sublime-text-2/Packages/User/Default (OSX).sublime-keymap",
+				"/extern/Ubuntu/Documents/学习资料/Java深入学习/MyJavaStudy/ReadMe.md",
+				"/extern/Ubuntu/Documents/学习资料/Java深入学习/MyJavaStudy/我的阅读列表/编写高质量代码(Java)(秦小波)/使用package-info类为包服务.md",
 				"/home/mike/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
+				"/home/mike/.config/sublime-text-2/Packages/User/Plain text.sublime-settings",
+				"/home/mike/.config/sublime-text-2/Packages/User/Default (OSX).sublime-keymap",
 				"/extern/My_CODE/Just For Fun/main.py",
 				"/extern/My_CODE/Just For Fun/ReadMe.md",
 				"/home/mike/.config/sublime-text-2/Packages/SublimePandoc/Default (Linux).sublime-keymap",
@@ -330,6 +334,7 @@
 				"case_sensitive": false,
 				"find_history":
 				[
+					"不能被随便创建，在一般的IDE中，",
 					"bin",
 					"tex",
 					"texbin",
@@ -490,13 +495,6 @@
 			},
 			"buffers":
 			[
-				{
-					"settings":
-					{
-						"buffer_size": 0,
-						"line_ending": "Unix"
-					}
-				}
 			],
 			"build_system": "",
 			"command_palette":
@@ -504,6 +502,50 @@
 				"height": 392.0,
 				"selected_items":
 				[
+					[
+						"ins",
+						"Package Control: Install Package"
+					],
+					[
+						"git add",
+						"Git: Add..."
+					],
+					[
+						"comm",
+						"Git: Commit"
+					],
+					[
+						"git st",
+						"Git: Show Tags"
+					],
+					[
+						"git his",
+						"Git: Commit history"
+					],
+					[
+						"git co",
+						"Git: Commit"
+					],
+					[
+						"git com",
+						"Git: Commit"
+					],
+					[
+						"pan",
+						"Pandoc: Convert a Pandoc file to HTML"
+					],
+					[
+						"pand",
+						"Pandoc: Convert a Pandoc file to PDF"
+					],
+					[
+						"in",
+						"Package Control: Install Package"
+					],
+					[
+						"",
+						"About"
+					],
 					[
 						"pandoc",
 						"Pandoc: Convert a Pandoc file to PDF"
@@ -513,28 +555,12 @@
 						"Set Syntax: Pandoc"
 					],
 					[
-						"git com",
-						"Git: Commit"
-					],
-					[
-						"git add",
-						"Git: Add..."
-					],
-					[
 						"git ",
 						"Github: Blame"
 					],
 					[
 						"panco",
 						"Pandoc: Convert a Pandoc file to PDF"
-					],
-					[
-						"pand",
-						"Set Syntax: Pandoc"
-					],
-					[
-						"ins",
-						"Package Control: Install Package"
 					],
 					[
 						"mar",
@@ -551,10 +577,6 @@
 					[
 						"rem",
 						"Package Control: Remove Package"
-					],
-					[
-						"pan",
-						"Pandoc"
 					],
 					[
 						"pdf",
@@ -579,14 +601,6 @@
 					[
 						"set",
 						"Set Syntax: Markdown"
-					],
-					[
-						"",
-						"About"
-					],
-					[
-						"in",
-						"Package Control: Install Package"
 					],
 					[
 						"pandc",
@@ -645,20 +659,12 @@
 						"Git: Commit"
 					],
 					[
-						"comm",
-						"Git: Commit"
-					],
-					[
 						"pando",
 						"Pandoc: Render Markdown to PDF"
 					],
 					[
 						"set py",
 						"Set Syntax: Python"
-					],
-					[
-						"git co",
-						"Git: Commit"
 					],
 					[
 						"g",
@@ -693,7 +699,7 @@
 						"Package Control: Install Package"
 					]
 				],
-				"width": 449.0
+				"width": 647.0
 			},
 			"console":
 			{
@@ -710,9 +716,11 @@
 			},
 			"file_history":
 			[
+				"/extern/Ubuntu/Documents/学习资料/Java深入学习/MyJavaStudy/我的阅读列表/编写高质量代码(Java)(秦小波)/使用package-info类为包服务.md",
+				"/extern/Ubuntu/Documents/学习资料/Java深入学习/MyJavaStudy/ReadMe.md",
+				"/home/mike/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
 				"/home/mike/.config/sublime-text-2/Packages/User/Plain text.sublime-settings",
 				"/home/mike/.config/sublime-text-2/Packages/User/Default (OSX).sublime-keymap",
-				"/home/mike/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
 				"/extern/My_CODE/Just For Fun/main.py",
 				"/extern/My_CODE/Just For Fun/ReadMe.md",
 				"/home/mike/.config/sublime-text-2/Packages/SublimePandoc/Default (Linux).sublime-keymap",
@@ -777,6 +785,7 @@
 				"case_sensitive": false,
 				"find_history":
 				[
+					"不能被随便创建，在一般的IDE中，",
 					"bin",
 					"tex",
 					"texbin",
@@ -821,37 +830,17 @@
 				"whole_word": false,
 				"wrap": true
 			},
+			"folders":
+			[
+				{
+					"path": "/extern/Ubuntu/Documents/学习资料/Java深入学习/MyJavaStudy"
+				}
+			],
 			"groups":
 			[
 				{
-					"selected": 0,
 					"sheets":
 					[
-						{
-							"buffer": 0,
-							"settings":
-							{
-								"buffer_size": 0,
-								"regions":
-								{
-								},
-								"selection":
-								[
-									[
-										0,
-										0
-									]
-								],
-								"settings":
-								{
-									"syntax": "Packages/Text/Plain text.tmLanguage"
-								},
-								"translation.x": 0.0,
-								"translation.y": 0.0,
-								"zoom_level": 1.0
-							},
-							"type": "text"
-						}
 					]
 				}
 			],
@@ -898,7 +887,7 @@
 			{
 				"height": 124.0
 			},
-			"position": "0,1,0,0,0,0,0,0,0,2390,1280",
+			"position": "0,1,0,0,0,156,373,796,853,2390,1280",
 			"replace":
 			{
 				"height": 64.0
@@ -926,7 +915,7 @@
 			"side_bar_visible": true,
 			"side_bar_width": 179.0,
 			"status_bar_visible": true,
-			"window_id": 9,
+			"window_id": 10,
 			"workspace_name": ""
 		}
 	],
