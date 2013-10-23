@@ -98,6 +98,7 @@ KMP字符串匹配算法
 > 但是，为什么字符串匹配中没有使用KMP算法呢，这一点我依旧是有点怀疑，于是我搜了下stackoverflow，然后发现了以下描述:
 
 > ![image](images/2013-10-23-15.png)
+
 > 大体意思是说KMP算法在巨大的字符串面前弱爆了，于是，我就地发了一个问题，就是关于为什么Java中的String.indexof()不使用KMP算法。
 
 > 地址在:[**Why jdk's String.indexof() does not use KMP? **](http://stackoverflow.com/questions/19543547/why-jdks-string-indexof-does-not-use-kmp)
