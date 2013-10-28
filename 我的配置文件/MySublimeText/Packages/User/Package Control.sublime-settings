@@ -3,6 +3,8 @@
 	[
 		"Alignment",
 		"All Autocomplete",
+		"CTags",
+		"DocBlockr",
 		"Git",
 		"Github Tools",
 		"HTMLAttributes",
@@ -13,6 +15,7 @@
 		"Pandoc (Markdown)",
 		"Pandoc Academic",
 		"Python Auto-Complete",
-		"SmartMarkdown"
+		"SmartMarkdown",
+		"Terminal"
 	]
 }

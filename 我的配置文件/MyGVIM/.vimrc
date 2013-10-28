@@ -62,6 +62,7 @@ nnoremap <space> @=((foldclosed(line('.')) < 0) ? 'zc' : 'zo')<CR>
 
 " 命令行补全
 set wildmenu
+
 " 自动补全括号，包括大括号
 :inoremap ( ()<ESC>i
 :inoremap ) <c-r>=ClosePair(')')<CR>
@@ -106,6 +107,10 @@ func! NDK_Build()
 	exec "! /extern/IDE_TOOLS/AndroidNDK/android-ndk-r8c/ndk-build"
 endfun
 
+map <F7> :call MP2PDF()<cr>
+func! MP2PDF()
+	exec "! pandoc --latex-engine=xelatex --template=/home/mike/.vim/pandoc/MikePandocTemplate.tex % -o %.pdf"
+endfun
 
 " 设置命令行高度为2行
 set cmdheight=1

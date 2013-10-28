@@ -1,6 +1,8 @@
 {
 	"folder_history":
 	[
+		"/home/mike/WorkSpace/CorC++/C/测试临时/Test",
+		"/home/mike/WorkSpace/CorC++/C/ACM/31.歌德巴赫猜想",
 		"/home/mike/WorkSpace/CorC++/C++",
 		"/home/mike/WorkSpace/Python",
 		"/home/mike",
@@ -13,10 +15,10 @@
 		"/home/mike/WorkSpace/Just For Fun",
 		"/home/mike/WorkSpace/Eclipse_WorkSpace/MyJavaStudy"
 	],
-	"last_window_id": 14,
+	"last_window_id": 16,
 	"settings":
 	{
-		"new_window_height": 0.0,
+		"new_window_height": 480.0,
 		"new_window_settings":
 		{
 			"auto_complete":
@@ -61,12 +63,28 @@
 					]
 				]
 			},
-			"build_system": "",
+			"build_system": "Packages/Makefile/Make.sublime-build",
 			"command_palette":
 			{
 				"height": 392.0,
 				"selected_items":
 				[
+					[
+						"pand",
+						"Pandoc: Convert a Pandoc file to PDF"
+					],
+					[
+						"in",
+						"Package Control: Install Package"
+					],
+					[
+						"ins",
+						"Package Control: Install Package"
+					],
+					[
+						"insta",
+						"Package Control: Install Package"
+					],
 					[
 						"set",
 						"Set Syntax: C"
@@ -74,14 +92,6 @@
 					[
 						"re",
 						"Package Control: Remove Package"
-					],
-					[
-						"ins",
-						"Package Control: Install Package"
-					],
-					[
-						"pand",
-						"Pandoc: Convert a Pandoc file to PDF"
 					],
 					[
 						"",
@@ -114,10 +124,6 @@
 					[
 						"pan",
 						"Pandoc: Convert a Pandoc file to HTML"
-					],
-					[
-						"in",
-						"Package Control: Install Package"
 					],
 					[
 						"pandoc",
@@ -200,10 +206,6 @@
 						"Markdown Preview: Python Markdown: Preview in Browser"
 					],
 					[
-						"insta",
-						"Package Control: Install Package"
-					],
-					[
 						"py",
 						"Python Imports Sorter: sort imports"
 					],
@@ -281,16 +283,22 @@
 			},
 			"file_history":
 			[
+				"/opt/sublime_text_2/sublime_text_back",
+				"/home/mike/Documents/实验室日报/2013-10/唐冬鑫_20131028.md",
+				"/home/mike/main.c",
+				"/home/mike/.vim/pandoc/MikePandocTemplate.tex",
+				"/home/mike/makefile",
+				"/home/mike/.config/sublime-text-2/Packages/User/Default (Linux).sublime-keymap",
+				"/home/mike/Documents/实验室日报/我的日报模板.mkd",
+				"/home/mike/WorkSpace/Python/Python_Study/main.py",
 				"/home/mike/WorkSpace/Python/Python_Study/main.c",
 				"/home/mike/WorkSpace/Python/Python_Study/makefile",
 				"/home/mike/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
 				"/home/mike/.config/sublime-text-2/Packages/Default/Default (Linux).sublime-keymap",
 				"/home/mike/WorkSpace/Python/Python_Study/main",
 				"/home/mike/.config/sublime-text-2/Packages/Default/Preferences.sublime-settings",
-				"/home/mike/.config/sublime-text-2/Packages/User/Default (Linux).sublime-keymap",
 				"/home/mike/WorkSpace/Python/Python_Study/T2013-10-28.py",
 				"/home/mike/s.mkd",
-				"/home/mike/Documents/实验室日报/2013-10/唐冬鑫_20131028.md",
 				"/home/mike/Documents/实验室日报/2013-10/唐冬鑫_20131028.mkd",
 				"/extern/My_CODE/Python/main.py",
 				"/extern/My_CODE/Python/untitled",
@@ -316,7 +324,6 @@
 				"/home/mike/WorkSpace/Just For Fun/ReadMe.md",
 				"/home/mike/.config/sublime-text-2/Packages/SublimePandoc/Pandoc.sublime-settings",
 				"/home/mike/.config/sublime-text-2/Packages/User/Pandoc.sublime-settings",
-				"/home/mike/Documents/实验室日报/我的日报模板.mkd",
 				"/home/mike/.config/sublime-text-2/Packages/User/MarkdownPreview.sublime-settings",
 				"/home/mike/.config/sublime-text-2/Packages/Markdown Preview/MarkdownPreview.sublime-settings",
 				"/home/mike/.config/sublime-text-2/Packages/Python Imports Sorter/Default.sublime-settings",
@@ -343,7 +350,6 @@
 				"/home/mike/.config/sublime-text-2/Packages/Git/Git.sublime-settings",
 				"/home/mike/.config/sublime-text-2/Packages/User/Git.sublime-settings",
 				"/home/mike/ReadMe.md",
-				"/home/mike/main.c",
 				"/home/mike/main.py",
 				"/home/mike/Public/sublime_text/sublime_text (copy)"
 			],
@@ -363,6 +369,7 @@
 				"case_sensitive": false,
 				"find_history":
 				[
+					"3342",
 					"indexof",
 					"contains",
 					"delete",
@@ -490,7 +497,7 @@
 			"side_bar_width": 129.0,
 			"status_bar_visible": true
 		},
-		"new_window_width": 0.0
+		"new_window_width": 640.0
 	},
 	"windows":
 	[
@@ -539,21 +546,29 @@
 			},
 			"buffers":
 			[
-				{
-					"file": "/home/mike/WorkSpace/Python/Python_Study/main.py",
-					"settings":
-					{
-						"buffer_size": 0,
-						"line_ending": "Unix"
-					}
-				}
 			],
-			"build_system": "",
+			"build_system": "Packages/Makefile/Make.sublime-build",
 			"command_palette":
 			{
 				"height": 392.0,
 				"selected_items":
 				[
+					[
+						"pand",
+						"Pandoc: Convert a Pandoc file to PDF"
+					],
+					[
+						"in",
+						"Package Control: Install Package"
+					],
+					[
+						"ins",
+						"Package Control: Install Package"
+					],
+					[
+						"insta",
+						"Package Control: Install Package"
+					],
 					[
 						"set",
 						"Set Syntax: C"
@@ -561,14 +576,6 @@
 					[
 						"re",
 						"Package Control: Remove Package"
-					],
-					[
-						"ins",
-						"Package Control: Install Package"
-					],
-					[
-						"pand",
-						"Pandoc: Convert a Pandoc file to PDF"
 					],
 					[
 						"",
@@ -601,10 +608,6 @@
 					[
 						"pan",
 						"Pandoc: Convert a Pandoc file to HTML"
-					],
-					[
-						"in",
-						"Package Control: Install Package"
 					],
 					[
 						"pandoc",
@@ -687,10 +690,6 @@
 						"Markdown Preview: Python Markdown: Preview in Browser"
 					],
 					[
-						"insta",
-						"Package Control: Install Package"
-					],
-					[
 						"py",
 						"Python Imports Sorter: sort imports"
 					],
@@ -768,16 +767,22 @@
 			},
 			"file_history":
 			[
+				"/opt/sublime_text_2/sublime_text_back",
+				"/home/mike/Documents/实验室日报/2013-10/唐冬鑫_20131028.md",
+				"/home/mike/main.c",
+				"/home/mike/.vim/pandoc/MikePandocTemplate.tex",
+				"/home/mike/makefile",
+				"/home/mike/.config/sublime-text-2/Packages/User/Default (Linux).sublime-keymap",
+				"/home/mike/Documents/实验室日报/我的日报模板.mkd",
+				"/home/mike/WorkSpace/Python/Python_Study/main.py",
 				"/home/mike/WorkSpace/Python/Python_Study/main.c",
 				"/home/mike/WorkSpace/Python/Python_Study/makefile",
 				"/home/mike/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
 				"/home/mike/.config/sublime-text-2/Packages/Default/Default (Linux).sublime-keymap",
 				"/home/mike/WorkSpace/Python/Python_Study/main",
 				"/home/mike/.config/sublime-text-2/Packages/Default/Preferences.sublime-settings",
-				"/home/mike/.config/sublime-text-2/Packages/User/Default (Linux).sublime-keymap",
 				"/home/mike/WorkSpace/Python/Python_Study/T2013-10-28.py",
 				"/home/mike/s.mkd",
-				"/home/mike/Documents/实验室日报/2013-10/唐冬鑫_20131028.md",
 				"/home/mike/Documents/实验室日报/2013-10/唐冬鑫_20131028.mkd",
 				"/extern/My_CODE/Python/main.py",
 				"/extern/My_CODE/Python/untitled",
@@ -803,7 +808,6 @@
 				"/home/mike/WorkSpace/Just For Fun/ReadMe.md",
 				"/home/mike/.config/sublime-text-2/Packages/SublimePandoc/Pandoc.sublime-settings",
 				"/home/mike/.config/sublime-text-2/Packages/User/Pandoc.sublime-settings",
-				"/home/mike/Documents/实验室日报/我的日报模板.mkd",
 				"/home/mike/.config/sublime-text-2/Packages/User/MarkdownPreview.sublime-settings",
 				"/home/mike/.config/sublime-text-2/Packages/Markdown Preview/MarkdownPreview.sublime-settings",
 				"/home/mike/.config/sublime-text-2/Packages/Python Imports Sorter/Default.sublime-settings",
@@ -830,7 +834,6 @@
 				"/home/mike/.config/sublime-text-2/Packages/Git/Git.sublime-settings",
 				"/home/mike/.config/sublime-text-2/Packages/User/Git.sublime-settings",
 				"/home/mike/ReadMe.md",
-				"/home/mike/main.c",
 				"/home/mike/main.py",
 				"/home/mike/Public/sublime_text/sublime_text (copy)"
 			],
@@ -850,6 +853,7 @@
 				"case_sensitive": false,
 				"find_history":
 				[
+					"3342",
 					"indexof",
 					"contains",
 					"delete",
@@ -907,35 +911,8 @@
 			"groups":
 			[
 				{
-					"selected": 0,
 					"sheets":
 					[
-						{
-							"buffer": 0,
-							"file": "/home/mike/WorkSpace/Python/Python_Study/main.py",
-							"settings":
-							{
-								"buffer_size": 0,
-								"regions":
-								{
-								},
-								"selection":
-								[
-									[
-										0,
-										0
-									]
-								],
-								"settings":
-								{
-									"syntax": "Packages/Python/Python.tmLanguage"
-								},
-								"translation.x": 0.0,
-								"translation.y": 0.0,
-								"zoom_level": 1.0
-							},
-							"type": "text"
-						}
 					]
 				}
 			],
