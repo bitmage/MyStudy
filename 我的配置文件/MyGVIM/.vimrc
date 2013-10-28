@@ -121,3 +121,11 @@ set comments=s1:/*,mb:*,ex0:/
 
 " 保存窗口大小
 set sessionoptions+=resize
+
+"Python代码的实时检测
+filetype on            " enables filetype detection
+filetype plugin on     " enables filetype specific plugins
+
+" 设置命令行缓存
+cmap <c-y> <Plug>CmdlineCompleteBackward
+cmap <c-e> <Plug>CmdlineCompleteForward 

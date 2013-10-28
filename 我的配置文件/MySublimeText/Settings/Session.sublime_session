@@ -1,6 +1,10 @@
 {
 	"folder_history":
 	[
+		"/home/mike/WorkSpace/CorC++/C++",
+		"/home/mike/WorkSpace/Python",
+		"/home/mike",
+		"/extern/My_CODE/Python",
 		"/extern/Ubuntu/Documents/学习资料/Java深入学习/MyJavaStudy",
 		"/home/mike/Documents/学习资料/Java深入学习/MyJavaStudy/我的配置文件/MySublimeText",
 		"/extern/My_CODE/Just For Fun",
@@ -9,7 +13,7 @@
 		"/home/mike/WorkSpace/Just For Fun",
 		"/home/mike/WorkSpace/Eclipse_WorkSpace/MyJavaStudy"
 	],
-	"last_window_id": 10,
+	"last_window_id": 14,
 	"settings":
 	{
 		"new_window_height": 0.0,
@@ -19,6 +23,14 @@
 			{
 				"selected_items":
 				[
+					[
+						"UTF",
+						"UTF-8"
+					],
+					[
+						"print",
+						"print	print"
+					],
 					[
 						"de",
 						"Default"
@@ -46,10 +58,6 @@
 					[
 						"inc",
 						"inc	#include \"…\""
-					],
-					[
-						"print",
-						"printf	printf …"
 					]
 				]
 			},
@@ -60,20 +68,56 @@
 				"selected_items":
 				[
 					[
-						"pan",
-						"Pandoc: Convert a Pandoc file to HTML"
+						"set",
+						"Set Syntax: C"
+					],
+					[
+						"re",
+						"Package Control: Remove Package"
+					],
+					[
+						"ins",
+						"Package Control: Install Package"
 					],
 					[
 						"pand",
 						"Pandoc: Convert a Pandoc file to PDF"
 					],
 					[
-						"in",
-						"Package Control: Install Package"
-					],
-					[
 						"",
 						"About"
+					],
+					[
+						"git add",
+						"Git: Add..."
+					],
+					[
+						"comm",
+						"Git: Commit"
+					],
+					[
+						"git st",
+						"Git: Show Tags"
+					],
+					[
+						"git his",
+						"Git: Commit history"
+					],
+					[
+						"git co",
+						"Git: Commit"
+					],
+					[
+						"git com",
+						"Git: Commit"
+					],
+					[
+						"pan",
+						"Pandoc: Convert a Pandoc file to HTML"
+					],
+					[
+						"in",
+						"Package Control: Install Package"
 					],
 					[
 						"pandoc",
@@ -84,24 +128,12 @@
 						"Set Syntax: Pandoc"
 					],
 					[
-						"git com",
-						"Git: Commit"
-					],
-					[
-						"git add",
-						"Git: Add..."
-					],
-					[
 						"git ",
 						"Github: Blame"
 					],
 					[
 						"panco",
 						"Pandoc: Convert a Pandoc file to PDF"
-					],
-					[
-						"ins",
-						"Package Control: Install Package"
 					],
 					[
 						"mar",
@@ -124,10 +156,6 @@
 						"Snippet: <?php foreach (…) … <?php endforeach ?>"
 					],
 					[
-						"re",
-						"Package Control: Remove Package"
-					],
-					[
 						"p",
 						"Python Imports Sorter: sort imports"
 					],
@@ -138,10 +166,6 @@
 					[
 						"python",
 						"Set Syntax: Python"
-					],
-					[
-						"set",
-						"Set Syntax: Markdown"
 					],
 					[
 						"pandc",
@@ -200,20 +224,12 @@
 						"Git: Commit"
 					],
 					[
-						"comm",
-						"Git: Commit"
-					],
-					[
 						"pando",
 						"Pandoc: Render Markdown to PDF"
 					],
 					[
 						"set py",
 						"Set Syntax: Python"
-					],
-					[
-						"git co",
-						"Git: Commit"
 					],
 					[
 						"g",
@@ -265,9 +281,25 @@
 			},
 			"file_history":
 			[
-				"/extern/Ubuntu/Documents/学习资料/Java深入学习/MyJavaStudy/ReadMe.md",
-				"/extern/Ubuntu/Documents/学习资料/Java深入学习/MyJavaStudy/我的阅读列表/编写高质量代码(Java)(秦小波)/使用package-info类为包服务.md",
+				"/home/mike/WorkSpace/Python/Python_Study/main.c",
+				"/home/mike/WorkSpace/Python/Python_Study/makefile",
 				"/home/mike/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
+				"/home/mike/.config/sublime-text-2/Packages/Default/Default (Linux).sublime-keymap",
+				"/home/mike/WorkSpace/Python/Python_Study/main",
+				"/home/mike/.config/sublime-text-2/Packages/Default/Preferences.sublime-settings",
+				"/home/mike/.config/sublime-text-2/Packages/User/Default (Linux).sublime-keymap",
+				"/home/mike/WorkSpace/Python/Python_Study/T2013-10-28.py",
+				"/home/mike/s.mkd",
+				"/home/mike/Documents/实验室日报/2013-10/唐冬鑫_20131028.md",
+				"/home/mike/Documents/实验室日报/2013-10/唐冬鑫_20131028.mkd",
+				"/extern/My_CODE/Python/main.py",
+				"/extern/My_CODE/Python/untitled",
+				"/home/mike/WorkSpace/Python/untitled",
+				"/home/mike/WorkSpace/CorC++/C/ACM/31.歌德巴赫猜想/main.c",
+				"/extern/Ubuntu/Documents/学习资料/Java深入学习/MyJavaStudy/我的阅读列表/编写高质量代码(Java)(秦小波)/asList方法产生的List对象不可更改.md",
+				"/home/mike/Downloads/正方教务管理系统_files/13级学生",
+				"/extern/Ubuntu/Documents/学习资料/Java深入学习/MyJavaStudy/我的阅读列表/编写高质量代码(Java)(秦小波)/使用package-info类为包服务.md",
+				"/extern/Ubuntu/Documents/学习资料/Java深入学习/MyJavaStudy/ReadMe.md",
 				"/home/mike/.config/sublime-text-2/Packages/User/Plain text.sublime-settings",
 				"/home/mike/.config/sublime-text-2/Packages/User/Default (OSX).sublime-keymap",
 				"/extern/My_CODE/Just For Fun/main.py",
@@ -284,14 +316,11 @@
 				"/home/mike/WorkSpace/Just For Fun/ReadMe.md",
 				"/home/mike/.config/sublime-text-2/Packages/SublimePandoc/Pandoc.sublime-settings",
 				"/home/mike/.config/sublime-text-2/Packages/User/Pandoc.sublime-settings",
-				"/home/mike/.config/sublime-text-2/Packages/User/Default (Linux).sublime-keymap",
 				"/home/mike/Documents/实验室日报/我的日报模板.mkd",
-				"/home/mike/.config/sublime-text-2/Packages/Default/Default (Linux).sublime-keymap",
 				"/home/mike/.config/sublime-text-2/Packages/User/MarkdownPreview.sublime-settings",
 				"/home/mike/.config/sublime-text-2/Packages/Markdown Preview/MarkdownPreview.sublime-settings",
 				"/home/mike/.config/sublime-text-2/Packages/Python Imports Sorter/Default.sublime-settings",
 				"/home/mike/.config/sublime-text-2/Packages/SmartMarkdown/Default.sublime-keymap",
-				"/home/mike/.config/sublime-text-2/Packages/Default/Preferences.sublime-settings",
 				"/home/mike/.config/sublime-text-2/Packages/SublimeCodeIntel/Default (Linux).sublime-keymap",
 				"/home/mike/.config/sublime-text-2/Packages/User/python_imports_sorter.sublime-settings",
 				"/extern/My_CODE/Just For Fun/.bashrc",
@@ -334,6 +363,9 @@
 				"case_sensitive": false,
 				"find_history":
 				[
+					"indexof",
+					"contains",
+					"delete",
 					"不能被随便创建，在一般的IDE中，",
 					"bin",
 					"tex",
@@ -432,6 +464,14 @@
 				"height": 0.0,
 				"selected_items":
 				[
+					[
+						"make",
+						"Python_Study/makefile"
+					],
+					[
+						"20",
+						"Python_Study/T2013-10-28.py"
+					]
 				],
 				"width": 0.0
 			},
@@ -444,10 +484,10 @@
 				"width": 0.0
 			},
 			"show_minimap": true,
-			"show_open_files": false,
+			"show_open_files": true,
 			"show_tabs": true,
-			"side_bar_visible": true,
-			"side_bar_width": 179.0,
+			"side_bar_visible": false,
+			"side_bar_width": 129.0,
 			"status_bar_visible": true
 		},
 		"new_window_width": 0.0
@@ -459,6 +499,14 @@
 			{
 				"selected_items":
 				[
+					[
+						"UTF",
+						"UTF-8"
+					],
+					[
+						"print",
+						"print	print"
+					],
 					[
 						"de",
 						"Default"
@@ -486,28 +534,16 @@
 					[
 						"inc",
 						"inc	#include \"…\""
-					],
-					[
-						"print",
-						"printf	printf …"
 					]
 				]
 			},
 			"buffers":
 			[
 				{
-					"file": "/extern/Ubuntu/Documents/学习资料/Java深入学习/MyJavaStudy/经典的算法实现/KMP字符串匹配算法.md",
+					"file": "/home/mike/WorkSpace/Python/Python_Study/main.py",
 					"settings":
 					{
-						"buffer_size": 1494,
-						"line_ending": "Unix"
-					}
-				},
-				{
-					"file": "/extern/IDE_TOOLS/JDK-7-SUN/src/java/lang/String.java",
-					"settings":
-					{
-						"buffer_size": 122381,
+						"buffer_size": 0,
 						"line_ending": "Unix"
 					}
 				}
@@ -519,8 +555,24 @@
 				"selected_items":
 				[
 					[
+						"set",
+						"Set Syntax: C"
+					],
+					[
+						"re",
+						"Package Control: Remove Package"
+					],
+					[
 						"ins",
 						"Package Control: Install Package"
+					],
+					[
+						"pand",
+						"Pandoc: Convert a Pandoc file to PDF"
+					],
+					[
+						"",
+						"About"
 					],
 					[
 						"git add",
@@ -551,16 +603,8 @@
 						"Pandoc: Convert a Pandoc file to HTML"
 					],
 					[
-						"pand",
-						"Pandoc: Convert a Pandoc file to PDF"
-					],
-					[
 						"in",
 						"Package Control: Install Package"
-					],
-					[
-						"",
-						"About"
 					],
 					[
 						"pandoc",
@@ -599,10 +643,6 @@
 						"Snippet: <?php foreach (…) … <?php endforeach ?>"
 					],
 					[
-						"re",
-						"Package Control: Remove Package"
-					],
-					[
 						"p",
 						"Python Imports Sorter: sort imports"
 					],
@@ -613,10 +653,6 @@
 					[
 						"python",
 						"Set Syntax: Python"
-					],
-					[
-						"set",
-						"Set Syntax: Markdown"
 					],
 					[
 						"pandc",
@@ -732,13 +768,25 @@
 			},
 			"file_history":
 			[
+				"/home/mike/WorkSpace/Python/Python_Study/main.c",
+				"/home/mike/WorkSpace/Python/Python_Study/makefile",
+				"/home/mike/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
 				"/home/mike/.config/sublime-text-2/Packages/Default/Default (Linux).sublime-keymap",
+				"/home/mike/WorkSpace/Python/Python_Study/main",
+				"/home/mike/.config/sublime-text-2/Packages/Default/Preferences.sublime-settings",
+				"/home/mike/.config/sublime-text-2/Packages/User/Default (Linux).sublime-keymap",
+				"/home/mike/WorkSpace/Python/Python_Study/T2013-10-28.py",
+				"/home/mike/s.mkd",
+				"/home/mike/Documents/实验室日报/2013-10/唐冬鑫_20131028.md",
+				"/home/mike/Documents/实验室日报/2013-10/唐冬鑫_20131028.mkd",
+				"/extern/My_CODE/Python/main.py",
+				"/extern/My_CODE/Python/untitled",
+				"/home/mike/WorkSpace/Python/untitled",
 				"/home/mike/WorkSpace/CorC++/C/ACM/31.歌德巴赫猜想/main.c",
 				"/extern/Ubuntu/Documents/学习资料/Java深入学习/MyJavaStudy/我的阅读列表/编写高质量代码(Java)(秦小波)/asList方法产生的List对象不可更改.md",
 				"/home/mike/Downloads/正方教务管理系统_files/13级学生",
 				"/extern/Ubuntu/Documents/学习资料/Java深入学习/MyJavaStudy/我的阅读列表/编写高质量代码(Java)(秦小波)/使用package-info类为包服务.md",
 				"/extern/Ubuntu/Documents/学习资料/Java深入学习/MyJavaStudy/ReadMe.md",
-				"/home/mike/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
 				"/home/mike/.config/sublime-text-2/Packages/User/Plain text.sublime-settings",
 				"/home/mike/.config/sublime-text-2/Packages/User/Default (OSX).sublime-keymap",
 				"/extern/My_CODE/Just For Fun/main.py",
@@ -755,13 +803,11 @@
 				"/home/mike/WorkSpace/Just For Fun/ReadMe.md",
 				"/home/mike/.config/sublime-text-2/Packages/SublimePandoc/Pandoc.sublime-settings",
 				"/home/mike/.config/sublime-text-2/Packages/User/Pandoc.sublime-settings",
-				"/home/mike/.config/sublime-text-2/Packages/User/Default (Linux).sublime-keymap",
 				"/home/mike/Documents/实验室日报/我的日报模板.mkd",
 				"/home/mike/.config/sublime-text-2/Packages/User/MarkdownPreview.sublime-settings",
 				"/home/mike/.config/sublime-text-2/Packages/Markdown Preview/MarkdownPreview.sublime-settings",
 				"/home/mike/.config/sublime-text-2/Packages/Python Imports Sorter/Default.sublime-settings",
 				"/home/mike/.config/sublime-text-2/Packages/SmartMarkdown/Default.sublime-keymap",
-				"/home/mike/.config/sublime-text-2/Packages/Default/Preferences.sublime-settings",
 				"/home/mike/.config/sublime-text-2/Packages/SublimeCodeIntel/Default (Linux).sublime-keymap",
 				"/home/mike/.config/sublime-text-2/Packages/User/python_imports_sorter.sublime-settings",
 				"/extern/My_CODE/Just For Fun/.bashrc",
@@ -855,65 +901,37 @@
 			"folders":
 			[
 				{
-					"path": "/extern/Ubuntu/Documents/学习资料/Java深入学习/MyJavaStudy"
+					"path": "/home/mike/WorkSpace/Python"
 				}
 			],
 			"groups":
 			[
 				{
-					"selected": 1,
+					"selected": 0,
 					"sheets":
 					[
 						{
 							"buffer": 0,
-							"file": "/extern/Ubuntu/Documents/学习资料/Java深入学习/MyJavaStudy/经典的算法实现/KMP字符串匹配算法.md",
+							"file": "/home/mike/WorkSpace/Python/Python_Study/main.py",
 							"settings":
 							{
-								"buffer_size": 1494,
+								"buffer_size": 0,
 								"regions":
 								{
 								},
 								"selection":
 								[
 									[
-										1494,
-										1494
+										0,
+										0
 									]
 								],
 								"settings":
 								{
-									"syntax": "Packages/Markdown/Markdown.tmLanguage"
+									"syntax": "Packages/Python/Python.tmLanguage"
 								},
 								"translation.x": 0.0,
 								"translation.y": 0.0,
-								"zoom_level": 1.0
-							},
-							"type": "text"
-						},
-						{
-							"buffer": 1,
-							"file": "/extern/IDE_TOOLS/JDK-7-SUN/src/java/lang/String.java",
-							"settings":
-							{
-								"buffer_size": 122381,
-								"regions":
-								{
-								},
-								"selection":
-								[
-									[
-										69945,
-										69945
-									]
-								],
-								"settings":
-								{
-									"syntax": "Packages/Java/Java.tmLanguage",
-									"tab_size": 4,
-									"translate_tabs_to_spaces": true
-								},
-								"translation.x": 0.0,
-								"translation.y": 38580.0,
 								"zoom_level": 1.0
 							},
 							"type": "text"
@@ -964,7 +982,7 @@
 			{
 				"height": 124.0
 			},
-			"position": "0,1,0,0,0,49,43,689,523,2390,1280",
+			"position": "0,1,0,0,0,0,0,0,0,2390,1280",
 			"replace":
 			{
 				"height": 64.0
@@ -975,6 +993,14 @@
 				"height": 0.0,
 				"selected_items":
 				[
+					[
+						"make",
+						"Python_Study/makefile"
+					],
+					[
+						"20",
+						"Python_Study/T2013-10-28.py"
+					]
 				],
 				"width": 0.0
 			},
@@ -987,12 +1013,12 @@
 				"width": 0.0
 			},
 			"show_minimap": true,
-			"show_open_files": false,
+			"show_open_files": true,
 			"show_tabs": true,
-			"side_bar_visible": true,
+			"side_bar_visible": false,
 			"side_bar_width": 129.0,
 			"status_bar_visible": true,
-			"window_id": 10,
+			"window_id": 13,
 			"workspace_name": ""
 		}
 	],
