@@ -1,0 +1,16 @@
+<snippet>
+	<content><![CDATA[
+#if(\$!{request.getParameter('debug')})
+<!--DEBUG:
+	=====================================
+	ARQUIVO:    $TM_FILENAME
+	CAMINHO:    $TM_FILEPATH
+	LINHA:      $TM_LINE_NUMBER
+	=====================================
+	${0:${1:obj}: \${${1}\}}
+-->
+#end
+]]></content>
+	<tabTrigger>debug</tabTrigger>
+	<scope>source.velocity</scope>
+</snippet>

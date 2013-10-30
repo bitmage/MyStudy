@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+isEmpty()
+]]></content>
+	<tabTrigger>ept</tabTrigger>
+	<scope>source.velocity</scope>
+</snippet>

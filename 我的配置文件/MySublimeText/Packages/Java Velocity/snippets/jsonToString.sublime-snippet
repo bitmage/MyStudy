@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+\$_json.toString( ${0:obj} )
+]]></content>
+	<tabTrigger>jstos</tabTrigger>
+	<scope>source.velocity</scope>
+</snippet>

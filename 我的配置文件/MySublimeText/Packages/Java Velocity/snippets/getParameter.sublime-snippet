@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+\$!{request.getParameter( "${1:nome do parâmetro}" )}
+]]></content>
+	<tabTrigger>param</tabTrigger>
+	<scope>source.velocity</scope>
+</snippet>

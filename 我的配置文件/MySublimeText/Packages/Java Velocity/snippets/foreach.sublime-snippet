@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+#foreach( \$${1:var} in \$!{${2:coleção}} )
+	${0}
+#end
+]]></content>
+	<tabTrigger>for</tabTrigger>
+	<scope>source.velocity</scope>
+</snippet>

@@ -9,6 +9,10 @@
 		"Github Tools",
 		"HTMLAttributes",
 		"HTTP Response Headers Snippets",
+		"Java Velocity",
+		"Javap",
+		"JavaSetterGetter",
+		"Jedi - Python autocompletion",
 		"Markdown Preview",
 		"Markdown Slideshow",
 		"Package Control",
@@ -16,6 +20,8 @@
 		"Pandoc Academic",
 		"Python Auto-Complete",
 		"SmartMarkdown",
-		"Terminal"
+		"Terminal",
+		"Youdao English-Chinese Translate",
+		"zenburn"
 	]
 }

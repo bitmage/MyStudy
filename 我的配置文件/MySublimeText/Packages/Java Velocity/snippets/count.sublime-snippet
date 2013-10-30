@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+\$velocityCount
+]]></content>
+	<tabTrigger>count</tabTrigger>
+	<scope>source.velocity</scope>
+</snippet>

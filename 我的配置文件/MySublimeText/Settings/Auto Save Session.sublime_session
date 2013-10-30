@@ -1,6 +1,7 @@
 {
 	"folder_history":
 	[
+		"/home/mike/WorkSpace/GIT",
 		"/home/mike/WorkSpace/Python/Python_Study",
 		"/home/mike/WorkSpace/CorC++/C/测试临时/Test",
 		"/home/mike/WorkSpace/CorC++/C/ACM/31.歌德巴赫猜想",
@@ -16,7 +17,7 @@
 		"/home/mike/WorkSpace/Just For Fun",
 		"/home/mike/WorkSpace/Eclipse_WorkSpace/MyJavaStudy"
 	],
-	"last_window_id": 17,
+	"last_window_id": 18,
 	"settings":
 	{
 		"new_window_height": 0.0,
@@ -27,12 +28,20 @@
 				"selected_items":
 				[
 					[
-						"UTF",
-						"UTF-8"
+						"impor",
+						"import	keyword"
 					],
 					[
 						"print",
-						"print	print"
+						"print	keyword"
+					],
+					[
+						"ge",
+						"gettext"
+					],
+					[
+						"UTF",
+						"UTF-8"
 					],
 					[
 						"de",
@@ -64,14 +73,38 @@
 					]
 				]
 			},
-			"build_system": "Packages/Makefile/Make.sublime-build",
+			"build_system": "",
 			"command_palette":
 			{
 				"height": 392.0,
 				"selected_items":
 				[
 					[
+						"ins",
+						"Package Control: Install Package"
+					],
+					[
+						"set",
+						"Set Syntax: Java"
+					],
+					[
+						"cta",
+						"CTags: Rebuild Tags"
+					],
+					[
+						"i",
+						"Package Control: Install Package"
+					],
+					[
+						"pandoc",
+						"Pandoc: Convert a Pandoc file to PDF"
+					],
+					[
 						"pand",
+						"Pandoc: Render Markdown to PDF"
+					],
+					[
+						"pan",
 						"Pandoc: Convert a Pandoc file to PDF"
 					],
 					[
@@ -79,16 +112,8 @@
 						"Package Control: Install Package"
 					],
 					[
-						"ins",
-						"Package Control: Install Package"
-					],
-					[
 						"insta",
 						"Package Control: Install Package"
-					],
-					[
-						"set",
-						"Set Syntax: C"
 					],
 					[
 						"re",
@@ -121,14 +146,6 @@
 					[
 						"git com",
 						"Git: Commit"
-					],
-					[
-						"pan",
-						"Pandoc: Convert a Pandoc file to HTML"
-					],
-					[
-						"pandoc",
-						"Pandoc: Convert a Pandoc file to PDF"
 					],
 					[
 						"pa",
@@ -284,20 +301,36 @@
 			},
 			"file_history":
 			[
-				"/opt/sublime_text_2/sublime_text_back",
 				"/home/mike/Documents/实验室日报/2013-10/唐冬鑫_20131028.md",
+				"/home/mike/Public/goagent/local/proxy.ini",
+				"/home/mike/.bashrc",
+				"/home/mike/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
+				"/home/mike/WorkSpace/Python/Python_Study/ReadMe.md",
+				"/home/mike/WorkSpace/Python/Python_Study/main.py",
+				"/etc/hostname",
+				"/home/mike/WorkSpace/Python/Python_Study/main.groovy",
+				"/home/mike/.config/sublime-text-2/Packages/User/groovy.sublime-build",
+				"/home/mike/WorkSpace/Python/Python_Study/main.java",
+				"/home/mike/WorkSpace/Python/Python_Study/.tags_sorted_by_file",
+				"/home/mike/WorkSpace/Python/Python_Study/.tags",
+				"/home/mike/.config/sublime-text-2/Packages/User/Default (Linux).sublime-keymap",
+				"/home/mike/.config/sublime-text-2/Packages/CTags/Default.sublime-keymap",
+				"/home/mike/WorkSpace/Python/Python_Study/ReadMe.pdf",
+				"/home/mike/.config/sublime-text-2/Packages/DocBlockr/Base File.sublime-settings",
+				"/home/mike/.config/sublime-text-2/Packages/Default/Preferences.sublime-settings",
+				"/home/mike/.config/sublime-text-2/Packages/Jedi - Python autocompletion/sublime_jedi.sublime-settings",
+				"/home/mike/.config/sublime-text-2/Packages/User/Default.sublime-keymap",
+				"/home/mike/.config/sublime-text-2/Packages/Alignment/Default (Linux).sublime-keymap",
+				"/home/mike/WorkSpace/Python/Python_Study/main.c",
+				"/home/mike/WorkSpace/Python/Python_Study/makefile",
+				"/home/mike/WorkSpace/Python/Python_Study/main,c",
+				"/opt/sublime_text_2/sublime_text_back",
 				"/home/mike/main.c",
 				"/home/mike/.vim/pandoc/MikePandocTemplate.tex",
 				"/home/mike/makefile",
-				"/home/mike/.config/sublime-text-2/Packages/User/Default (Linux).sublime-keymap",
 				"/home/mike/Documents/实验室日报/我的日报模板.mkd",
-				"/home/mike/WorkSpace/Python/Python_Study/main.py",
-				"/home/mike/WorkSpace/Python/Python_Study/main.c",
-				"/home/mike/WorkSpace/Python/Python_Study/makefile",
-				"/home/mike/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
 				"/home/mike/.config/sublime-text-2/Packages/Default/Default (Linux).sublime-keymap",
 				"/home/mike/WorkSpace/Python/Python_Study/main",
-				"/home/mike/.config/sublime-text-2/Packages/Default/Preferences.sublime-settings",
 				"/home/mike/WorkSpace/Python/Python_Study/T2013-10-28.py",
 				"/home/mike/s.mkd",
 				"/home/mike/Documents/实验室日报/2013-10/唐冬鑫_20131028.mkd",
@@ -332,7 +365,6 @@
 				"/home/mike/.config/sublime-text-2/Packages/SublimeCodeIntel/Default (Linux).sublime-keymap",
 				"/home/mike/.config/sublime-text-2/Packages/User/python_imports_sorter.sublime-settings",
 				"/extern/My_CODE/Just For Fun/.bashrc",
-				"/home/mike/.bashrc",
 				"/home/mike/mike-template.tex",
 				"/home/mike/.config/sublime-text-2/Packages/User/SmartMarkdown.sublime-settings",
 				"/home/mike/WorkSpace/Just For Fun/main.c",
@@ -508,12 +540,20 @@
 				"selected_items":
 				[
 					[
-						"UTF",
-						"UTF-8"
+						"impor",
+						"import	keyword"
 					],
 					[
 						"print",
-						"print	print"
+						"print	keyword"
+					],
+					[
+						"ge",
+						"gettext"
+					],
+					[
+						"UTF",
+						"UTF-8"
 					],
 					[
 						"de",
@@ -548,13 +588,26 @@
 			"buffers":
 			[
 				{
-					"contents": "print 'Mike'\n\na = 2;\nb  =\n\n",
-					"file": "/home/mike/WorkSpace/Python/Python_Study/main.py",
-					"file_size": 15,
-					"file_write_time": 1382964264000000,
+					"file": "/home/mike/Desktop/websocket.html",
 					"settings":
 					{
-						"buffer_size": 27,
+						"buffer_size": 1618,
+						"line_ending": "Unix"
+					}
+				},
+				{
+					"file": "/home/mike/Documents/实验室日报/2013-10/唐冬鑫_20131030.md",
+					"settings":
+					{
+						"buffer_size": 1416,
+						"line_ending": "Unix"
+					}
+				},
+				{
+					"file": "/extern/Ubuntu/Documents/学习资料/MyStudy/我的阅读列表/Netty学习/NIO学习/基于NIO的消息接受示例.md",
+					"settings":
+					{
+						"buffer_size": 5229,
 						"line_ending": "Unix"
 					}
 				}
@@ -566,7 +619,31 @@
 				"selected_items":
 				[
 					[
+						"ins",
+						"Package Control: Install Package"
+					],
+					[
+						"set",
+						"Set Syntax: Java"
+					],
+					[
+						"cta",
+						"CTags: Rebuild Tags"
+					],
+					[
+						"i",
+						"Package Control: Install Package"
+					],
+					[
+						"pandoc",
+						"Pandoc: Convert a Pandoc file to PDF"
+					],
+					[
 						"pand",
+						"Pandoc: Render Markdown to PDF"
+					],
+					[
+						"pan",
 						"Pandoc: Convert a Pandoc file to PDF"
 					],
 					[
@@ -574,16 +651,8 @@
 						"Package Control: Install Package"
 					],
 					[
-						"ins",
-						"Package Control: Install Package"
-					],
-					[
 						"insta",
 						"Package Control: Install Package"
-					],
-					[
-						"set",
-						"Set Syntax: C"
 					],
 					[
 						"re",
@@ -616,14 +685,6 @@
 					[
 						"git com",
 						"Git: Commit"
-					],
-					[
-						"pan",
-						"Pandoc: Convert a Pandoc file to HTML"
-					],
-					[
-						"pandoc",
-						"Pandoc: Convert a Pandoc file to PDF"
 					],
 					[
 						"pa",
@@ -779,21 +840,37 @@
 			},
 			"file_history":
 			[
+				"/extern/IDE_TOOLS/JDK-7-SUN/src/java/nio/Buffer.java",
+				"/home/mike/Documents/实验室日报/2013-10/唐冬鑫_20131028.md",
+				"/home/mike/Public/goagent/local/proxy.ini",
+				"/home/mike/.bashrc",
+				"/home/mike/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
+				"/home/mike/WorkSpace/Python/Python_Study/ReadMe.md",
+				"/home/mike/WorkSpace/Python/Python_Study/main.py",
+				"/etc/hostname",
+				"/home/mike/WorkSpace/Python/Python_Study/main.groovy",
+				"/home/mike/.config/sublime-text-2/Packages/User/groovy.sublime-build",
+				"/home/mike/WorkSpace/Python/Python_Study/main.java",
+				"/home/mike/WorkSpace/Python/Python_Study/.tags_sorted_by_file",
+				"/home/mike/WorkSpace/Python/Python_Study/.tags",
+				"/home/mike/.config/sublime-text-2/Packages/User/Default (Linux).sublime-keymap",
+				"/home/mike/.config/sublime-text-2/Packages/CTags/Default.sublime-keymap",
+				"/home/mike/WorkSpace/Python/Python_Study/ReadMe.pdf",
+				"/home/mike/.config/sublime-text-2/Packages/DocBlockr/Base File.sublime-settings",
+				"/home/mike/.config/sublime-text-2/Packages/Default/Preferences.sublime-settings",
+				"/home/mike/.config/sublime-text-2/Packages/Jedi - Python autocompletion/sublime_jedi.sublime-settings",
+				"/home/mike/.config/sublime-text-2/Packages/User/Default.sublime-keymap",
+				"/home/mike/.config/sublime-text-2/Packages/Alignment/Default (Linux).sublime-keymap",
 				"/home/mike/WorkSpace/Python/Python_Study/main.c",
 				"/home/mike/WorkSpace/Python/Python_Study/makefile",
 				"/home/mike/WorkSpace/Python/Python_Study/main,c",
 				"/opt/sublime_text_2/sublime_text_back",
-				"/home/mike/Documents/实验室日报/2013-10/唐冬鑫_20131028.md",
 				"/home/mike/main.c",
 				"/home/mike/.vim/pandoc/MikePandocTemplate.tex",
 				"/home/mike/makefile",
-				"/home/mike/.config/sublime-text-2/Packages/User/Default (Linux).sublime-keymap",
 				"/home/mike/Documents/实验室日报/我的日报模板.mkd",
-				"/home/mike/WorkSpace/Python/Python_Study/main.py",
-				"/home/mike/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
 				"/home/mike/.config/sublime-text-2/Packages/Default/Default (Linux).sublime-keymap",
 				"/home/mike/WorkSpace/Python/Python_Study/main",
-				"/home/mike/.config/sublime-text-2/Packages/Default/Preferences.sublime-settings",
 				"/home/mike/WorkSpace/Python/Python_Study/T2013-10-28.py",
 				"/home/mike/s.mkd",
 				"/home/mike/Documents/实验室日报/2013-10/唐冬鑫_20131028.mkd",
@@ -828,7 +905,6 @@
 				"/home/mike/.config/sublime-text-2/Packages/SublimeCodeIntel/Default (Linux).sublime-keymap",
 				"/home/mike/.config/sublime-text-2/Packages/User/python_imports_sorter.sublime-settings",
 				"/extern/My_CODE/Just For Fun/.bashrc",
-				"/home/mike/.bashrc",
 				"/home/mike/mike-template.tex",
 				"/home/mike/.config/sublime-text-2/Packages/User/SmartMarkdown.sublime-settings",
 				"/home/mike/WorkSpace/Just For Fun/main.c",
@@ -915,37 +991,85 @@
 				"whole_word": false,
 				"wrap": true
 			},
-			"folders":
-			[
-				{
-					"path": "/home/mike/WorkSpace/Python/Python_Study"
-				}
-			],
 			"groups":
 			[
 				{
-					"selected": 0,
+					"selected": 2,
 					"sheets":
 					[
 						{
 							"buffer": 0,
-							"file": "/home/mike/WorkSpace/Python/Python_Study/main.py",
+							"file": "/home/mike/Desktop/websocket.html",
 							"settings":
 							{
-								"buffer_size": 27,
+								"buffer_size": 1618,
 								"regions":
 								{
 								},
 								"selection":
 								[
 									[
-										25,
-										25
+										384,
+										384
 									]
 								],
 								"settings":
 								{
-									"syntax": "Packages/Python/Python.tmLanguage"
+									"syntax": "Packages/HTML/HTML.tmLanguage",
+									"tab_size": 4,
+									"translate_tabs_to_spaces": true
+								},
+								"translation.x": 0.0,
+								"translation.y": 0.0,
+								"zoom_level": 1.0
+							},
+							"type": "text"
+						},
+						{
+							"buffer": 1,
+							"file": "/home/mike/Documents/实验室日报/2013-10/唐冬鑫_20131030.md",
+							"settings":
+							{
+								"buffer_size": 1416,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										1352,
+										1352
+									]
+								],
+								"settings":
+								{
+									"syntax": "Packages/Markdown/Markdown.tmLanguage"
+								},
+								"translation.x": 0.0,
+								"translation.y": 792.0,
+								"zoom_level": 1.0
+							},
+							"type": "text"
+						},
+						{
+							"buffer": 2,
+							"file": "/extern/Ubuntu/Documents/学习资料/MyStudy/我的阅读列表/Netty学习/NIO学习/基于NIO的消息接受示例.md",
+							"settings":
+							{
+								"buffer_size": 5229,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										15,
+										15
+									]
+								],
+								"settings":
+								{
+									"syntax": "Packages/Markdown/Markdown.tmLanguage"
 								},
 								"translation.x": 0.0,
 								"translation.y": 0.0,
@@ -1032,7 +1156,7 @@
 			"show_minimap": true,
 			"show_open_files": true,
 			"show_tabs": true,
-			"side_bar_visible": true,
+			"side_bar_visible": false,
 			"side_bar_width": 129.0,
 			"status_bar_visible": true,
 			"window_id": 17,
