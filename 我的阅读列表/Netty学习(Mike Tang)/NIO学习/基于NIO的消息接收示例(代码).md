@@ -23,12 +23,12 @@ public class ChatServer {
     private ByteBuffer readBuffer = ByteBuffer.allocate(2);
     //调整缓存的大小可以看到打印输出的变化 
     private Map<SocketChannel, byte[]> clientMessage = 
-            new ConcurrentHashMap<SocketChannel, byte[]>(); 
+    		new ConcurrentHashMap<SocketChannel, byte[]>(); 
  
     public void start() throws IOException { 
-        ServerSocketChannel     ssc         = ServerSocketChannel.open();
-                                selector    = Selector.open(); 
-                                
+        ServerSocketChannel 	ssc 		= ServerSocketChannel.open();
+        						selector 	= Selector.open(); 
+        						
         ssc.configureBlocking(false); 
         ssc.bind(new InetSocketAddress("localhost", 8001)); 
         ssc.register(selector, SelectionKey.OP_ACCEPT); 
@@ -37,6 +37,7 @@ public class ChatServer {
             Set<SelectionKey> keys = selector.selectedKeys(); 
             Iterator<SelectionKey> keyIterator = keys.iterator(); 
             while (keyIterator.hasNext()) { 
+            	System.out.println("Change Channel!");
                 SelectionKey key = keyIterator.next(); 
                 if (!key.isValid()) { 
                     continue; 
