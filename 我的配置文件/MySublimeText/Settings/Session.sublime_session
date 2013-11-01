@@ -587,22 +587,6 @@
 			},
 			"buffers":
 			[
-				{
-					"file": "/home/mike/Desktop/websocket.html",
-					"settings":
-					{
-						"buffer_size": 1618,
-						"line_ending": "Unix"
-					}
-				},
-				{
-					"file": "/home/mike/Documents/实验室日报/2013-10/唐冬鑫_20131030.md",
-					"settings":
-					{
-						"buffer_size": 2072,
-						"line_ending": "Unix"
-					}
-				}
 			],
 			"build_system": "",
 			"command_palette":
@@ -832,12 +816,14 @@
 			},
 			"file_history":
 			[
+				"/home/mike/Desktop/websocket.html",
+				"/home/mike/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
+				"/home/mike/Documents/实验室日报/2013-10/唐冬鑫_20131030.md",
 				"/extern/Ubuntu/Documents/学习资料/MyStudy/我的阅读列表/Netty学习/NIO学习/基于NIO的消息接受示例.md",
 				"/extern/IDE_TOOLS/JDK-7-SUN/src/java/nio/Buffer.java",
 				"/home/mike/Documents/实验室日报/2013-10/唐冬鑫_20131028.md",
 				"/home/mike/Public/goagent/local/proxy.ini",
 				"/home/mike/.bashrc",
-				"/home/mike/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
 				"/home/mike/WorkSpace/Python/Python_Study/ReadMe.md",
 				"/home/mike/WorkSpace/Python/Python_Study/main.py",
 				"/etc/hostname",
@@ -987,63 +973,8 @@
 			"groups":
 			[
 				{
-					"selected": 1,
 					"sheets":
 					[
-						{
-							"buffer": 0,
-							"file": "/home/mike/Desktop/websocket.html",
-							"settings":
-							{
-								"buffer_size": 1618,
-								"regions":
-								{
-								},
-								"selection":
-								[
-									[
-										384,
-										384
-									]
-								],
-								"settings":
-								{
-									"syntax": "Packages/HTML/HTML.tmLanguage",
-									"tab_size": 4,
-									"translate_tabs_to_spaces": true
-								},
-								"translation.x": 0.0,
-								"translation.y": 0.0,
-								"zoom_level": 1.0
-							},
-							"type": "text"
-						},
-						{
-							"buffer": 1,
-							"file": "/home/mike/Documents/实验室日报/2013-10/唐冬鑫_20131030.md",
-							"settings":
-							{
-								"buffer_size": 2072,
-								"regions":
-								{
-								},
-								"selection":
-								[
-									[
-										1715,
-										1715
-									]
-								],
-								"settings":
-								{
-									"syntax": "Packages/Markdown/Markdown.tmLanguage"
-								},
-								"translation.x": 0.0,
-								"translation.y": 1260.0,
-								"zoom_level": 1.0
-							},
-							"type": "text"
-						}
 					]
 				}
 			],

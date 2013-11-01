@@ -11,7 +11,7 @@
 			"selector": "text.html"
 		}
 	],
-	"auto_complete_with_fields": false,
+	"auto_complete_with_fields": true,
 	"auto_indent": true,
 	"auto_match_enabled": true,
 	"binary_file_patterns":
@@ -83,11 +83,11 @@
 		".hg",
 		"CVS"
 	],
-	"font_face": "FZLiShu-S01",
+	"font_face": "FZKai-Z03",
 	"font_options":
 	[
 	],
-	"font_size": 14,
+	"font_size": 15,
 	"gpu_window_buffer": "auto",
 	"gutter": true,
 	"highlight_line": true,
