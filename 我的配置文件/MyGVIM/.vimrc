@@ -39,14 +39,14 @@ set incsearch             "搜索时，输入的词句逐字符高亮
 set ruler                      "右下角显示光标位置的状态行
 set hlsearch               "高亮显示搜索结果
 
-
+set nowrap				"不自动换行
 set autoindent             "继承前一行的缩进方式
 set smartindent           "开启新行是使用智能自动缩进
 set cindent                  "使用c样式的缩进
 set tabstop=4              "制表符为4
-set softtabstop=4
+set softtabstop=4           " 使得按退格键时可以一次删掉 4 个空格
 set shiftwidth=4          "统一缩进为4
-set noexpandtab         "不要用空格代替制表符
+"set noexpandtab         "不要用空格代替制表符
 set showmode            "显示文本处理模式
 set confirm                  "处理未保存或者只读文件时，给出提示
 set fileencoding=utf-8 "文件保存编码

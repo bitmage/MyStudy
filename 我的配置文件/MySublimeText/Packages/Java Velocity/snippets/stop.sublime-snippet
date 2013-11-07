@@ -1,7 +1,0 @@
-<snippet>
-	<content><![CDATA[
-#stop
-]]></content>
-	<tabTrigger>st</tabTrigger>
-	<scope>source.velocity</scope>
-</snippet>

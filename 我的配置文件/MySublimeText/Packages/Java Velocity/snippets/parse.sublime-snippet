@@ -1,7 +1,0 @@
-<snippet>
-	<content><![CDATA[
-#parse( "${0:url}" )
-]]></content>
-	<tabTrigger>par</tabTrigger>
-	<scope>source.velocity</scope>
-</snippet>

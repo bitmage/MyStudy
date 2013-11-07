@@ -1,7 +1,0 @@
-<snippet>
-	<content><![CDATA[
-\$date.getSystemTime()
-]]></content>
-	<tabTrigger>sysdate</tabTrigger>
-	<scope>source.velocity</scope>
-</snippet>

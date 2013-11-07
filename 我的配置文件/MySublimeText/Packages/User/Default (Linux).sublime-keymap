@@ -1,15 +1,2 @@
 [
-    { "keys": ["ctrl+f"], "command": "show_panel", "args": {"panel": "replace"} },
-    { "keys": ["ctrl+b"], "command": "build" },
-    { "keys": ["ctrl+d"], "command": "run_macro_file", "args": {"file": "Packages/Default/Delete Line.sublime-macro"} },
-    { "keys": ["alt+b"], "command": "build", "args": {"variant": "Run"} },
-
-    //BookMarks
-    { "keys": ["ctrl+="], "command": "next_bookmark" },
-    { "keys": ["ctrl+-"], "command": "prev_bookmark" },
-    { "keys": ["alt+="], "command": "toggle_bookmark" },
-    { "keys": ["alt+-"], "command": "clear_bookmarks" },
-
-    //MarkDown
-    { "keys": ["alt+m"], "command": "markdown_preview", "args": {"target": "browser", "parser":"markdown"} }
 ]

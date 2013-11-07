@@ -1,7 +1,0 @@
-<snippet>
-	<content><![CDATA[
-\$!{link.getHost()}
-]]></content>
-	<tabTrigger>host</tabTrigger>
-	<scope>source.velocity</scope>
-</snippet>

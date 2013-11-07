@@ -1,9 +1,0 @@
-{
-    /* Please specify the PATH of pdflatex if you wanna generate PDF */
-    "tex_path": [],
-    /* Provide your settings here as a list e.g.: ["--latex-engine=xelatex", "--toc"]*/
-    "pandoc_args": [],
-    "pandoc_args_pdf": ["-S", "--latex-engine=xelatex", "--template=/home/mike/.config/sublime-text-2/pandoc/latex.template.tex"],
-    "pandoc_args_html": ["-s","--mathjax"],
-    "pandoc_args_docx": []
-}

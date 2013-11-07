@@ -1,7 +1,0 @@
-<snippet>
-	<content><![CDATA[
-\$${1:!}{${2:var}}
-]]></content>
-	<tabTrigger>$</tabTrigger>
-	<scope>source.velocity</scope>
-</snippet>

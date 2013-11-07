@@ -1,7 +1,0 @@
-<snippet>
-	<content><![CDATA[
-.toUpperCase()
-]]></content>
-	<tabTrigger>.upper</tabTrigger>
-	<scope>source.velocity</scope>
-</snippet>
