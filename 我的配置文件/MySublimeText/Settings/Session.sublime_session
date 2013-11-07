@@ -18,16 +18,11 @@
 			"buffers":
 			[
 				{
-					"contents": "Package Control Messages\n========================\n\nMarkdown Preview:\n----------------\n\n  Sublime Text 2/3 Markdown Preview\n  =================================\n  \n  Preview your markdown files quickly in you web browser from sublime text 2/3. \n  \n  You can use builtin [python-markdown][10] parser or use the [github markdown API][5] for the conversion.\n  \n  **NOTE:** If you choose the GitHub API for conversion (set parser: github in your settings), your code will be sent through https to github for live conversion. You'll have [Github flavored markdown][6], syntax highlighting and EMOJI support for free :heart: :octocat: :gift:. If you make more than 60 calls a day, be sure to set your GitHub API key in the settings :)\n  \n  **LINUX users:** If you want to use GitHub API for conversion, you'll need to have a custom Python install that includes python-ssl as its not built in the Sublime Text 2 Linux package. see [@dusteye comment][8]. If you use a custom window manager, also be sure to set a `BROWSER` environnement variable. see [@PPvG comments][9]\n  \n  ## Features :\n  1. 2\n  2. 3\n  你啊好哦\n\n\n1. dawd\n  Download day \n   - Markdown preivew using the [Python-markdown][10] or the Github API just choose select the build commands.\n   - Build markdown file using Sublime Text build system. The build parser are config via the `\"parser\"` config.\n   - Browser preview auto reload on save if you have the [ST2 LiveReload plugin][7] installed.\n   - Builtin parser : supports `abbr`, `attr_list`, `def_list`, `fenced_code`, `footnotes`, `tables`, `smart_strong` and `toc` markdown extensions.\n   - CSS search path for local and build-in CSS files (always enabled) and/or CSS overriding if you need\n   - YAML support thanks to @tommi\n   - Clipboard selection and copy to clipboard thanks to @hexatrope\n   - MathJax support : \\\\(\\frac{\\pi}{2}\\\\) thanks to @bps10\n  \n  ## Installation :\n  \n  ### Using [Package Control][3] (*Recommanded*)\n  \n  For all Sublime Text 2/3 users we recommand installe via [Package Control][3].\n  \n  1. [Install][11] Package Control if you haven't yet.\n  2. Use `cmd+shift+P` then `Package Control: Install Package`\n  3. Look for `Markdown Preview` and install it.\n  \n  ### Manual Install\n  \n  1. Click the `Preferences > Browse Packages…` menu\n  2. Browse up a folder and then into the `Installed Packages/` folder\n  3. Download [zip package][12] rename it to `Markdown Preview.sublime-package` and copy it into the `Installed Packages/` directory\n  4. Restart Sublime Text\n  \n  ## Usage :\n  \n  ### To preivew :\n  \n   - optionnaly select some of your markdown for conversion\n   - use `cmd+shift+P` then `Markdown Preview` to show the follow commands:\n  	- Markdown Preview: Python Markdown: Preview in Browser\n  	- Markdown Preview: Python Markdown: Export HTML in Sublime Text\n  	- Markdown Preview: Python Markdown: Copy to Clipboard\n  	- Markdown Preview: Github Flavored Markdown: Preview in Browser\n  	- Markdown Preview: Github Flavored Markdown: Export HTML in Sublime Text\n  	- Markdown Preview: Github Flavored Markdown: Copy to Clipboard\n  	- Markdown Preview: Open Markdown Cheat sheet\n   - or bind some key in your user key binding, using a line like this one:\n     `{ \"keys\": [\"alt+m\"], \"command\": \"markdown_preview\", \"args\": {\"target\": \"browser\", \"parser\":\"markdown\"} },`\n   - once converted a first time, the output HTML will be updated on each file save (with LiveReload plugin)\n  \n  ### To build :\n  \n   - Just use `Ctrl+B` (Windows/Linux) or `cmd+B` (Mac) to build current file.\n  \n  ### To config :\n  \n  Using Sublime Text menu: `Preferences`->`Package Settings`->`Markdown Preivew`\n  \n  - `Settings - User` is where you change your serrings for Markdown Preview.\n  - `Settings - Default` is a good reference with detail description for each setting.\n  \n  \n  ## Support :\n  \n  - Any bugs about Markdown Preview please fell free to report [here][issue].\n  - And you are welcome to fork and submit pullrequests.\n  \n  \n  ## Licence :\n  \n  The code is available at github [project][home] under [MIT licence][4].\n  \n   [0]: https://github.com/trentm/python-markdown2\n   [home]: https://github.com/revolunet/sublimetext-markdown-preview\n   [3]: https://sublime.wbond.net/\n   [4]: http://revolunet.mit-license.org\n   [5]: http://developer.github.com/v3/markdown\n   [6]: http://github.github.com/github-flavored-markdown/\n   [7]: https://github.com/dz0ny/LiveReload-sublimetext2\n   [8]: https://github.com/revolunet/sublimetext-markdown-preview/issues/27#issuecomment-11772098\n   [9]: https://github.com/revolunet/sublimetext-markdown-preview/issues/78#issuecomment-15644727\n   [10]: https://github.com/waylan/Python-Markdown\n   [11]: https://sublime.wbond.net/installation\n   [12]: https://github.com/revolunet/sublimetext-markdown-preview/archive/master.zip\n   [issue]: https://github.com/revolunet/sublimetext-markdown-preview/issues\n",
-					"file": "/home/mike/Desktop/Package Control Messages",
-					"file_size": 4885,
-					"file_write_time": 1383830576000000,
+					"file": "/home/mike/Desktop/ReadME.mkd",
 					"settings":
 					{
-						"buffer_size": 4875,
-						"line_ending": "Unix",
-						"name": "Package Control Messages",
-						"scratch": true
+						"buffer_size": 46,
+						"line_ending": "Unix"
 					}
 				}
 			],
@@ -38,12 +33,20 @@
 				"selected_items":
 				[
 					[
+						"ma",
+						"Set Syntax: Markdown"
+					],
+					[
+						"pand",
+						"Pandoc: Render Markdown to temp PDF and View"
+					],
+					[
 						"pan",
 						"Pandoc: Render Markdown to PDF"
 					],
 					[
-						"pand",
-						"Pandoc: Render Markdown to PDF"
+						"set",
+						"Set Syntax: Markdown"
 					],
 					[
 						"ins",
@@ -103,16 +106,18 @@
 			},
 			"file_history":
 			[
+				"/home/mike/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
+				"/home/mike/.config/sublime-text-2/Packages/User/Default (Linux).sublime-keymap",
+				"/home/mike/.config/sublime-text-2/Packages/Default/Default (Linux).sublime-keymap",
+				"/home/mike/Desktop/Package Control Messages",
+				"/home/mike/.config/sublime-text-2/Packages/SublimePandoc/Pandoc.sublime-settings",
 				"/home/mike/.config/sublime-text-2/Packages/Package Control/Package Control.sublime-settings",
 				"/home/mike/.config/sublime-text-2/Packages/Markdown Preview/MarkdownPreview.sublime-settings",
-				"/home/mike/.config/sublime-text-2/Packages/SublimePandoc/Pandoc.sublime-settings",
 				"/home/mike/.config/sublime-text-2/Packages/User/Pandoc.sublime-settings",
-				"/home/mike/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
 				"/home/mike/.config/sublime-text-2/Packages/Pandoc/Pandoc.sublime-settings",
 				"/home/mike/.config/sublime-text-2/Packages/Default/Preferences.sublime-settings",
 				"/home/mike/Desktop/syn_flood.c",
-				"/home/mike/Desktop/synflood.c",
-				"/home/mike/.config/sublime-text-2/Packages/User/Default (Linux).sublime-keymap"
+				"/home/mike/Desktop/synflood.c"
 			],
 			"find":
 			{
@@ -130,6 +135,11 @@
 				"case_sensitive": false,
 				"find_history":
 				[
+					"ctrl+b",
+					"compile",
+					"com",
+					"delete",
+					"replace",
 					"3"
 				],
 				"highlight": true,
@@ -153,26 +163,23 @@
 					[
 						{
 							"buffer": 0,
-							"file": "/home/mike/Desktop/Package Control Messages",
+							"file": "/home/mike/Desktop/ReadME.mkd",
 							"settings":
 							{
-								"buffer_size": 4875,
+								"buffer_size": 46,
 								"regions":
 								{
 								},
 								"selection":
 								[
 									[
-										729,
-										729
+										46,
+										46
 									]
 								],
 								"settings":
 								{
-									"syntax": "Packages/Markdown/Markdown.tmLanguage",
-									"tab_size": 2,
-									"translate_tabs_to_spaces": true,
-									"word_wrap": true
+									"syntax": "Packages/Markdown/Markdown.tmLanguage"
 								},
 								"translation.x": 0.0,
 								"translation.y": 0.0,
@@ -221,7 +228,7 @@
 			"position": "0,1,0,0,0,0,0,0,0,2390,1280",
 			"replace":
 			{
-				"height": 0.0
+				"height": 68.0
 			},
 			"save_all_on_build": true,
 			"select_file":
