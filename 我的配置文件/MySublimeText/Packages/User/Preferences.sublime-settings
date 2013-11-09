@@ -51,6 +51,25 @@
 	"fallback_encoding": "Western (Windows 1252)",
 	"file_exclude_patterns":
 	[
+		"*.jpg",
+		"*.jpeg",
+		"*.png",
+		"*.gif",
+		"*.ttf",
+		"*.tga",
+		"*.dds",
+		"*.ico",
+		"*.eot",
+		"*.pdf",
+		"*.swf",
+		"*.jar",
+		"*.zip",
+		"*.f*",
+		"*.project",
+		"*.settings",
+		"*.t*",
+		"*.git*",
+		"*.do",
 		"*.pyc",
 		"*.pyo",
 		"*.exe",
@@ -67,7 +86,7 @@
 		"*.pdb",
 		"*.idb",
 		".DS_Store",
-		"*.class",
+		"*.class*",
 		"*.psd",
 		"*.db"
 	],
@@ -75,6 +94,8 @@
 	"fold_buttons": true,
 	"folder_exclude_patterns":
 	[
+		".metadata",
+		".settings",
 		".svn",
 		".git",
 		".hg",
@@ -93,6 +114,15 @@
 	"ignored_packages":
 	[
 		"Vintage"
+	],
+	"ignored_words":
+	[
+		"Djava",
+		"Quickstart",
+		"Soochow",
+		"accesslog=false",
+		"haltonfailure=false",
+		"readme"
 	],
 	"indent_guide_options":
 	[
