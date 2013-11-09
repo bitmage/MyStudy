@@ -25,7 +25,7 @@
 
 3. [WebSocketServerPipelineFactory.java](https://github.com/MikeCoder/MyStudy/blob/master/%E6%88%91%E7%9A%84%E9%98%85%E8%AF%BB%E5%88%97%E8%A1%A8/Netty%E5%AD%A6%E4%B9%A0%28Mike%20Tang%29/%E5%9F%BA%E4%BA%8ENetty%E5%AE%9E%E7%8E%B0WebSocket/websocket/src/main/java/iot/mike/websocket/WebSocketServerPipelineFactory.java)
 >+ 这是这三个类当中代码最少的类了，主要的作用就是配置pipeline.
->+ ![image](2013-11-9-3.png)
+>+ ![image](images/2013-11-9-3.png)
 >+ 我们可以看到最后的那个addLast，就是在给这个工厂类添加处理逻辑
 
 4. [websocket.html](https://github.com/MikeCoder/MyStudy/blob/master/%E6%88%91%E7%9A%84%E9%98%85%E8%AF%BB%E5%88%97%E8%A1%A8/Netty%E5%AD%A6%E4%B9%A0%28Mike%20Tang%29/%E5%9F%BA%E4%BA%8ENetty%E5%AE%9E%E7%8E%B0WebSocket/websocket/src/main/java/iot/mike/websocket/html/websocket.html)
