@@ -1,13 +1,14 @@
 {
 	"folder_history":
 	[
+		"/home/mike/WorkSpace/GIT/netty",
 		"/home/mike/WorkSpace/GIT/tomcat",
 		"/home/mike/WorkSpace/Just For Fun",
 		"/home/mike/WorkSpace/GIT",
 		"/home/mike/WorkSpace/GIT/tomcat7.x/apache-tomcat-7.0.47-src",
 		"/home/mike/WorkSpace/CorC++/C/网络相关/SYN攻击"
 	],
-	"last_window_id": 7,
+	"last_window_id": 8,
 	"settings":
 	{
 		"new_window_height": 0.0,
@@ -26,6 +27,22 @@
 				"selected_items":
 				[
 					[
+						"git pu",
+						"Git: Push"
+					],
+					[
+						"git com",
+						"Git: Commit"
+					],
+					[
+						"git q",
+						"Git: Quick Add"
+					],
+					[
+						"git co",
+						"Git: Commit"
+					],
+					[
 						"ins",
 						"Package Control: Install Package"
 					],
@@ -34,16 +51,8 @@
 						"Javap decompilation"
 					],
 					[
-						"git com",
-						"Git: Commit"
-					],
-					[
 						"git add ",
 						"Git: Quick Add"
-					],
-					[
-						"git co",
-						"Git: Commit"
 					],
 					[
 						"git ini",
@@ -96,10 +105,6 @@
 					[
 						"git che",
 						"Git: Checkout Current File"
-					],
-					[
-						"git pu",
-						"Git: Push"
 					],
 					[
 						"git p",
@@ -171,7 +176,16 @@
 			},
 			"file_history":
 			[
+				"/extern/My_CODE/Eclipse_WorkSpace/MikeDog/ReadME.md",
+				"/home/mike/WorkSpace/GIT/tomcat/java/javax/servlet/http/HttpServletRequest.java",
+				"/home/mike/WorkSpace/GIT/tomcat/java/org/apache/tomcat/util/http/RequestUtil.java",
+				"/extern/My_CODE/Eclipse_WorkSpace/MikeDog/src/main/java/iot/mike/mikedog/attemps/alpha/有关简单静态文件的服务器.md",
+				"/extern/Ubuntu/Documents/学习资料/MyStudy/ReadMe.md",
+				"/home/mike/WorkSpace/CorC++/C/网络相关/SYN攻击/synflood.c",
+				"/home/mike/WorkSpace/GIT/netty/transport/src/main/java/io/netty/bootstrap/AbstractBootstrap.java",
+				"/home/mike/WorkSpace/GIT/tomcat/java/javax/servlet/ServletRequest.java",
 				"/home/mike/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
+				"/home/mike/WorkSpace/GIT/tomcat/ReadME.md",
 				"/home/mike/WorkSpace/Eclipse_WorkSpace/RestFulWS/target/classes/iot/mike/restfulws/HomeController.class",
 				"/home/mike/WorkSpace/GIT/netty/buffer/src/main/java/io/netty/buffer/AbstractByteBuf.java",
 				"/home/mike/WorkSpace/GIT/tomcat7.x/apache-tomcat-7.0.47-src/KEYS",
@@ -205,6 +219,9 @@
 				"case_sensitive": false,
 				"find_history":
 				[
+					"uri",
+					"ur",
+					"uri",
 					"ctrl+b",
 					"compile",
 					"com",
@@ -290,6 +307,18 @@
 				"height": 0.0,
 				"selected_items":
 				[
+					[
+						"request",
+						"java/org/apache/tomcat/util/http/RequestUtil.java"
+					],
+					[
+						"servletreq",
+						"java/javax/servlet/ServletRequest.java"
+					],
+					[
+						"httpser",
+						"java/javax/servlet/http/HttpServletRequest.java"
+					]
 				],
 				"width": 0.0
 			},
@@ -305,7 +334,7 @@
 			"show_open_files": false,
 			"show_tabs": true,
 			"side_bar_visible": true,
-			"side_bar_width": 226.0,
+			"side_bar_width": 195.0,
 			"status_bar_visible": true
 		},
 		"new_window_width": 0.0
@@ -322,10 +351,10 @@
 			"buffers":
 			[
 				{
-					"file": "/extern/My_CODE/Eclipse_WorkSpace/MikeDog/ReadME.md",
+					"file": "/extern/Ubuntu/Documents/学习资料/MyStudy/我的阅读列表/Netty学习(Mike Tang)/基于Netty实现WebSocket/基于Netty实现WebSocket.md",
 					"settings":
 					{
-						"buffer_size": 28,
+						"buffer_size": 2251,
 						"line_ending": "Unix"
 					}
 				}
@@ -486,6 +515,7 @@
 			},
 			"file_history":
 			[
+				"/extern/My_CODE/Eclipse_WorkSpace/MikeDog/ReadME.md",
 				"/home/mike/WorkSpace/GIT/tomcat/java/javax/servlet/http/HttpServletRequest.java",
 				"/home/mike/WorkSpace/GIT/tomcat/java/org/apache/tomcat/util/http/RequestUtil.java",
 				"/extern/My_CODE/Eclipse_WorkSpace/MikeDog/src/main/java/iot/mike/mikedog/attemps/alpha/有关简单静态文件的服务器.md",
@@ -528,6 +558,7 @@
 				"case_sensitive": false,
 				"find_history":
 				[
+					"09",
 					"uri",
 					"ur",
 					"uri",
@@ -544,6 +575,7 @@
 				"regex": false,
 				"replace_history":
 				[
+					"9"
 				],
 				"reverse": false,
 				"show_context": true,
@@ -554,7 +586,7 @@
 			"folders":
 			[
 				{
-					"path": "/home/mike/WorkSpace/GIT/tomcat"
+					"path": "/home/mike/WorkSpace/GIT/netty"
 				}
 			],
 			"groups":
@@ -565,26 +597,26 @@
 					[
 						{
 							"buffer": 0,
-							"file": "/extern/My_CODE/Eclipse_WorkSpace/MikeDog/ReadME.md",
+							"file": "/extern/Ubuntu/Documents/学习资料/MyStudy/我的阅读列表/Netty学习(Mike Tang)/基于Netty实现WebSocket/基于Netty实现WebSocket.md",
 							"settings":
 							{
-								"buffer_size": 28,
+								"buffer_size": 2251,
 								"regions":
 								{
 								},
 								"selection":
 								[
 									[
-										28,
-										28
+										1910,
+										1910
 									]
 								],
 								"settings":
 								{
 									"syntax": "Packages/Markdown/Markdown.tmLanguage"
 								},
-								"translation.x": 0.0,
-								"translation.y": 0.0,
+								"translation.x": 161.0,
+								"translation.y": 289.0,
 								"zoom_level": 1.0
 							},
 							"type": "text"
@@ -685,9 +717,9 @@
 			"show_open_files": false,
 			"show_tabs": true,
 			"side_bar_visible": true,
-			"side_bar_width": 195.0,
+			"side_bar_width": 382.0,
 			"status_bar_visible": true,
-			"window_id": 7,
+			"window_id": 8,
 			"workspace_name": ""
 		}
 	],
