@@ -1,3 +1,0 @@
-New in version 1.1.0:
-
-- Ability to select properties with '@' annotations. They will be ignored, of course.
