@@ -488,9 +488,7 @@ public class InternalInputBuffer implements InputBuffer {
                        && (questionPos == -1)) {
                 questionPos = pos;
             }
-
             pos++;
-
         }
 
         // Spec says single SP but also says be tolerant of multiple and/or HT
@@ -638,7 +636,6 @@ public class InternalInputBuffer implements InputBuffer {
             ascbuf[pos] = (char) buf[pos];
 
             pos++;
-
         }
 
         // Mark the current buffer position
@@ -793,7 +790,6 @@ public class InternalInputBuffer implements InputBuffer {
 
     // ------------------------------------- InputStreamInputBuffer Inner Class
 
-
     /**
      * This class is an input buffer which will read its data from an input
      * stream.
@@ -818,11 +814,6 @@ public class InternalInputBuffer implements InputBuffer {
             pos = lastValid;
 
             return (length);
-
         }
-
-
     }
-
-
 }

@@ -282,5 +282,4 @@ public class StringManager {
       }
       return mgr;
     }
-
 }

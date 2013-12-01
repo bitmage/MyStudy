@@ -227,7 +227,7 @@ public class ThreadPoolExecutor extends java.util.concurrent.ThreadPoolExecutor 
         }
 
         if (taskQueue != null) {
-            // ok, restore the state of the queue and pool
+            // okay, restore the state of the queue and pool
             taskQueue.setForcedRemainingCapacity(null);
         }
         this.setCorePoolSize(savedCorePoolSize);

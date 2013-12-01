@@ -25,7 +25,7 @@ import java.io.OutputStream;
 /**
  * Processor.
  *
- * Not really used, should be deprecated. 
+ * Not really used, should be deprecated(弃用). 
  *
  * @author Remy Maucherat
  */

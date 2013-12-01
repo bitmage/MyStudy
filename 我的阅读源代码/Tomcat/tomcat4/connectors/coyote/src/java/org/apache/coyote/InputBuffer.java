@@ -42,5 +42,4 @@ public interface InputBuffer {
     public int doRead(ByteChunk chunk, Request request) 
         throws IOException;
 
-
 }
