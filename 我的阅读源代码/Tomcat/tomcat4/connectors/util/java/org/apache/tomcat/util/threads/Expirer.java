@@ -23,8 +23,7 @@ import org.apache.tomcat.util.buf.TimeStamp;
  * Expire unused objects. 
  * 
  */
-public final class Expirer  implements ThreadPoolRunnable
-{
+public final class Expirer  implements ThreadPoolRunnable {
     
     private static org.apache.commons.logging.Log log=
         org.apache.commons.logging.LogFactory.getLog(Expirer.class );
