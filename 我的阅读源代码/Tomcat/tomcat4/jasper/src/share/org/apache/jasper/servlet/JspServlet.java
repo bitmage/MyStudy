@@ -137,7 +137,6 @@ public class JspServlet extends HttpServlet {
                                        Constants.PRECOMPILE + " set to " +
                                        value);
         }
-
     }
     
 
