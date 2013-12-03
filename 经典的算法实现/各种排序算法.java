@@ -4,18 +4,6 @@ import java.util.Random;
 
 public class 各种排序算法 {
 	public static void main(String[] args) {
-		Random random = new Random();
-		int[] testnums = new int[10];
-		for (int i = 0; i < testnums.length; i++) {
-			testnums[i] = random.nextInt(20);
-		}
-		for (int i : testnums) {
-			System.out.println(i);
-		}
-		mergesort(testnums, 0, testnums.length - 1);
-		for (int i : testnums) {
-			System.out.println(i);
-		}
 	}
 	
 	/**
@@ -76,5 +64,62 @@ public class 各种排序算法 {
 			}
 			return;
 		}
+	}
+
+	/**
+	 * 插入排序算法
+	 */
+	public static void insert_sort(int nums[]) {
+	    for (int i = 1; i < nums.length; i++) {
+	        for (int j = 0; j < i; j++) {
+	            if (nums[j] > nums[i]) {//J为前的数,I为选中的数
+	                int temp = nums[i];
+	                for (int k = i; k > j; k--) {
+	                    nums[k] = nums[k - 1];
+	                }
+	                nums[j] = temp;
+	            }
+	        }
+	    }
+	}
+
+	/**
+	 * 冒泡排序
+	 */
+	public static void bubble_sort(int nums[]) {
+        /*
+        function bubblesort (A : list[0..n-1]) {
+            var int i, j;
+            for i from n-1 downto 0 {
+                for j from 0 to i - 1 { 
+                    if (A[j] > A[j+1])
+                        swap(A[j], A[j+1])
+                }
+            }
+        }*/
+        for (int i = nums.length - 1; i > 0 ; i--) {
+            for (int j = 0; j <= i-1; j++) {
+                if (nums[j] > nums[j+1]) {
+                    nums[j] = nums[j+1]^nums[j];
+                    nums[j+1] = nums[j]^nums[j+1];
+                    nums[j] = nums[j]^nums[j+1];
+                }
+            }
+        }
+    }
+	
+	/**
+	 * 选择排序
+	 */
+	public static void select_sort(int nums[]) {
+	    for (int i = 0; i < nums.length - 1; i++) {
+	        for (int j = i+1; j < nums.length; j++) {
+	            if (nums[i] > nums[j]) {
+	                nums[i] = nums[i]^nums[j];
+	                nums[j] = nums[i]^nums[j];
+	                nums[i] = nums[i]^nums[j];
+	            }
+	        }
+	    }
 	}
 }
