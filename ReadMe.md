@@ -22,5 +22,8 @@
 >* [**Netty**](https://github.com/MikeCoder/MyStudy/tree/master/%E6%88%91%E7%9A%84%E9%98%85%E8%AF%BB%E6%BA%90%E4%BB%A3%E7%A0%81/Netty)
 
 
+>###我的随笔
+> *[**MySQL的锁分析 **]()*
+> *[**有关Java的代理**]()*
 ---
 Wish You a Happy Day!
