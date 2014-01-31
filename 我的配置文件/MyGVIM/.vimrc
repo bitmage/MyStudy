@@ -14,7 +14,7 @@ colo torte              "设置配色方案
 if has("win32") || has("win64")
    set guifont=FZShuTi :h10:cDEFAULT
 else
-   set guifont=FreeMono\ 15
+   set guifont=FreeMono  
 endif
 set ambiwidth=double
 set nu                        "设置行号
