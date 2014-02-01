@@ -12,9 +12,9 @@ colo torte              "设置配色方案
 
 "字体设置
 if has("win32") || has("win64")
-   set guifont=FZShuTi :h10:cDEFAULT
+   set guifont=FreeMono:h10 "字体 && 字号
 else
-   set guifont=FreeMono  
+   set guifont=Courier\ 10\ Pitch\ 11
 endif
 set ambiwidth=double
 set nu                        "设置行号
