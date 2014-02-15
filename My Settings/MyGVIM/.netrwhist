@@ -1,4 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_cnt =3
 let g:netrw_dirhist_1='/home/mike/KuaiPan/重要文档/我的简历/AboutMe'
 let g:netrw_dirhist_2='/extern/My_CODE/Android_WorkSpace/Gimini/extern_c'
+let g:netrw_dirhist_3='/extern/My_CODE/Android_WorkSpace/Gemini'
