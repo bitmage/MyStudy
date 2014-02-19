@@ -1,0 +1,143 @@
+This file contains any messages produced by compilers while
+running configure, to aid debugging if configure makes a mistake.
+
+configure:646: checking whether to install link to etags
+configure:654: checking whether to install readtags object file
+configure:685: checking for gcc
+configure:798: checking whether the C compiler (gcc  ) works
+configure:814: gcc -o conftest    conftest.c  1>&5
+configure:840: checking whether the C compiler (gcc  ) is a cross-compiler
+configure:845: checking whether we are using GNU C
+configure:854: gcc -E conftest.c
+configure:873: checking whether gcc accepts -g
+configure:931: checking whether ln -s works
+configure:954: checking for strip
+configure:985: checking directory to use for temporary files
+configure:1014: checking whether #! works in shell scripts
+configure:1042: checking for case-insensitive filenames
+configure:1056: checking selected sort method
+configure:1065: checking for sort
+configure:1094: checking if sort accepts our command line
+configure:1117: checking how to run the C preprocessor
+configure:1138: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:1200: checking for dirent.h
+configure:1210: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:1200: checking for fcntl.h
+configure:1210: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:1200: checking for fnmatch.h
+configure:1210: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:1200: checking for stat.h
+configure:1210: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:1206:18: fatal error: stat.h: No such file or directory
+compilation terminated.
+configure: failed program was:
+#line 1205 "configure"
+#include "confdefs.h"
+#include <stat.h>
+configure:1200: checking for stdlib.h
+configure:1210: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:1200: checking for string.h
+configure:1210: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:1240: checking for time.h
+configure:1250: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:1240: checking for types.h
+configure:1250: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:1246:19: fatal error: types.h: No such file or directory
+compilation terminated.
+configure: failed program was:
+#line 1245 "configure"
+#include "confdefs.h"
+#include <types.h>
+configure:1240: checking for unistd.h
+configure:1250: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:1280: checking for sys/dir.h
+configure:1290: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:1280: checking for sys/stat.h
+configure:1290: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:1280: checking for sys/times.h
+configure:1290: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:1280: checking for sys/types.h
+configure:1290: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:1321: checking if L_tmpnam is defined in stdio.h
+configure:1353: checking if INT_MAX is defined in limits.h
+configure:1416: checking for ANSI C header files
+configure:1429: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:1496: gcc -o conftest -g -O2   conftest.c  1>&5
+configure: In function 'main':
+configure:1491:67: warning: incompatible implicit declaration of built-in function 'exit' [enabled by default]
+configure:1520: checking for size_t
+configure:1553: checking for off_t
+configure:1587: checking for fpos_t
+configure:1611: checking for clock_t
+configure:1637: checking for Cygwin environment
+configure:1653: gcc -c -g -O2  conftest.c 1>&5
+configure: In function 'main':
+configure:1649:8: error: '__CYGWIN32__' undeclared (first use in this function)
+configure:1649:8: note: each undeclared identifier is reported only once for each function it appears in
+configure: failed program was:
+#line 1642 "configure"
+#include "confdefs.h"
+
+int main() {
+
+#ifndef __CYGWIN__
+#define __CYGWIN__ __CYGWIN32__
+#endif
+return __CYGWIN__;
+; return 0; }
+configure:1670: checking for mingw32 environment
+configure:1682: gcc -c -g -O2  conftest.c 1>&5
+configure: In function 'main':
+configure:1678:8: error: '__MINGW32__' undeclared (first use in this function)
+configure:1678:8: note: each undeclared identifier is reported only once for each function it appears in
+configure: failed program was:
+#line 1675 "configure"
+#include "confdefs.h"
+
+int main() {
+return __MINGW32__;
+; return 0; }
+configure:1699: checking for working const
+configure:1753: gcc -c -g -O2  conftest.c 1>&5
+configure:1774: checking for object suffix
+configure:1780: gcc -c -g -O2  conftest.c 1>&5
+configure:1800: checking for executable suffix
+configure:1810: gcc -o conftest -g -O2   conftest.c  1>&5
+configure:1832: checking if struct stat contains st_ino
+configure:1846: gcc -c -g -O2  conftest.c 1>&5
+configure: In function 'main':
+configure:1841:3: warning: incompatible implicit declaration of built-in function 'exit' [enabled by default]
+configure:1869: checking for fnmatch
+configure:1897: gcc -o conftest -g -O2   conftest.c  1>&5
+configure:1924: checking for strstr
+configure:1952: gcc -o conftest -g -O2   conftest.c  1>&5
+configure:1936:6: warning: conflicting types for built-in function 'strstr' [enabled by default]
+configure:1979: checking for strcasecmp
+configure:2007: gcc -o conftest -g -O2   conftest.c  1>&5
+configure:1991:6: warning: conflicting types for built-in function 'strcasecmp' [enabled by default]
+configure:2034: checking for strncasecmp
+configure:2062: gcc -o conftest -g -O2   conftest.c  1>&5
+configure:2046:6: warning: conflicting types for built-in function 'strncasecmp' [enabled by default]
+configure:2089: checking for fgetpos
+configure:2117: gcc -o conftest -g -O2   conftest.c  1>&5
+configure:2206: checking for mkstemp
+configure:2234: gcc -o conftest -g -O2   conftest.c  1>&5
+configure:2379: checking for opendir
+configure:2407: gcc -o conftest -g -O2   conftest.c  1>&5
+configure:2434: checking for strerror
+configure:2462: gcc -o conftest -g -O2   conftest.c  1>&5
+configure:2489: checking for clock
+configure:2517: gcc -o conftest -g -O2   conftest.c  1>&5
+configure:2544: checking for remove
+configure:2572: gcc -o conftest -g -O2   conftest.c  1>&5
+configure:2630: checking for truncate
+configure:2658: gcc -o conftest -g -O2   conftest.c  1>&5
+configure:2800: checking for setenv
+configure:2828: gcc -o conftest -g -O2   conftest.c  1>&5
+configure:2953: checking for regcomp
+configure:2981: gcc -o conftest -g -O2   conftest.c  1>&5
+configure:3006: checking if regcomp works
+configure:3024: gcc -o conftest -g -O2   conftest.c  1>&5
+configure: In function 'main':
+configure:3020:2: warning: incompatible implicit declaration of built-in function 'exit' [enabled by default]
+configure:3048: checking for missing prototypes
