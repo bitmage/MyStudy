@@ -540,15 +540,10 @@ public class Catalina {
      * Start a new server instance.
      */
     public void load() {
-
         long t1 = System.nanoTime();
-
         initDirs();
-
         // Before digester - it may be needed
-
         initNaming();
-
         // Create and execute our Digester
         Digester digester = createStartDigester();
 
