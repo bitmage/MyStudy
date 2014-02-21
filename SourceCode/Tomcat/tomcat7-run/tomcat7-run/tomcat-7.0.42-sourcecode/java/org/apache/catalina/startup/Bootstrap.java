@@ -28,6 +28,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.StringTokenizer;
+import java.util.logging.Level;
 
 import javax.management.MBeanServer;
 import javax.management.MBeanServerFactory;
@@ -420,8 +421,7 @@ public final class Bootstrap {
     public static void main(String args[]) {
 
         System.out.println("Have fun and Enjoy!");
-
-
+        
         if (daemon == null) {
             // Don't set daemon until init() has completed
             Bootstrap bootstrap = new Bootstrap();

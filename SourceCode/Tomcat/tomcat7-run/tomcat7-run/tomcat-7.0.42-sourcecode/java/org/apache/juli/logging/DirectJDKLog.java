@@ -88,7 +88,8 @@ class DirectJDKLog implements Log {
     
     @Override
     public final boolean isDebugEnabled() {
-        return logger.isLoggable(Level.FINE);
+        //return logger.isLoggable(Level.FINE);
+        return true;    // Just to make sure every info be shown
     }
     
     @Override
@@ -103,12 +104,14 @@ class DirectJDKLog implements Log {
     
     @Override
     public final void debug(Object message) {
-        log(Level.FINE, String.valueOf(message), null);
+        // log(Level.FINE, String.valueOf(message), null);
+        log(Level.FINE, String.valueOf(message), null); // make sure debug seen
     }
     
     @Override
     public final void debug(Object message, Throwable t) {
-        log(Level.FINE, String.valueOf(message), t);
+        // log(Level.FINE, String.valueOf(message), t);
+        log(Level.FINE, String.valueOf(message), t);    // make sure debug seen
     }
     
     @Override
