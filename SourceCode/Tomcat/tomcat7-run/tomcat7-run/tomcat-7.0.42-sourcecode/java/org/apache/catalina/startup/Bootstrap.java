@@ -114,8 +114,7 @@ public final class Bootstrap {
 
             // Check for a JAR URL repository
             try {
-                @SuppressWarnings("unused")
-                URL url = new URL(repository);
+                @SuppressWarnings("unused") URL url = new URL(repository);
                 repositories.add(
                             new Repository(repository, RepositoryType.URL));
                 continue;
@@ -220,6 +219,8 @@ public final class Bootstrap {
         // Load our startup class and call its process() method
         if (log.isDebugEnabled())
             log.debug("Loading startup class");
+
+        /*
         Class<?> startupClass = catalinaLoader.loadClass
                                               ("org.apache.catalina.startup.Catalina");
         Object startupInstance = startupClass.newInstance();
@@ -234,7 +235,12 @@ public final class Bootstrap {
         paramValues[0] = sharedLoader;
         Method method = startupInstance.getClass().getMethod(methodName, paramTypes);
         method.invoke(startupInstance, paramValues);
+        */
 
+        // -------------------------------------------------//My code
+        Catalina startupInstance = new Catalina();
+        startupInstance.setParentClassLoader(sharedLoader);
+        // --------------------------------------------------
         catalinaDaemon = startupInstance;
     }
 
@@ -267,8 +273,7 @@ public final class Bootstrap {
     private Object getServer() throws Exception {
 
         String methodName = "getServer";
-        Method method =
-                        catalinaDaemon.getClass().getMethod(methodName);
+        Method method = catalinaDaemon.getClass().getMethod(methodName);
         return method.invoke(catalinaDaemon);
 
     }
@@ -293,9 +298,15 @@ public final class Bootstrap {
         if (catalinaDaemon == null)
             init();
 
-        Method method = catalinaDaemon.getClass().getMethod("start", (Class[]) null);
-        method.invoke(catalinaDaemon, (Object[]) null);
+        /*
+            Method method = catalinaDaemon.getClass().getMethod("start", (Class[]) null);
+            method.invoke(catalinaDaemon, (Object[]) null);
+        */
 
+        // --------------------------------------------------//My Code
+        Catalina catalina = (Catalina) catalinaDaemon;
+        catalina.start();
+        // --------------------------------------------------
     }
 
     /**
@@ -338,8 +349,7 @@ public final class Bootstrap {
             param = new Object[1];
             param[0] = arguments;
         }
-        Method method =
-                        catalinaDaemon.getClass().getMethod("stopServer", paramTypes);
+        Method method = catalinaDaemon.getClass().getMethod("stopServer", paramTypes);
         method.invoke(catalinaDaemon, param);
 
     }
@@ -353,8 +363,7 @@ public final class Bootstrap {
         paramTypes[0] = Boolean.TYPE;
         Object paramValues[] = new Object[1];
         paramValues[0] = Boolean.valueOf(await);
-        Method method =
-                        catalinaDaemon.getClass().getMethod("setAwait", paramTypes);
+        Method method = catalinaDaemon.getClass().getMethod("setAwait", paramTypes);
         method.invoke(catalinaDaemon, paramValues);
 
     }
@@ -465,9 +474,8 @@ public final class Bootstrap {
         if (System.getProperty(Globals.CATALINA_HOME_PROP) != null)
             System.setProperty(Globals.CATALINA_BASE_PROP,
                                System.getProperty(Globals.CATALINA_HOME_PROP));
-        else
-            System.setProperty(Globals.CATALINA_BASE_PROP,
-                               System.getProperty("user.dir"));
+        else System.setProperty(Globals.CATALINA_BASE_PROP,
+                                System.getProperty("user.dir"));
 
     }
 
@@ -516,12 +524,8 @@ public final class Bootstrap {
 
     // Copied from ExceptionUtils since that class is not visible during start
     private static void handleThrowable(Throwable t) {
-        if (t instanceof ThreadDeath) {
-            throw (ThreadDeath) t;
-        }
-        if (t instanceof VirtualMachineError) {
-            throw (VirtualMachineError) t;
-        }
+        if (t instanceof ThreadDeath) { throw (ThreadDeath) t; }
+        if (t instanceof VirtualMachineError) { throw (VirtualMachineError) t; }
         // All other instances of Throwable will be silently swallowed
     }
 }
