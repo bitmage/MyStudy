@@ -1,0 +1,13 @@
+version: 1.5.2
+apkFileName: Flappy_Bird_v1_3.apk
+isFrameworkApk: false
+usesFramework:
+  ids:
+  - 1
+sdkInfo:
+  minSdkVersion: '8'
+  targetSdkVersion: '15'
+packageInfo:
+  cur_package: com.dotgears.flappybird
+  orig_package: com.dotgears.flappybird
+compressionType: false

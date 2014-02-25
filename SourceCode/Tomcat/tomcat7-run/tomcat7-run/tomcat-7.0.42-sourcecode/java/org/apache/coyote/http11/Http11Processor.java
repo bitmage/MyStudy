@@ -375,7 +375,6 @@ public class Http11Processor extends AbstractHttp11Processor<Socket> {
 
     // ------------------------------------------------------ Protected Methods
 
-
     @Override
     protected void prepareRequestInternal() {
         // NOOP for BIO
