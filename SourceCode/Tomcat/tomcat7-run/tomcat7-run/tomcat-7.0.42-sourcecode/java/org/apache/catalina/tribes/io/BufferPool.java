@@ -88,5 +88,5 @@ public class BufferPool {
         public void returnBuffer(XByteBuffer buffer);
 
         public void clear();
-    }    
+    }
 }
