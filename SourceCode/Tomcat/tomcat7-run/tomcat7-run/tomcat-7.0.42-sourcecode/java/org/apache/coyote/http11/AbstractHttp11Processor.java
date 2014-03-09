@@ -962,8 +962,7 @@ public abstract class AbstractHttp11Processor<S> extends AbstractProcessor<S> {
                 }
             } catch (IOException e) {
                 if (getLog().isDebugEnabled()) {
-                    getLog().debug(
-                            sm.getString("http11processor.header.parse"), e);
+                    getLog().debug(sm.getString("http11processor.header.parse"), e);
                 }
                 error = true;
                 break;
@@ -971,12 +970,10 @@ public abstract class AbstractHttp11Processor<S> extends AbstractProcessor<S> {
                 ExceptionUtils.handleThrowable(t);
                 UserDataHelper.Mode logMode = userDataHelper.getNextMode();
                 if (logMode != null) {
-                    String message = sm.getString(
-                            "http11processor.header.parse");
+                    String message = sm.getString("http11processor.header.parse");
                     switch (logMode) {
                         case INFO_THEN_DEBUG:
-                            message += sm.getString(
-                                    "http11processor.fallToDebug");
+                            message += sm.getString("http11processor.fallToDebug");
                             //$FALL-THROUGH$
                         case INFO:
                             getLog().info(message);

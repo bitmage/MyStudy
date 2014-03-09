@@ -1,18 +1,18 @@
 /*
- *  Licensed to the Apache Software Foundation (ASF) under one or more
- *  contributor license agreements.  See the NOTICE file distributed with
- *  this work for additional information regarding copyright ownership.
- *  The ASF licenses this file to You under the Apache License, Version 2.0
- *  (the "License"); you may not use this file except in compliance with
- *  the License.  You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- *  Unless required by applicable law or agreed to in writing, software
- *  distributed under the License is distributed on an "AS IS" BASIS,
- *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- *  See the License for the specific language governing permissions and
- *  limitations under the License.
+ * Licensed to the Apache Software Foundation (ASF) under one or more
+ * contributor license agreements. See the NOTICE file distributed with this
+ * work for additional information regarding copyright ownership. The ASF
+ * licenses this file to You under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
  */
 
 package org.apache.tomcat.util.net;
@@ -33,15 +33,14 @@ import org.apache.juli.logging.LogFactory;
 import org.apache.tomcat.util.ExceptionUtils;
 import org.apache.tomcat.util.net.AbstractEndpoint.Handler.SocketState;
 
-
 /**
  * Handle incoming TCP connections.
- *
- * This class implement a simple server model: one listener thread accepts on a socket and
- * creates a new worker thread for each incoming connection.
- *
+ * 
+ * This class implement a simple server model: one listener thread accepts on a
+ * socket and creates a new worker thread for each incoming connection.
+ * 
  * More advanced Endpoints will reuse the threads, use queues, etc.
- *
+ * 
  * @author James Duncan Davidson
  * @author Jason Hunter
  * @author James Todd
@@ -52,18 +51,16 @@ import org.apache.tomcat.util.net.AbstractEndpoint.Handler.SocketState;
  */
 public class JIoEndpoint extends AbstractEndpoint {
 
-
     // -------------------------------------------------------------- Constants
 
-    private static final Log log = LogFactory.getLog(JIoEndpoint.class);
+    private static final Log log          = LogFactory.getLog(JIoEndpoint.class);
 
     // ----------------------------------------------------------------- Fields
 
     /**
      * Associated server socket.
      */
-    protected ServerSocket serverSocket = null;
-
+    protected ServerSocket   serverSocket = null;
 
     // ------------------------------------------------------------ Constructor
 
@@ -79,15 +76,27 @@ public class JIoEndpoint extends AbstractEndpoint {
      * Handling of accepted sockets.
      */
     protected Handler handler = null;
-    public void setHandler(Handler handler ) { this.handler = handler; }
-    public Handler getHandler() { return handler; }
+
+    public void setHandler(Handler handler) {
+        this.handler = handler;
+    }
+
+    public Handler getHandler() {
+        return handler;
+    }
 
     /**
      * Server socket factory.
      */
     protected ServerSocketFactory serverSocketFactory = null;
-    public void setServerSocketFactory(ServerSocketFactory factory) { this.serverSocketFactory = factory; }
-    public ServerSocketFactory getServerSocketFactory() { return serverSocketFactory; }
+
+    public void setServerSocketFactory(ServerSocketFactory factory) {
+        this.serverSocketFactory = factory;
+    }
+
+    public ServerSocketFactory getServerSocketFactory() {
+        return serverSocketFactory;
+    }
 
     /**
      * Port in use.
@@ -106,16 +115,29 @@ public class JIoEndpoint extends AbstractEndpoint {
      * Optional feature support.
      */
     @Override
-    public boolean getUseSendfile() { return false; } // Not supported
-    @Override
-    public boolean getUseComet() { return false; } // Not supported
-    @Override
-    public boolean getUseCometTimeout() { return false; } // Not supported
-    @Override
-    public boolean getDeferAccept() { return false; } // Not supported
-    @Override
-    public boolean getUsePolling() { return false; } // Not supported
+    public boolean getUseSendfile() {
+        return false;
+    } // Not supported
 
+    @Override
+    public boolean getUseComet() {
+        return false;
+    } // Not supported
+
+    @Override
+    public boolean getUseCometTimeout() {
+        return false;
+    } // Not supported
+
+    @Override
+    public boolean getDeferAccept() {
+        return false;
+    } // Not supported
+
+    @Override
+    public boolean getUsePolling() {
+        return false;
+    } // Not supported
 
     // ------------------------------------------------ Handler Inner Interface
 
@@ -126,10 +148,10 @@ public class JIoEndpoint extends AbstractEndpoint {
      */
     public interface Handler extends AbstractEndpoint.Handler {
         public SocketState process(SocketWrapper<Socket> socket,
-                SocketStatus status);
+                                   SocketStatus status);
+
         public SSLImplementation getSslImplementation();
     }
-
 
     /**
      * Async timeout thread
@@ -151,13 +173,13 @@ public class JIoEndpoint extends AbstractEndpoint {
                 }
                 long now = System.currentTimeMillis();
                 Iterator<SocketWrapper<Socket>> sockets =
-                    waitingRequests.iterator();
+                                                          waitingRequests.iterator();
                 while (sockets.hasNext()) {
                     SocketWrapper<Socket> socket = sockets.next();
                     long access = socket.getLastAccess();
                     if (socket.getTimeout() > 0 &&
-                            (now-access)>socket.getTimeout()) {
-                        processSocketAsync(socket,SocketStatus.TIMEOUT);
+                            (now - access) > socket.getTimeout()) {
+                        processSocketAsync(socket, SocketStatus.TIMEOUT);
                     }
                 }
 
@@ -173,7 +195,6 @@ public class JIoEndpoint extends AbstractEndpoint {
             }
         }
     }
-
 
     // --------------------------------------------------- Acceptor Inner Class
     /**
@@ -206,7 +227,7 @@ public class JIoEndpoint extends AbstractEndpoint {
                 state = AcceptorState.RUNNING;
 
                 try {
-                    //if we have reached max connections, wait
+                    // if we have reached max connections, wait
                     countUpOrAwaitConnection();
 
                     Socket socket = null;
@@ -254,7 +275,6 @@ public class JIoEndpoint extends AbstractEndpoint {
         }
     }
 
-
     private void closeSocket(Socket socket) {
         try {
             socket.close();
@@ -263,9 +283,7 @@ public class JIoEndpoint extends AbstractEndpoint {
         }
     }
 
-
     // ------------------------------------------- SocketProcessor Inner Class
-
 
     /**
      * This class is the equivalent of the Worker, but will simply use in an
@@ -274,10 +292,10 @@ public class JIoEndpoint extends AbstractEndpoint {
     protected class SocketProcessor implements Runnable {
 
         protected SocketWrapper<Socket> socket = null;
-        protected SocketStatus status = null;
+        protected SocketStatus          status = null;
 
         public SocketProcessor(SocketWrapper<Socket> socket) {
-            if (socket==null) throw new NullPointerException();
+            if (socket == null) throw new NullPointerException();
             this.socket = socket;
         }
 
@@ -309,13 +327,13 @@ public class JIoEndpoint extends AbstractEndpoint {
                         if (status == null) {
                             state = handler.process(socket, SocketStatus.OPEN);
                         } else {
-                            state = handler.process(socket,status);
+                            state = handler.process(socket, status);
                         }
                     }
                     if (state == SocketState.CLOSED) {
                         // Close socket
                         if (log.isTraceEnabled()) {
-                            log.trace("Closing socket:"+socket);
+                            log.trace("Closing socket:" + socket);
                         }
                         countDownConnection();
                         try {
@@ -324,8 +342,8 @@ public class JIoEndpoint extends AbstractEndpoint {
                             // Ignore
                         }
                     } else if (state == SocketState.OPEN ||
-                            state == SocketState.UPGRADING  ||
-                            state == SocketState.UPGRADED){
+                            state == SocketState.UPGRADING ||
+                            state == SocketState.UPGRADED) {
                         socket.setKeptAlive(true);
                         socket.access();
                         launch = true;
@@ -336,21 +354,22 @@ public class JIoEndpoint extends AbstractEndpoint {
                 } finally {
                     if (launch) {
                         try {
-                            getExecutor().execute(new SocketProcessor(socket, SocketStatus.OPEN));
+                            getExecutor().execute(new SocketProcessor(socket,
+                                                                      SocketStatus.OPEN));
                         } catch (RejectedExecutionException x) {
-                            log.warn("Socket reprocessing request was rejected for:"+socket,x);
+                            log.warn("Socket reprocessing request was rejected for:"
+                                    + socket, x);
                             try {
-                                //unable to handle connection at this time
+                                // unable to handle connection at this time
                                 handler.process(socket, SocketStatus.DISCONNECT);
                             } finally {
                                 countDownConnection();
                             }
 
-
                         } catch (NullPointerException npe) {
                             if (running) {
                                 log.error(sm.getString("endpoint.launch.fail"),
-                                        npe);
+                                          npe);
                             }
                         }
                     }
@@ -361,7 +380,6 @@ public class JIoEndpoint extends AbstractEndpoint {
         }
 
     }
-
 
     // -------------------- Public methods --------------------
 
@@ -380,8 +398,7 @@ public class JIoEndpoint extends AbstractEndpoint {
 
         if (serverSocketFactory == null) {
             if (isSSLEnabled()) {
-                serverSocketFactory =
-                    handler.getSslImplementation().getServerSocketFactory(this);
+                serverSocketFactory = handler.getSslImplementation().getServerSocketFactory(this);
             } else {
                 serverSocketFactory = new DefaultServerSocketFactory(this);
             }
@@ -391,24 +408,22 @@ public class JIoEndpoint extends AbstractEndpoint {
             try {
                 if (getAddress() == null) {
                     serverSocket = serverSocketFactory.createSocket(getPort(),
-                            getBacklog());
+                                                                    getBacklog());
                 } else {
                     serverSocket = serverSocketFactory.createSocket(getPort(),
-                            getBacklog(), getAddress());
+                                                                    getBacklog(), getAddress());
                 }
             } catch (BindException orig) {
                 String msg;
                 if (getAddress() == null)
                     msg = orig.getMessage() + " <null>:" + getPort();
-                else
-                    msg = orig.getMessage() + " " +
-                            getAddress().toString() + ":" + getPort();
+                else msg = orig.getMessage() + " " +
+                        getAddress().toString() + ":" + getPort();
                 BindException be = new BindException(msg);
                 be.initCause(orig);
                 throw be;
             }
         }
-
     }
 
     @Override
@@ -429,7 +444,7 @@ public class JIoEndpoint extends AbstractEndpoint {
 
             // Start async timeout thread
             Thread timeoutThread = new Thread(new AsyncTimeout(),
-                    getName() + "-AsyncTimeout");
+                                              getName() + "-AsyncTimeout");
             timeoutThread.setPriority(threadPriority);
             timeoutThread.setDaemon(true);
             timeoutThread.start();
@@ -469,12 +484,10 @@ public class JIoEndpoint extends AbstractEndpoint {
         handler.recycle();
     }
 
-
     @Override
     protected AbstractEndpoint.Acceptor createAcceptor() {
         return new Acceptor();
     }
-
 
     /**
      * Configure the socket.
@@ -484,7 +497,7 @@ public class JIoEndpoint extends AbstractEndpoint {
             // 1: Set socket options: timeout, linger, etc
             socketProperties.setProperties(socket);
         } catch (SocketException s) {
-            //error here is common if the client has reset the connection
+            // error here is common if the client has reset the connection
             if (log.isDebugEnabled()) {
                 log.debug(sm.getString("endpoint.err.unexpected"), s);
             }
@@ -499,19 +512,18 @@ public class JIoEndpoint extends AbstractEndpoint {
         return true;
     }
 
-
     /**
      * Process a new connection from a new client. Wraps the socket so
      * keep-alive and other attributes can be tracked and then passes the socket
      * to the executor for processing.
-     *
-     * @param socket    The socket associated with the client.
-     *
-     * @return          <code>true</code> if the socket is passed to the
-     *                  executor, <code>false</code> if something went wrong or
-     *                  if the endpoint is shutting down. Returning
-     *                  <code>false</code> is an indication to close the socket
-     *                  immediately.
+     * 
+     * @param socket
+     *            The socket associated with the client.
+     * 
+     * @return <code>true</code> if the socket is passed to the executor,
+     *         <code>false</code> if something went wrong or if the endpoint is
+     *         shutting down. Returning <code>false</code> is an indication to
+     *         close the socket immediately.
      */
     protected boolean processSocket(Socket socket) {
         // Process the request from this socket
@@ -519,12 +531,10 @@ public class JIoEndpoint extends AbstractEndpoint {
             SocketWrapper<Socket> wrapper = new SocketWrapper<Socket>(socket);
             wrapper.setKeepAliveLeft(getMaxKeepAliveRequests());
             // During shutdown, executor may be null - avoid NPE
-            if (!running) {
-                return false;
-            }
+            if (!running) { return false; }
             getExecutor().execute(new SocketProcessor(wrapper));
         } catch (RejectedExecutionException x) {
-            log.warn("Socket processing request was rejected for:"+socket,x);
+            log.warn("Socket processing request was rejected for:" + socket, x);
             return false;
         } catch (Throwable t) {
             ExceptionUtils.handleThrowable(t);
@@ -536,43 +546,43 @@ public class JIoEndpoint extends AbstractEndpoint {
         return true;
     }
 
-
     /**
      * Process an existing async connection. If processing is required, passes
      * the wrapped socket to an executor for processing.
-     *
-     * @param socket    The socket associated with the client.
-     * @param status    Only OPEN and TIMEOUT are used. The others are used for
-     *                  Comet requests that are not supported by the BIO (JIO)
-     *                  Connector.
-     * @return          <code>true</code> if the socket is passed to the
-     *                  executor, <code>false</code> if something went wrong.
-     *                  Returning <code>false</code> is an indication to close
-     *                  the socket immediately.
+     * 
+     * @param socket
+     *            The socket associated with the client.
+     * @param status
+     *            Only OPEN and TIMEOUT are used. The others are used for Comet
+     *            requests that are not supported by the BIO (JIO) Connector.
+     * @return <code>true</code> if the socket is passed to the executor,
+     *         <code>false</code> if something went wrong. Returning
+     *         <code>false</code> is an indication to close the socket
+     *         immediately.
      */
     public boolean processSocketAsync(SocketWrapper<Socket> socket,
-            SocketStatus status) {
+                                      SocketStatus status) {
         try {
             synchronized (socket) {
                 if (waitingRequests.remove(socket)) {
-                    SocketProcessor proc = new SocketProcessor(socket,status);
+                    SocketProcessor proc = new SocketProcessor(socket, status);
                     ClassLoader loader = Thread.currentThread().getContextClassLoader();
                     try {
-                        //threads should not be created by the webapp classloader
+                        // threads should not be created by the webapp
+                        // classloader
                         if (Constants.IS_SECURITY_ENABLED) {
                             PrivilegedAction<Void> pa = new PrivilegedSetTccl(
-                                    getClass().getClassLoader());
+                                                                              getClass().getClassLoader());
                             AccessController.doPrivileged(pa);
                         } else {
                             Thread.currentThread().setContextClassLoader(
-                                    getClass().getClassLoader());
+                                                                         getClass().getClassLoader());
                         }
                         // During shutdown, executor may be null - avoid NPE
-                        if (!running) {
-                            return false;
-                        }
+                        if (!running) { return false; }
                         getExecutor().execute(proc);
-                        //TODO gotta catch RejectedExecutionException and properly handle it
+                        // TODO gotta catch RejectedExecutionException and
+                        // properly handle it
                     } finally {
                         if (Constants.IS_SECURITY_ENABLED) {
                             PrivilegedAction<Void> pa = new PrivilegedSetTccl(loader);
@@ -594,7 +604,7 @@ public class JIoEndpoint extends AbstractEndpoint {
     }
 
     protected ConcurrentLinkedQueue<SocketWrapper<Socket>> waitingRequests =
-        new ConcurrentLinkedQueue<SocketWrapper<Socket>>();
+                                                                             new ConcurrentLinkedQueue<SocketWrapper<Socket>>();
 
     @Override
     protected Log getLog() {
