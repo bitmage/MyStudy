@@ -1084,7 +1084,7 @@ public abstract class AbstractReplicatedMap extends ConcurrentHashMap implements
         }
 
         @Override
-        public Set<Object> keySet() {
+        public KeySetView keySet() {
             //todo implement
             //should only return keys where this is active.
             LinkedHashSet<Object> set = new LinkedHashSet<Object>(super.size());
@@ -1095,7 +1095,7 @@ public abstract class AbstractReplicatedMap extends ConcurrentHashMap implements
                 MapEntry entry = (MapEntry)super.get(key);
                 if ( entry!=null && entry.isActive() ) set.add(key);
             }
-            return Collections.unmodifiableSet(set);
+            return (KeySetView) Collections.unmodifiableSet(set);
 
         }
 
