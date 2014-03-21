@@ -281,7 +281,6 @@ public class InternalInputBuffer extends AbstractInputBuffer<Socket> {
      * @return false after reading a blank line (which indicates that the
      * HTTP header parsing is done
      */
-    @SuppressWarnings("null") // headerValue cannot be null
     private boolean parseHeader()
         throws IOException {
 

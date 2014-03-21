@@ -178,7 +178,7 @@ public class JIoEndpoint extends AbstractEndpoint {
                     SocketWrapper<Socket> socket = sockets.next();
                     long access = socket.getLastAccess();
                     if (socket.getTimeout() > 0 &&
-                            (now - access) > socket.getTimeout()) {
+                        (now - access) > socket.getTimeout()) {
                         processSocketAsync(socket, SocketStatus.TIMEOUT);
                     }
                 }
@@ -342,8 +342,8 @@ public class JIoEndpoint extends AbstractEndpoint {
                             // Ignore
                         }
                     } else if (state == SocketState.OPEN ||
-                            state == SocketState.UPGRADING ||
-                            state == SocketState.UPGRADED) {
+                               state == SocketState.UPGRADING ||
+                               state == SocketState.UPGRADED) {
                         socket.setKeptAlive(true);
                         socket.access();
                         launch = true;
@@ -358,7 +358,7 @@ public class JIoEndpoint extends AbstractEndpoint {
                                                                       SocketStatus.OPEN));
                         } catch (RejectedExecutionException x) {
                             log.warn("Socket reprocessing request was rejected for:"
-                                    + socket, x);
+                                     + socket, x);
                             try {
                                 // unable to handle connection at this time
                                 handler.process(socket, SocketStatus.DISCONNECT);
@@ -418,7 +418,7 @@ public class JIoEndpoint extends AbstractEndpoint {
                 if (getAddress() == null)
                     msg = orig.getMessage() + " <null>:" + getPort();
                 else msg = orig.getMessage() + " " +
-                        getAddress().toString() + ":" + getPort();
+                           getAddress().toString() + ":" + getPort();
                 BindException be = new BindException(msg);
                 be.initCause(orig);
                 throw be;
@@ -571,12 +571,10 @@ public class JIoEndpoint extends AbstractEndpoint {
                         // threads should not be created by the webapp
                         // classloader
                         if (Constants.IS_SECURITY_ENABLED) {
-                            PrivilegedAction<Void> pa = new PrivilegedSetTccl(
-                                                                              getClass().getClassLoader());
+                            PrivilegedAction<Void> pa = new PrivilegedSetTccl(getClass().getClassLoader());
                             AccessController.doPrivileged(pa);
                         } else {
-                            Thread.currentThread().setContextClassLoader(
-                                                                         getClass().getClassLoader());
+                            Thread.currentThread().setContextClassLoader(getClass().getClassLoader());
                         }
                         // During shutdown, executor may be null - avoid NPE
                         if (!running) { return false; }
@@ -603,8 +601,7 @@ public class JIoEndpoint extends AbstractEndpoint {
         return true;
     }
 
-    protected ConcurrentLinkedQueue<SocketWrapper<Socket>> waitingRequests =
-                                                                             new ConcurrentLinkedQueue<SocketWrapper<Socket>>();
+    protected ConcurrentLinkedQueue<SocketWrapper<Socket>> waitingRequests = new ConcurrentLinkedQueue<SocketWrapper<Socket>>();
 
     @Override
     protected Log getLog() {
