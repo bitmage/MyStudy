@@ -276,9 +276,12 @@ public final class Bootstrap {
      * getServer() for configtest
      */
     private Object getServer() throws Exception {
-        String methodName = "getServer";
-        Method method = catalinaDaemon.getClass().getMethod(methodName);
-        return method.invoke(catalinaDaemon);
+
+        // String methodName = "getServer";
+        // Method method = catalinaDaemon.getClass().getMethod(methodName);
+        // return method.invoke(catalinaDaemon);
+
+        return ((Catalina) catalinaDaemon).getServer();
 
     }
 
@@ -329,8 +332,7 @@ public final class Bootstrap {
     public void stopServer()
         throws Exception {
 
-        Method method =
-                        catalinaDaemon.getClass().getMethod("stopServer", (Class[]) null);
+        Method method = catalinaDaemon.getClass().getMethod("stopServer", (Class[]) null);
         method.invoke(catalinaDaemon, (Object[]) null);
 
     }
@@ -451,7 +453,7 @@ public final class Bootstrap {
         } catch (Throwable t) {
             // Unwrap the Exception for clearer error reporting
             if (t instanceof InvocationTargetException &&
-                    t.getCause() != null) {
+                t.getCause() != null) {
                 t = t.getCause();
             }
             handleThrowable(t);
