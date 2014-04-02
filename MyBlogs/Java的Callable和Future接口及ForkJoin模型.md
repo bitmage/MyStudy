@@ -1,4 +1,4 @@
-Java的Callable，Future接口及Fork/Join模型
+Java的Callable和Future接口及Fork/Join模型
 ---
 
 目前已经大三下了，马上就要准备实习了，所以也开始好好复习之前的一些内容了，对于Java中的callable和future之前也是有所了解，但是
@@ -63,6 +63,9 @@ Java的Callable，Future接口及Fork/Join模型
 至此，本文结束。
 
 **PS:[参考网页]**
-+ [Oracle - Fork and Join: Java Can Excel at Painless Parallel Programming Too!](http://www.oracle.com/technetwork/articles/java/fork-join-422606.html)
-+ [并发编程网 - work-stealing](http://ifeve.com/java7-fork-join-and-closure/)
-+ [IBM - JDK 7 中的 Fork/Join 模式](http://www.ibm.com/developerworks/cn/java/j-lo-forkjoin/)
+
+ > + [Oracle - Fork and Join: Java Can Excel at Painless Parallel Programming Too!](http://www.oracle.com/technetwork/articles/java/fork-join-422606.html)
+ > 
+ > + [并发编程网 - work-stealing](http://ifeve.com/java7-fork-join-and-closure/)
+ > 
+ > + [IBM - JDK 7 中的 Fork/Join 模式](http://www.ibm.com/developerworks/cn/java/j-lo-forkjoin/)
