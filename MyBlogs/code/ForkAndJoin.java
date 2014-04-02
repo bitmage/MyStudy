@@ -1,4 +1,4 @@
-package concurrency.forkandjoinexample;
+package iot.mike.interview.concurrent;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -6,21 +6,44 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Timer;
+import java.util.TimerTask;
 import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.RecursiveTask;
 
 public class ForkAndJoin {
 
-    private static final String       SEARCH_STRING = "m";
-    private static final String       SEARCH_FOLDER = "/home/mike/Documents"
-                                                      + "/MyStudy/MyStudy/MyBlogs/";
+    private static final String       SEARCH_STRING = "mike";
+    private static final String       SEARCH_FOLDER = "/home/mike/Downloads/graphlab-master/";
 
-    private static final ForkJoinPool forkJoinPool  = new ForkJoinPool();
+    private static final ForkJoinPool forkJoinPool  = new ForkJoinPool(50);
 
     public static void main(String[] args) throws IOException {
-        Folder folder =
-                Folder.fromDirectory(new File(SEARCH_FOLDER));
+        Timer timer = new Timer();
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                System.out.println("Queued Submission Count : " + forkJoinPool.getQueuedSubmissionCount());
+                System.out.println("Steal Count : " + forkJoinPool.getStealCount());
+                System.out.println("Active Thread Count : " + forkJoinPool.getActiveThreadCount());
+                System.out.println("Parallelism Count : " + forkJoinPool.getParallelism());
+                System.out.println("Running Thread Count : " + forkJoinPool.getRunningThreadCount());
+                System.out.println("Queued Task Count : " + forkJoinPool.getQueuedTaskCount());
+                System.out.println();
+            }
+        },
+                       0,
+                       2000);
+        Folder folder = Folder.fromDirectory(new File(SEARCH_FOLDER));
+        System.out.println("数据读入完毕");
+        long start = System.currentTimeMillis();
         System.out.println(countOccurrencesOnSingleThread(folder, SEARCH_STRING));
+        System.out.println("单线程耗时 : "+(System.currentTimeMillis() - start));
+        
+        start = System.currentTimeMillis();
+        System.out.println(countOccurrencesInParallel(folder, SEARCH_STRING));
+        System.out.println("多线程耗时 : "+(System.currentTimeMillis() - start));
+        timer.cancel();
     }
 
     static Long countOccurrencesInParallel(Folder folder, String searchedWord) {
@@ -161,5 +184,5 @@ public class ForkAndJoin {
             return count;
         }
     }
-
 }
+
