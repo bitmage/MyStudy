@@ -3,7 +3,7 @@
 
 说来也巧合，在[内推网](http://neitui.me)上投了阿里的内推，然后很机缘巧合的接到了[蘑菇街](http://www.mogujie.com/)的面试电话。
 
-第一面是IM部门的负责人的面试，所以主要的交流都是在消息机制一块，因为之前写过一个消息机制的框架，可以看我得[GitHub-omniscient(顺风耳)](https://github.com/MikeCoder/omniscient)。
+第一面是IM部门的负责人的面试，所以主要的交流都是在消息机制一块，因为之前写过一个消息机制的框架，可以看我得[GitHub-Omniscient(顺风耳)](https://github.com/MikeCoder/Omniscient)。
 然后再阐述了自己对消息中间件的理解，基本都是集中在消息的处理和传递的过程。之后也谈了一些Java的基本问题，也是几次面试下来我被面试的最多的
 一个问题，就是Java的内存模型，也就是HotSpot虚拟机的分代垃圾回收机制。聊完之后，就是一个简单的算法题，然后其中还穿插者Java的集合源代码。
 比如HashMap的线程问题，和HashTable的区别，然后ConcurrentHashMap和HashTable的联系和区别。等等，总之回答的也就是基于源代码的，感觉还不错。
