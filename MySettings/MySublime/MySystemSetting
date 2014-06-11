@@ -7,11 +7,11 @@
     "auto_complete_triggers":
     [
         {
-            "characters": "<",
-            "selector": "text.html"
+            "characters": "qazwsxedcrfvtgbyhnujmikolpQAZWSXEDCRFVTGBYHNUJMIKOLP",
+            "selector": "text, source, meta, string, punctuation, constant"
         }
     ],
-    "auto_complete_with_fields": false,
+    "auto_complete_with_fields": true,
     "auto_indent": true,
     "auto_match_enabled": true,
     "binary_file_patterns":
@@ -30,9 +30,9 @@
         "*.jar",
         "*.zip"
     ],
-    "bold_folder_labels": false,
+    "bold_folder_labels": true,
     "caret_style": "smooth",
-    "close_windows_when_empty": false,
+    "close_windows_when_empty": true,
     "color_scheme": "Packages/zenburn/zenburn.tmTheme",
     "copy_with_empty_selection": true,
     "create_window_at_startup": true,
@@ -44,30 +44,13 @@
     "draw_centered": false,
     "draw_indent_guides": true,
     "draw_minimap_border": false,
-    "draw_white_space": "selection",
+    "draw_white_space": "none",
     "enable_hexadecimal_encoding": true,
     "ensure_newline_at_eof_on_save": false,
     "fade_fold_buttons": true,
     "fallback_encoding": "Western (Windows 1252)",
     "file_exclude_patterns":
     [
-        "*.jpg",
-        "*.jpeg",
-        "*.png",
-        "*.gif",
-        "*.ttf",
-        "*.tga",
-        "*.dds",
-        "*.ico",
-        "*.eot",
-        "*.pdf",
-        "*.swf",
-        "*.jar",
-        "*.zip",
-        "*.f*",
-        "*.project",
-        "*.settings",
-        "*.t*",
         "*.git*",
         "*.do",
         "*.pyc",
@@ -86,42 +69,42 @@
         "*.pdb",
         "*.idb",
         ".DS_Store",
-        "*.class*",
+        "*.class",
         "*.psd",
-        "*.db"
+        "*.db",
+        "*.jpg",
+        "*.gif",
+        "*.swf",
+        "*.png"
     ],
     "find_selected_text": true,
     "fold_buttons": true,
     "folder_exclude_patterns":
     [
-        ".metadata",
-        ".settings",
         ".svn",
         ".git",
         ".hg",
         "CVS"
     ],
-    "font_face": "TlwgMono",
+    "font_face": "YaHei Consolas Hybrid",
     "font_options":
     [
     ],
-    "font_size": 13,
+    "font_size": 10,
     "gpu_window_buffer": "auto",
     "gutter": true,
     "highlight_line": true,
     "highlight_modified_tabs": true,
-    "hot_exit": true,
+    "hot_exit": false,
     "ignored_packages":
     [
-        "Vintage"
+        "Vintage",
+        "SyncedSideBar"
     ],
     "ignored_words":
     [
-        "Djava",
         "Quickstart",
         "Soochow",
-        "accesslog=false",
-        "haltonfailure=false",
         "readme"
     ],
     "indent_guide_options":
@@ -129,7 +112,7 @@
         "draw_normal"
     ],
     "indent_subsequent_lines": true,
-    "indent_to_bracket": false,
+    "indent_to_bracket": true,
     "line_numbers": true,
     "line_padding_bottom": 0,
     "line_padding_top": 0,
@@ -145,7 +128,7 @@
     "open_files_in_new_window": true,
     "overlay_scroll_bars": "system",
     "preview_on_click": true,
-    "remember_open_files": true,
+    "remember_open_files": false,
     "rulers":
     [
     ],
@@ -153,9 +136,9 @@
     "scroll_past_end": true,
     "scroll_speed": 1.0,
     "shift_tab_unindent": false,
-    "show_full_path": true,
+    "show_full_path": false,
     "show_panel_on_build": true,
-    "show_tab_close_buttons": true,
+    "show_tab_close_buttons": false,
     "smart_indent": true,
     "spell_check": false,
     "tab_completion": false,
@@ -165,9 +148,9 @@
     "tree_animation_enabled": true,
     "trim_automatic_white_space": true,
     "trim_trailing_white_space_on_save": false,
-    "use_simple_full_screen": false,
+    "use_simple_full_screen": true,
     "use_tab_stops": true,
     "word_separators": "./\\()\"'-:,.;<>~!@#$%^&*|+=[]{}`~?",
-    "word_wrap": "false",
+    "word_wrap": "true",
     "wrap_width": 0
 }
