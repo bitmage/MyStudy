@@ -1,4 +1,4 @@
-###像NodeJS一样写Java(二)
+像NodeJS一样写Java(二)
 ---
 在上篇文章中[像NodeJS一样写Java(一)](http://mikecoder.net/?post=95)中，我们已经了解了一个简单的单线程异步框架的基本构成和编写方式。
 
@@ -116,7 +116,7 @@ public static void main(String[] args) {
 ```
 你就可以看到两个计算PI的任务在一个线程中交替执行了。
 效果图如下：
-> ![image](http://mikecoder.net/content/plugins/kl_album/upload/201406/fe1027e61413d53b76ae328ee69120642014061212261528394.png)
+> ![运行效果图](images/2014-06-12-1.png)
 
 当然，你也可以编写自己的异步任务，然后放入框架中运行。
 

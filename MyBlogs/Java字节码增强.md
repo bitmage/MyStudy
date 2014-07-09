@@ -47,6 +47,7 @@
 > + 首先，我们有这么一个类:
 >
 > ![image](images/2014-01-17-5.png)
+>
 > + 然后，我们想在执行这个类的say方法时，多加一句话，因为不知道是谁说的，于是，我们这么做，利用
 [**Javasist**](http://www.csg.ci.i.u-tokyo.ac.jp/~chiba/javassist/)的API。
 >
