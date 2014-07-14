@@ -49,4 +49,9 @@ sudo openvpn config.ovpn
 使用方法为:`source **.sh`,不要使用`sh *.sh`和`./**.sh`，避免出现cd不到指定目录的情况。
 
 然后就可以等着输入用户名和密码，之后便是自动的连接。等到出现如下文字的时候说明已经成功启动openvpn，
+> ![image](images/openvpn-1.png)
+
 接着就可以使用ssh连接上juanniu125来进行调试和修改了。
+
+
+
