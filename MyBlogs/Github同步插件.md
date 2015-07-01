@@ -31,7 +31,7 @@ int main() {
 
 > ![完成效果](./images/github-test-3.jpg)
 
-然后就是简单的保存和提交了。还在怀疑吗，其实这篇文章就是用这个插件写出来的。
+然后就是简单的保存和提交了。还在怀疑吗，其实这篇文章就是用这个插件写出来的,原文在[这-GITHUB](https://github.com/MikeCoder/MyStudy/blob/master/MyBlogs/Github%E5%90%8C%E6%AD%A5%E6%8F%92%E4%BB%B6.md)。
 
 #注意事项!!!
 写markdown的时候需要注意以下几点。开头第一行一定需要是标题，且用"==="或者"---"标注
