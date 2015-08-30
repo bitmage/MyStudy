@@ -22,7 +22,7 @@ FireFox 上 JSONView 的配置
 
 然后就可以了。
 
-//=============================================================================================
+//=======================================================================
 
 开始查看他的源码，终于发现如下的代码:
 
@@ -31,7 +31,9 @@ FireFox 上 JSONView 的配置
 // always be a unique list that includes "application/json".
 function getJsonContentTypes() {
   // 读取我们设置的配置
-  var contentTypes = prefsService.get('extensions.jsonview@brh.numbera.com.alternateContentTypes').split(/[,\s]+/);
+  var contentTypes = prefsService
+    .get('extensions.jsonview@brh.numbera.com.alternateContentTypes')
+    .split(/[,\s]+/);
   contentTypes.push("application/json");
 
   var unique = {};
