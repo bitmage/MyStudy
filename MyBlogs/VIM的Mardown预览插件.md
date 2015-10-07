@@ -24,17 +24,17 @@ VIM 的 MarkDown 预览插件
 
 ####推荐使用 Bundle 和 Vundle 进行安装
 
-+ 添加 `Bundle 'MikeCoder/markdown-preview.vim'` 到 vimrc 或者 vimrc.bundles 里面
-+ 执行 `BundleInstall` 进行安装就可以了
++ 添加 **Bundle 'MikeCoder/markdown-preview.vim'** 到 vimrc 或者 vimrc.bundles 里面
++ 执行 **BundleInstall** 进行安装就可以了
 
 *BTW:推荐使用 [k-vim](https://github.com/wklken/k-vim) 做为 VIM 的配置*
 
 ####插件使用方法
 
 + 正常编辑你的.md 或者.markdown 文件。
-+ 如果需要进行预览的时候就可以执行`:MarkdownPreview default` 命令，在浏览器中进行预览
-+ **default**是主题，插件自带有`default 和 GitHub` 两个主题。
-+ 你也可以添加快捷键的方式简化操作，如:`map <leader>m :MarkdownPreview GitHub<CR>`
++ 如果需要进行预览的时候就可以执行**:MarkdownPreview default** 命令，在浏览器中进行预览
++ **default**是主题，插件自带有**default 和 GitHub** 两个主题。
++ 你也可以添加快捷键的方式简化操作，如:**map <leader>m :MarkdownPreview GitHub<CR>**
 
 ####自定义
 如果你想添加自己的主题。可以按照如下步骤:
@@ -43,7 +43,7 @@ VIM 的 MarkDown 预览插件
 + 然后找到 *MarkDownRes* 文件夹
 + 进入就可以看到 default.css 和 GitHub.css 两个文件
 + 将你的 css 文件添加到这，如 example.css
-+ 然后回到 vim,执行`:MarkDownPreview example`
++ 然后回到 vim,执行**:MarkDownPreview example**
 + 就可以用 example.css 的效果渲染你的 markdown 文档了
 
 ####代码高亮
