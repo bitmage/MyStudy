@@ -51,13 +51,11 @@
 1. 我们的所有 API 部署在 **https://url/mobile/api/** 下,如
     + GET https://url/api/userinfo/{uid}
     + GET https://url/api/products/
-    + ...
 2. 这边顺带说下我们如何解决版本问题。一般来说有两种方式：
->
-> + 将版本号写到 url 中
-> + 将版本号写到 Request Body 中或者 Header 中
->
-> 这边我们采用直接写到 url 中，简单粗暴
+    + 将版本号写到 url 中
+    + 将版本号写到 Request Body 中或者 Header 中
+
+    这边我们采用直接写到 url 中，简单粗暴
 
 #####第二点
 1. 我们所知道 Http Response Code 如下：
