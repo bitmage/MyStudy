@@ -9,7 +9,7 @@ PHP 调用 exec 执行中文命令的坑
 
 样例代码:
 
-```php
+```
 <?php
     $cmd = 'java -jar sign-maker.jar mike messi';
     exec($cmd, $ret, $out);
@@ -37,7 +37,7 @@ array(2) {
 
 可以看到，我们已经生成了两个 sign 值。但是，在传输过程中，对面居然报了 sign 无效的错误。觉得很奇怪，第一个 sign 是正确的，但是第二个就是败了。于是我们在终端中手动输入了这个命令:
 
-```bash
+```
 └─[$]> java -jar sign-maker.jar 麦克 梅西
 92144a18e9f75ec2e257c9bb15a05825a706064445b9492efd065dfd6c8b38d0bf0772218e29d3d8
 ```
@@ -71,7 +71,7 @@ array(2) {
 
 结果在服务器上发现并没有返回值。而在终端中，执行 *env | grep LANG* 却有如下输出:
 
-```bash
+```
 ➜  ~  env | grep LANG
 LANG=en_US.UTF-8
 ```
