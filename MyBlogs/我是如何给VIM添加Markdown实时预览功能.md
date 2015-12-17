@@ -6,7 +6,7 @@
 所以，我这边就闲里抽空把这个功能做了下。
 
 ####首先就是效果展示
-![效果展示](https://github.com/MikeCoder/markdown-preview.vim/blob/master/images/example.gif?raw=true)
+![效果展示](https://raw.githubusercontent.com/MikeCoder/markdown-preview.vim/master/images/example.gif)
 
 ####接着就是 HOW
 首先就是吐槽下 Python 居然不能管理线程。这个确实挺蛋疼的。不能强行关闭线程。其次，是 VIM 插件开发，资料真的少的可怜。基本上 bing 和 google 到的资料大多都是如何使用别人的插件，而不是如何创造插件。 作为一个在兴趣驱动编码时喜欢造轮子的逗比，我就决定自己写了。
