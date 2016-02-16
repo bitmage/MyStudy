@@ -7,7 +7,7 @@ Laravel Session 失效 Case
 
 即在 *app/Http/route.php* 里面，写如下的代码:
 
-```php
+```
 Route::group(['prefix' => 'Test', 'namespace' => 'Test'], function() {
     Route::get('/', function() {
         Session::set('mike', 'mike');
@@ -20,7 +20,7 @@ Route::group(['prefix' => 'Test', 'namespace' => 'Test'], function() {
 
 因为推行 Laravel 框架的同事，之前在 Laravel5.1 的版本上实现了这个功能，也不能叫实现吧，就是重新测试了下，发下在他的代码中是可行的。他的代码如下：
 
-```php
+```
 Route::get('/', function() {
     session()->set('fff', 'fff');
     d(session()->get('fff'));
@@ -31,7 +31,7 @@ Route::get('/', function() {
 
 最简单的办法，就是抛一个异常看看调用栈。这是我们新版本的错误栈：
 
-```php
+```
 in routes.php line 16
 at RouteServiceProvider->{closure}()
 at call_user_func_array(object(Closure), array()) in Route.php line 158
@@ -61,7 +61,7 @@ at Kernel->handle(object(Request)) in index.php line 52
 
 这是旧版本的错误栈:
 
-```php
+```
 in routes.php line 15
 at RouteServiceProvider->{closure}()
 at call_user_func_array(object(Closure), array()) in compiled.php line 7843
@@ -114,7 +114,7 @@ at Kernel->handle(object(Request)) in index.php line 68
 
 果不出所料，在 app/Http/Kernel.php 中看到了这个类:
 
-```php
+```
 protected $middleware = [
     \Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode::class,
 ];
@@ -136,7 +136,7 @@ protected $middlewareGroups = [
 
 同理，我去看了老版本的代码，发现了这边确实是不同的:
 
-```php
+```
 protected $middleware = [
     'Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode',
     'Illuminate\Cookie\Middleware\EncryptCookies',
@@ -169,7 +169,7 @@ protected $routeMiddleware = [
 
 所以解决办法也很简单。就是在 route 中添加 web 中间件即可。如最上面的代码修改成:
 
-```php
+```
 Route::group(['middleware' => 'web', 'prefix' => 'Test', 'namespace' => 'Test'], function() {
     Route::get('/', function() {
         Session::set('mike', 'mike');
