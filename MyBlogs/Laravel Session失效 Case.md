@@ -117,6 +117,12 @@ at Kernel->handle(object(Request)) in index.php line 68
 ```
 <?php
 
+namespace App\Http;
+
+use Illuminate\Foundation\Http\Kernel as HttpKernel;
+
+class Kernel extends HttpKernel
+{
     protected $middleware = [
         \Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode::class,
     ];
@@ -141,31 +147,32 @@ at Kernel->handle(object(Request)) in index.php line 68
 ```
 <?php
 
+namespace App\Http;
+
+use Illuminate\Foundation\Http\Kernel as HttpKernel;
+
+class Kernel extends HttpKernel
+{
     protected $middleware = [
-        'Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode',
-        'Illuminate\Cookie\Middleware\EncryptCookies',
-        'Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse',
-        'Illuminate\Session\Middleware\StartSession',
-        'Illuminate\View\Middleware\ShareErrorsFromSession',
-        '\LucaDegasperi\OAuth2Server\Middleware\OAuthExceptionHandlerMiddleware',
+        \Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode::class,
+        \Illuminate\Cookie\Middleware\EncryptCookies::class,
+        \Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse::class,
+        \Illuminate\Session\Middleware\StartSession::class,
+        \Illuminate\View\Middleware\ShareErrorsFromSession::class,
+        \LucaDegasperi\OAuth2Server\Middleware\OAuthExceptionHandlerMiddleware::class
     ];
 
-    /**
-    * The application's route middleware.
-    *
-    * @var array
-    */
     protected $routeMiddleware = [
-        'auth' => 'App\Http\Middleware\Authenticate',
-        'auth.basic' => 'Illuminate\Auth\Middleware\AuthenticateWithBasicAuth',
-        'guest' => 'App\Http\Middleware\RedirectIfAuthenticated',
-        'role' => 'App\Http\Middleware\Role',
-        'permission' => 'App\Http\Middleware\Permission',
-        'csrf' => 'App\Http\Middleware\VerifyCsrfToken',
-        'oauth' => '\LucaDegasperi\OAuth2Server\Middleware\OAuthMiddleware',
-        'oauth-user' => '\LucaDegasperi\OAuth2Server\Middleware\OAuthUserOwnerMiddleware',
-        'oauth-client' => '\LucaDegasperi\OAuth2Server\Middleware\OAuthClientOwnerMiddleware',
-        'check-authorization-params' => '\LucaDegasperi\OAuth2Server\Middleware\CheckAuthCodeRequestMiddleware',
+        'auth' => App\Http\Middleware\Authenticate::class,
+        'auth.basic' => Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
+        'guest' => App\Http\Middleware\RedirectIfAuthenticated::class,
+        'role' => App\Http\Middleware\Role::class,
+        'permission' => App\Http\Middleware\Permission::class,
+        'csrf' => App\Http\Middleware\VerifyCsrfToken::class,
+        'oauth' => \LucaDegasperi\OAuth2Server\Middleware\OAuthMiddleware::class,
+        'oauth-user' => \LucaDegasperi\OAuth2Server\Middleware\OAuthUserOwnerMiddleware::class,
+        'oauth-client' => \LucaDegasperi\OAuth2Server\Middleware\OAuthClientOwnerMiddleware::class,
+        'check-authorization-params' => \LucaDegasperi\OAuth2Server\Middleware\CheckAuthCodeRequestMiddleware::class
     ];
 ```
 
