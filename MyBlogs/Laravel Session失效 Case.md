@@ -115,54 +115,58 @@ at Kernel->handle(object(Request)) in index.php line 68
 果不出所料，在 app/Http/Kernel.php 中看到了这个类:
 
 ```
-protected $middleware = [
-    \Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode::class,
-];
+<?php
 
-protected $middlewareGroups = [
-    'web' => [
-        \App\Http\Middleware\EncryptCookies::class,
-        \Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse::class,
-        \Illuminate\Session\Middleware\StartSession::class,
-        \Illuminate\View\Middleware\ShareErrorsFromSession::class,
-        \App\Http\Middleware\VerifyCsrfToken::class,
-    ],
+    protected $middleware = [
+        \Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode::class,
+    ];
 
-    'api' => [
-        'throttle:60,1',
-    ],
-];
+    protected $middlewareGroups = [
+        'web' => [
+            \App\Http\Middleware\EncryptCookies::class,
+            \Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse::class,
+            \Illuminate\Session\Middleware\StartSession::class,
+            \Illuminate\View\Middleware\ShareErrorsFromSession::class,
+            \App\Http\Middleware\VerifyCsrfToken::class,
+        ],
+
+        'api' => [
+            'throttle:60,1',
+        ],
+    ];
 ```
 
 同理，我去看了老版本的代码，发现了这边确实是不同的:
 
 ```
-protected $middleware = [
-    'Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode',
-    'Illuminate\Cookie\Middleware\EncryptCookies',
-    'Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse',
-    'Illuminate\Session\Middleware\StartSession',
-    'Illuminate\View\Middleware\ShareErrorsFromSession',
-    '\LucaDegasperi\OAuth2Server\Middleware\OAuthExceptionHandlerMiddleware',
-];
+<?php
 
-/**
+    protected $middleware = [
+        'Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode',
+        'Illuminate\Cookie\Middleware\EncryptCookies',
+        'Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse',
+        'Illuminate\Session\Middleware\StartSession',
+        'Illuminate\View\Middleware\ShareErrorsFromSession',
+        '\LucaDegasperi\OAuth2Server\Middleware\OAuthExceptionHandlerMiddleware',
+    ];
+
+    /**
     * The application's route middleware.
     *
     * @var array
     */
-protected $routeMiddleware = [
-    'auth' => 'App\Http\Middleware\Authenticate',
-    'auth.basic' => 'Illuminate\Auth\Middleware\AuthenticateWithBasicAuth',
-    'guest' => 'App\Http\Middleware\RedirectIfAuthenticated',
-    'role' => 'App\Http\Middleware\Role',
-    'permission' => 'App\Http\Middleware\Permission',
-    'csrf' => 'App\Http\Middleware\VerifyCsrfToken',
-    'oauth' => '\LucaDegasperi\OAuth2Server\Middleware\OAuthMiddleware',
-    'oauth-user' => '\LucaDegasperi\OAuth2Server\Middleware\OAuthUserOwnerMiddleware',
-    'oauth-client' => '\LucaDegasperi\OAuth2Server\Middleware\OAuthClientOwnerMiddleware',
-    'check-authorization-params' => '\LucaDegasperi\OAuth2Server\Middleware\CheckAuthCodeRequestMiddleware',
-];
+    protected $routeMiddleware = [
+        'auth' => 'App\Http\Middleware\Authenticate',
+        'auth.basic' => 'Illuminate\Auth\Middleware\AuthenticateWithBasicAuth',
+        'guest' => 'App\Http\Middleware\RedirectIfAuthenticated',
+        'role' => 'App\Http\Middleware\Role',
+        'permission' => 'App\Http\Middleware\Permission',
+        'csrf' => 'App\Http\Middleware\VerifyCsrfToken',
+        'oauth' => '\LucaDegasperi\OAuth2Server\Middleware\OAuthMiddleware',
+        'oauth-user' => '\LucaDegasperi\OAuth2Server\Middleware\OAuthUserOwnerMiddleware',
+        'oauth-client' => '\LucaDegasperi\OAuth2Server\Middleware\OAuthClientOwnerMiddleware',
+        'check-authorization-params' => '\LucaDegasperi\OAuth2Server\Middleware\CheckAuthCodeRequestMiddleware',
+    ];
 ```
 
 可以看到，这边直接将 Session 和 Cookie 直接写进了默认加载的 middleware 里面，所以在没有指定 middleware group 的情况下，依旧能读写 Session。
