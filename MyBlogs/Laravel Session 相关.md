@@ -100,6 +100,6 @@ session.gc_divisor = 100
 说了这么多，似乎PHP 原生的 Session 机制，并没有什么大的问题，而且看上去实现的还算是优雅。那么，为什么 Laravel 需要重新设计一套与原生没有一点联系的 Session 机制？
 
 ####Laravel Session 由来
-详情见[Laravel 开发者的自白](https://github.com/laravel/framework/issues/5416#issuecomment-68366445), 英文不太好，翻译轻喷。
+详情见[Laravel 开发者的自白](https://github.com/laravel/framework/issues/5416#issuecomment-68366445), 英文不太好，翻译轻喷。大意就是
 
 1.
