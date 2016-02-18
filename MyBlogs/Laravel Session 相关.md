@@ -25,17 +25,25 @@ PHPAPI zend_string *php_session_create_id(PS_CREATE_SID_ARGS) /* {{{ */
 
 	gettimeofday(&tv, NULL); // 获得时间戳
 
-	if ((array = zend_hash_str_find(&EG(symbol_table), "_SERVER", sizeof("_SERVER") - 1)) &&
-		Z_TYPE_P(array) == IS_ARRAY &&
-		(token = zend_hash_str_find(Z_ARRVAL_P(array), "REMOTE_ADDR", sizeof("REMOTE_ADDR") - 1)) &&
-		Z_TYPE_P(token) == IS_STRING
-	) {
+	if ((array = zend_hash_str_find(&EG(symbol_table),
+                                    "_SERVER",
+                                    sizeof("_SERVER") - 1))
+        && Z_TYPE_P(array) == IS_ARRAY
+        && (token = zend_hash_str_find(Z_ARRVAL_P(array),
+                                    "REMOTE_ADDR",
+                                    sizeof("REMOTE_ADDR") - 1))
+        && Z_TYPE_P(token) == IS_STRING)
+    {
 		remote_addr = Z_STRVAL_P(token);
 	}
     // 如果可能，获得用户的地址
 
 	/* maximum 15+19+19+10 bytes */
-	spprintf(&buf, 0, "%.15s%ld" ZEND_LONG_FMT "%0.8F", remote_addr ? remote_addr : "", tv.tv_sec, (zend_long)tv.tv_usec, php_combined_lcg() * 10);
+	spprintf(&buf, 0, "%.15s%ld" ZEND_LONG_FMT "%0.8F",
+                        remote_addr ? remote_addr : "",
+                        tv.tv_sec,
+                        (zend_long)tv.tv_usec,
+                        php_combined_lcg() * 10);
     //%.15s	remote_addr ? remote_addr : "" 这是用户的地址
     //%ld		tv.tv_sec	当前的时间戳
     //%ld		(long int)tv.tv_usec 当前毫秒数
@@ -61,7 +69,10 @@ PHPAPI zend_string *php_session_create_id(PS_CREATE_SID_ARGS) /* {{{ */
 	}
 
 	outid = zend_string_alloc((digest_len + 2) * ((8.0f / PS(hash_bits_per_character) + 0.5)), 0);
-	ZSTR_LEN(outid) = (size_t)(bin_to_readable((char *)digest, digest_len, ZSTR_VAL(outid), (char)PS(hash_bits_per_character)) - (char *)&ZSTR_VAL(outid));
+	ZSTR_LEN(outid) = (size_t)(bin_to_readable((char *)digest,
+                                                digest_len,
+                                                ZSTR_VAL(outid),
+                                                (char)PS(hash_bits_per_character)) - (char *)&ZSTR_VAL(outid));
     // 散列后的二进制数据digest用字符串表示成可读的形式，并放置在outid字符串里
 	efree(digest);
     // 此时的 outid 就是最终的 Session ID
