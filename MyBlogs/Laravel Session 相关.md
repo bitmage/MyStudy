@@ -100,6 +100,33 @@ session.gc_divisor = 100
 说了这么多，似乎PHP 原生的 Session 机制，并没有什么大的问题，而且看上去实现的还算是优雅。那么，为什么 Laravel 需要重新设计一套与原生没有一点联系的 Session 机制？
 
 ####Laravel Session 由来
-详情见[Laravel 开发者的自白](https://github.com/laravel/framework/issues/5416#issuecomment-68366445), 英文不太好，翻译轻喷。大意就是
+详情见[Laravel 开发者的自白](https://github.com/laravel/framework/issues/5416#issuecomment-68366445), 英文不太好，翻译轻喷。大意就是 PHP 原生的 Session 直接写进了请求的头部，没有办法进行修改，这样违背了他们想要达到的封装一切设计理念。
 
-1.
+####Laravel Session 产生
+所以，他们就自己重新开发了一套。 - -。那么，为什么他们需要修改 Session？其实，主要是为了防止 CSRF。通过阅读 Laravel 源码，我们可以看到他的 Session 生成思路：
+
+代码在:*vendor/laravel/framework/src/Illuminate/Session/Store.php*中
+```
+/**
+ * Get a new, random session ID.
+ *
+ * @return string
+ */
+protected function generateSessionId()
+{
+    return sha1(uniqid('', true).Str::random(25).microtime(true));
+}
+```
+
+即对 uniqid 拼接上一个25位的随机字符串然后还有当前时间戳的 sha1 值, 比如，可以通过火狐的开发者工具看到 Laravel 的 Session ID。
+
+有可能我们会发现他超过了sha1的长度，原因也很简单，因为我们开启了 CSRF 中间件。
+
+####那么，如果我们需要在不同的系统中公用 Session 怎么办？
+因为 Laravel 的 Session 是不兼容 PHP 的 Session 的。网上常用的说法是通过写一个转换器，或者是解析器来解决。
+
+我这边提供一个思路，就是重写 Laravel 的 Session，将生成 Session ID 直接等同于 PHP 原生的 Session。这个其实挺方便的。不过这就和 Laravel 的设计思路违背了。
+
+相对来说一个比较优雅的方法，我觉得是通过原有系统的接口来做。而非简单的直接读 Session 文件。
+
+
