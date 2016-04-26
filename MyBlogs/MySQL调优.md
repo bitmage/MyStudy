@@ -55,6 +55,7 @@
 最后的最后，面对这样的一个常 update 和 select 的场景，有没有好一点的实现解决思路呢？
 
 因为这张表设计的真的不合理。常用来搜索的字段都是 char 型。所以，我最后提出的一个优化方案就是：
+
 1. 修改引擎为 InnoDB
 2. 增加字段 wechat_id_idx, token_idx，这两个字段都是 int 型，生成的方法就是(以最好的语言 PHP 举例)：*$token_idx = base_convert( md5($token), 16, 10);*，将 char 转换成 int
 3. 基于上述两个字段建立索引
