@@ -2,21 +2,23 @@
 ---
 
 最近有一个朋友遇到一个问题，就是突然之间网站的响应时间变成了秒级，而且 MySQL 占用了大量的 CPU 资源。具体如下图:
-+ CPU 资源占用
++ CPU 资源占用:
 > ![CPU 资源](./images/cpu.png)
 
-+ 响应时间
++ 响应时间:
 > ![响应时间](./images/resp.png)
 
 可以看到这一个很明显的异常值。所以，我就开始排查。一切都是常规的思路，连上服务器，然后 *show full processlist;*。看看当前都是些什么任务。
-+ 当前任务
+
++ 当前任务:
 > ![当前任务](./images/tasks.png)
 
 可以看到，基本上所有的 query 都是在等待表锁。然后查了下这张表的表结构，还有 select 和 update 的执行情况。
-+ 表结构
+
++ 表结构:
 > ![表结构](./images/table.png)
 
-+ SELECT 语句执行情况
++ SELECT 语句执行情况:
 > 以 *SELECT x FROM `xx` WHERE ( `vote_id` = xx ) AND ( `token` = 'xx' ) AND ( `wecha_id` = 'x' ) LIMIT 1* 为例
 >
 > ![执行情况](./images/select.png)
