@@ -101,3 +101,7 @@ if (strpos($route, ':') !== false) {
 其余的一些，还是需要结合整体的框架来。比如权限认证，控制流等等。
 
 不过，在自己编写框架的时候，发现 Laravel 的设计确实合理。所以很大程度上，都是按照 Laravel 的思路在写一个简单的框架。
+
+推荐这个项目:[https://github.com/noahbuscher/Macaw](https://github.com/noahbuscher/Macaw)
+
+简答的 PHP Router，只有150多行的代码，但是麻雀虽小，五脏俱全。特别是那个魔术方法的，对于一个兼职写代码的人来说，确实眼前一亮的感觉。
