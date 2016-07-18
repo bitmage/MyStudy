@@ -60,8 +60,8 @@ allprojects {
 
 ```
 dependencies {
-    compile 'com.github.MikeCoder:MBanner:1.0.5' // 表示指定的版本
-    compile 'com.github.MikeCoder:MBanner:+' // 表示最新的版本
+    compile 'com.github.MikeCoder:MBanner:1.0.6' // 表示指定的版本
+    compile 'com.github.MikeCoder:MBanner:+' // 表示最新的版本（推荐使用）
 }
 ```
 
@@ -71,7 +71,77 @@ dependencies {
 
 
 ###使用方法：
-git clone 项目之后，见 app 模块中的 **MainActivity.java** 和 **ImageViewerActivity.java** 文件
+####基本使用:
++ 将其作为简单的 Banner，添加点击事件和长按事件:
+
+```
+MBannerView mBannerView1 = (MBannerView) this.findViewById(R.id.banner_view1);
+
+Banner banner = JSON.parseObject(readAssets(), Banner.class); // This just get resources from the file
+
+final ArrayList<MBannerEntity> entities = new ArrayList<>();
+for (int i = 0; i < banner.getRecommends().size(); i++) {
+    MBannerEntity entity = new MBannerEntity();
+    entity.setImgURL(banner.getRecommends().get(i).getThumb());
+    entity.setTitle(banner.getRecommends().get(i).getTitle());
+    entities.add(entity);
+}
+
+assert mBannerView1 != null;
+mBannerView1.setEntities(entities);
+mBannerView1.setOnBannerClickListener(new OnBannerClickListener() {
+    @Override
+    public void onClick(int idx) {
+        Toast.makeText(MainActivity.this,
+                        "CLICK:" + idx + "=> " + entities.get(idx).getTitle(),
+                        Toast.LENGTH_SHORT).show();
+    }
+});
+
+mBannerView1.setOnLongClickListener(new OnBannerLongClickListener() {
+    @Override
+    public boolean onLongClick(View v, int idx) {
+        Toast.makeText(MainActivity.this,
+                        "LONG CLICK:" + idx + "=> " + entities.get(idx).getTitle(),
+                        Toast.LENGTH_SHORT).show();
+        return true;
+    }
+});
+```
+
++ 如果希望添加自动滑动，使用如下方法，例子是3秒滑动一次。
+
+```
+// set auto scroll
+mBannerView1.setAutoScroll(3);
+```
+
++ 如果希望该改变背景填充色，可以调用如下方法。
+
+```
+// use the setBackground* method
+mBannerView.setBackgroundColor(Color.BLACK);
+```
+
++ 如果希望改变默认的 Loading 动画。(建议使用 GIF)
+
+```
+// add custom loading gif
+mBannerView2.setLoadingGIF(R.drawable.loading);
+```
+
+**PS**
+这个控件也可以作为 ImageViewer 使用，具体方法如下：
+
+```
+ArrayList<MBannerEntity> entities    = (ArrayList<MBannerEntity>) getIntent().getSerializableExtra(IMAGES_KEY);
+MBannerView              mBannerView = (MBannerView) findViewById(R.id.previewView);
+
+mBannerView.setFullEntities(entities); // instead of setEntities
+mBannerView.setBackgroundColor(Color.BLACK);
+```
+
+**具体的使用方法，可以参照 GITHUB 中的 app 模块。**
 
 ###做的不好的地方
 1. 关于 PageAdapter 还是没有抽象出来，导致自定义程度较低。
