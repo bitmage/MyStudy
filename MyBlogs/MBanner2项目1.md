@@ -28,6 +28,7 @@ MBanner2 项目(一) --- 基本设计
 4. 在 saiwu-bigkoo 中，则提供了一个暴露的接口，用来设置 PageIndicator 的样式。但是也有一个局限性，就是这个只支持固定位置的 PageIndicator，所以在和 JeasonWong 的绘图实现是冲突的，并不能很好的集成。
 
 所以这边的一个设计思路如下：
+
 1. 将 Banner 的页面定义成三个部分
     + Banner Header 头部，即页面的上部显示，微信的做法是这边显示是时间(主要用于图片浏览的时候)
     + Banner Content  图片本体，即图片,可以理解为中间的翻页本体
