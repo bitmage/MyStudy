@@ -75,66 +75,66 @@ MBanner2 项目(一) --- 基本设计
         + public abstract void setEntity(ArrayList<MBannerEntity> entities, int position); // 为什么使用 List 而不是单个的对象，为什么不是 List 而是 ArrayList？稍后解答
         + public abstract void setPageScroll(int idx, float offset);
     + 所以，可以在 MBannerView 中添加 listener，并将这三个方法进行调用。具体如下：
-        ```
-        private void generateBanner() {
-            if (headerView == null) {
-                headerView = new DefaultMBannerHeaderView(getContext());
-                headerView.setEntity(entities, 0);
-                header.addView(headerView);
-            }
-            if (bottomView == null) {
-                bottomView = new DefaultMBannerBottomView(getContext());
-                bottomView.setEntity(entities, 0);
-                bottom.addView(bottomView);
-            }
-            if (pagerAdapter == null) {
-                pagerAdapter = new DefaultMBannerPagerAdapter(this);
-                content.setAdapter(pagerAdapter);
-            }
-            content.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
-                @Override
-                public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-                    Log.i(Constants.TAG, "onPageScrolled:" + positionOffset + ":" + positionOffsetPixels);
-                    setPageScroll(position, positionOffset);
-                    content.setCurrentItem(position, true);
+
+            private void generateBanner() {
+                if (headerView == null) {
+                    headerView = new DefaultMBannerHeaderView(getContext());
+                    headerView.setEntity(entities, 0);
+                    header.addView(headerView);
                 }
-                @Override
-                public void onPageSelected(int position) {
-                    Log.i(Constants.TAG, "onPageSelected:" + String.valueOf(position));
-                    setIndex(position, entities.size());
+                if (bottomView == null) {
+                    bottomView = new DefaultMBannerBottomView(getContext());
+                    bottomView.setEntity(entities, 0);
+                    bottom.addView(bottomView);
                 }
-                @Override
-                public void onPageScrollStateChanged(int state) {
-                    Log.i(Constants.TAG, "onPageScrollStateChanged:" + String.valueOf(state));
+                if (pagerAdapter == null) {
+                    pagerAdapter = new DefaultMBannerPagerAdapter(this);
+                    content.setAdapter(pagerAdapter);
                 }
-            });
-        }
-        public void setIndex(int current, int total) {
-            if (headerView != null) headerView.setIndex(current, total);
-            if (bottomView != null) bottomView.setIndex(current, total);
-        }
-        public void setPageScroll(int idx, float offset) {
-            if (headerView != null) headerView.setPageScroll(idx, offset);
-            if (bottomView != null) bottomView.setPageScroll(idx, offset);
-        }
-        ```
+                content.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+                    @Override
+                    public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+                        Log.i(Constants.TAG, "onPageScrolled:" + positionOffset + ":" + positionOffsetPixels);
+                        setPageScroll(position, positionOffset);
+                        content.setCurrentItem(position, true);
+                    }
+                    @Override
+                    public void onPageSelected(int position) {
+                        Log.i(Constants.TAG, "onPageSelected:" + String.valueOf(position));
+                        setIndex(position, entities.size());
+                    }
+                    @Override
+                    public void onPageScrollStateChanged(int state) {
+                        Log.i(Constants.TAG, "onPageScrollStateChanged:" + String.valueOf(state));
+                    }
+                });
+            }
+            public void setIndex(int current, int total) {
+                if (headerView != null) headerView.setIndex(current, total);
+                if (bottomView != null) bottomView.setIndex(current, total);
+            }
+            public void setPageScroll(int idx, float offset) {
+                if (headerView != null) headerView.setPageScroll(idx, offset);
+                if (bottomView != null) bottomView.setPageScroll(idx, offset);
+            }
+
     + 这样，ViewPager 的变化可以反映到上下两个 FrameLayout 中，这就可以实现对应的控件变化。
     + 为什么使用 List 而不是单个对象：因为，在 FrameLayout 的 View 中，我们可能会需要知道总得数量，或者进行下一页的预览，使用 list 加 position 的组合会比较方便实现。
     + 为什么使用 ArrayList 而不是 List 接口：因为很多情况下，我们会通过 java 的序列化来进行数据的存储，而单独的 List 接口并没 implements Serializer 接口，导致无法序列化的异常。
 4. 至此，基本的设计说完，接下来说的是图片加载。
     + 因为很多时候，项目中已经使用了对应的图片加载框架，比如说 Glide，ImageLoader 等等，我们不太可能会因为使用一个库而单独去构建一个新的图片加载库。所以这边我借鉴了 youth5201314 的实现思路。
     + 通过添加 ImageLoadListener 接口实现。 在代码中：
-        ```
-        @Override
-        public void setEntity(ArrayList<MBannerEntity> entities, int position) {
-            MBannerEntity entity = entities.get(position);
-            if (onImageLoadListener == null) {
-                this.onImageLoadListener = new DefaultOnImageLoadListener();
+
+            @Override
+            public void setEntity(ArrayList<MBannerEntity> entities, int position) {
+                MBannerEntity entity = entities.get(position);
+                if (onImageLoadListener == null) {
+                    this.onImageLoadListener = new DefaultOnImageLoadListener();
+                }
+                this.onImageLoadListener.onImageLoad(mImageView, entity.getImgURL());
+                titleTV.setText(entity.getTitle());
             }
-            this.onImageLoadListener.onImageLoad(mImageView, entity.getImgURL());
-            titleTV.setText(entity.getTitle());
-        }
-        ```
+
 5. 将默认形态的 ImageView 改成了 PhotoView，这样的一个好处就是可以实现多图片滑动的图片浏览器功能。而且仅需要改动极少量代码的情况下。
 
 以上，就是这次重构的大部分内容。接下来的一篇就是具体的如何编写可测试的代码，以及几个样例的使用示范。
