@@ -59,6 +59,7 @@ MBanner2 项目(一) --- 基本设计
                 android:layout_alignParentBottom="true">
             </FrameLayout>
         </RelativeLayout>
+
     + 最外面是用 RelativeLayout 进行布局，方便适应屏幕。
     + 上下抽象为 RelativeLayout，方便进行覆盖控件编码。
     + 中间则是 ViewPager，负责主内容的展示。
