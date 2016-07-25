@@ -33,6 +33,7 @@ MBanner2 项目(一) --- 基本设计
     + Banner Content  图片本体，即图片,可以理解为中间的翻页本体
     + Banner Bottom   底部，这部分可以实现为图片的标题，或者像微信一样附加了评论等按钮(朋友圈图片浏览)
 2. 布局是这样设定的:
+        
         <?xml version="1.0" encoding="utf-8"?>
         <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                         android:layout_width="match_parent"
