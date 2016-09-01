@@ -41,7 +41,7 @@ class UserInfo extends Model
 }
 ```
 
-做一个一对一的关系。然后在需要获取数据的地方使用 *->comments* 的方法方便的得到数据:
+做一个一对一的关系。然后在需要获取数据的地方使用 *->userinfo* 的方法方便的得到数据:
 
 ```
 <?php
@@ -61,7 +61,6 @@ class IndexController extends Controller
         $users = User::all();
         foreach ($users as $user) {
             ($user->userinfo);
-            ($user->comments);
         }
     }
 }
