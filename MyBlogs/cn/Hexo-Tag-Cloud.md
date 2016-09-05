@@ -60,7 +60,7 @@ Hexo 标签云插件
 
 ####效果展示
 1. 这边首先上一个图片效果图:
-> ![TagCloud](http://chuantu.biz/t2/33/1458566883x1822613129.png)
+> ![TagCloud](./images/tag_cloud.png)
 
 2. 然后就是一个 Live Demo:
 > 请点击这个链接:[mikecoder.github.io](http://mikecoder.github.io)
