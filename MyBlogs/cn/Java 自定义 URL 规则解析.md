@@ -27,9 +27,10 @@ Java 自定义 URL 规则解析
 2. | 表示分支，or 条件需要使用\[\]
 3. - 表示范围，1-22 表示 1 到 22 。需要使用\[\]
 4. 支持嵌套，比如[1-2|[3-4]a].htm，表示 {1.htm, 2.htm, 3a.htm, 4a.htm} 这个集合
-5. 空格表示无数据。比如 m.baidu.com 和 baidu.com, 可以用这个表达式表示: *[m.| ]baidu.com*, 因为 URL 中不能出现空格，所以就用空格表示无。这也确实是无奈之举，因为对与 Java 的 split 函数，如果是无就不会分割。（其实是懒得再写自定义切分了）
+5. ~~空格表示无数据。比如 m.baidu.com 和 baidu.com, 可以用这个表达式表示: *[m.| ]baidu.com*, 因为 URL 中不能出现空格，所以就用空格表示无。这也确实是无奈之举，因为对与 Java 的 split 函数，如果是无就不会分割。（其实是懒得再写自定义切分了）~~
+6. 无数据直接留空就行比如: [|www.]bing.com 表示 bing.com 和 www.bing.com，因为直接用 split 方法在嵌套定义规则时有 bug，只好自己写了切分函数- -。
 
-为了比较好的来写这个东西，我自己举了个例子: **[http|https]://[m| ].mike/[1-2|[3-5]ff].html**
+为了比较好的来写这个东西，我自己举了个例子: **[http|https]://[m.| ]mike/[1-2|[3-5]ff].html**
 
 ###接下来就是如何实现了
 
@@ -38,10 +39,14 @@ Java 自定义 URL 规则解析
 在这里，就是对应的这样的一个图:
 
 ```
-S: start    E: end  loop: loop   BS: branch start    BE: branch end
+S: start
+E: end
+loop: loop
+BS: branch start
+BE: branch end
 
         -- http ---                 -- m. --                    -- loop: 1-2 --------------------
-S -- BS             BE -- :// -- BS          BE -- .mike/ -- BS                                   BE -- .html -- E
+S -- BS             BE -- :// -- BS          BE -- mike/ -- BS                                   BE -- .html -- E
         -- https --                 -- '' --                    -- BS -- loop: 3-5 -- BE -- ff --
 ```
 
@@ -164,11 +169,12 @@ S  --------------------  E
         if (snippet.charAt(0) == '[') {
             Block branchStart = new Block(Type.BRANCH_START);
             Block branchEnd = new Block(Type.BRANCH_END);
-
             current.getNexts().add(branchStart);
 
             String content = snippet.substring(1, snippet.length() - 1);
-            String[] branches = content.split("\\|");
+            // String[] branches = content.split("\\|");
+            // use custom split function instead
+            ArrayList<String> branches = _branches(content);
             for (String branch : branches) {
                 if (!_check(branch)) { // check does it has inner []
                     branchStart = _parse(branch, branchStart, branchEnd);
@@ -180,7 +186,8 @@ S  --------------------  E
                             start = Integer.parseInt(loops[0]);
                         } catch (Exception e) {
                             if (loops[0].length() == 1) {
-                                start = (int) ((char) loops[0].charAt(0));
+                                // use negative number to represent the char
+                                start = -(int) ((char) loops[0].charAt(0));
                             } else {
                                 e.printStackTrace();
                             }
@@ -189,7 +196,8 @@ S  --------------------  E
                             end = Integer.parseInt(loops[1]);
                         } catch (Exception e) {
                             if (loops[1].length() == 1) {
-                                end = (int) ((char) loops[1].charAt(0));
+                                // use negative number to represent the char
+                                end = -(int) ((char) loops[1].charAt(0));
                             } else {
                                 e.printStackTrace();
                             }
@@ -217,6 +225,9 @@ S  --------------------  E
         return next;
     }
 ```
+
+
+*可以看到我注释了之前的 split 方法，原因就是在处理 \[|\[ff|ff\]\] 这种嵌套的定义的时候，会把内部的内容切分，也是自己大意了。*
 
 当发现存在递归的节点时，将其重新进行切分。
 
