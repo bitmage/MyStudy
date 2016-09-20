@@ -6,11 +6,11 @@ Java 自定义 URL 规则解析
 举个简单的例子。我们可以看到:
 
 ```
-    public final static String VPS_LIST_URL[] = {
-            "http://www.cz88.utils/proxy/[|http_[2-3|7-9].shtml]",
-            "http://www.site-digger.com/html/articles/20110516/proxieslist.html",
-            "http://www.kuaidaili.com/proxylist/[0-10]"
-    };
+public final static String VPS_LIST_URL[] = {
+		"http://www.cz88.utils/proxy/[|http_[2-3|7-9].shtml]",
+		"http://www.site-digger.com/html/articles/20110516/proxieslist.html",
+		"http://www.kuaidaili.com/proxylist/[0-10]"
+};
 ```
 
 这边在 cz88 这个站点，他的路径是比较奇怪的。页码为1的时候，他是直接根目录访问，但是从之后就是 2-3 和 7-9 两个区间。所以，这边我用的是正则表达式的一个写法。相对来说比较容易上手。
@@ -111,48 +111,48 @@ public enum Type {
 这样就对每个节点定义就已经完善了。那么接下来就是解析。之前也提到了，因为正则无法获得最长对应括号的内容，所以这边只能用手动的方式进行切分。其实也就是比较[]的个数，取最长的那段。
 
 ```
-    private ArrayList<String> _split(String snippet) {
-        ArrayList<String> res = new ArrayList<String>();
-        int count = 0;
-        int start = 0, idx = start;
-        while (idx < snippet.length()) {
-            if (snippet.charAt(idx) == '[') {
-                idx++;
-                count++;
-                while (count != 0) {
-                    if (idx < snippet.length() && snippet.charAt(idx) == '[') {
-                        count++;
-                    }
-                    if (idx < snippet.length() && snippet.charAt(idx) == ']') {
-                        count--;
-                    }
-                    idx++;
-                }
-                res.add(snippet.substring(start, idx));
-                start = idx;
-            } else {
-                while (idx < snippet.length() && snippet.charAt(idx) != '[') {
-                    idx++;
-                }
-                res.add(snippet.substring(start, idx));
-                start = idx;
-            }
-        }
-        return res;
-    }
+private ArrayList<String> _split(String snippet) {
+	ArrayList<String> res = new ArrayList<String>();
+	int count = 0;
+	int start = 0, idx = start;
+	while (idx < snippet.length()) {
+		if (snippet.charAt(idx) == '[') {
+			idx++;
+			count++;
+			while (count != 0) {
+				if (idx < snippet.length() && snippet.charAt(idx) == '[') {
+					count++;
+				}
+				if (idx < snippet.length() && snippet.charAt(idx) == ']') {
+					count--;
+				}
+				idx++;
+			}
+			res.add(snippet.substring(start, idx));
+			start = idx;
+		} else {
+			while (idx < snippet.length() && snippet.charAt(idx) != '[') {
+				idx++;
+			}
+			res.add(snippet.substring(start, idx));
+			start = idx;
+		}
+	}
+	return res;
+}
 ```
 
 然后将切分好的字符串交给解析函数:
 ```
-    private Block _parse(String snippet, Block start, Block end) {
-        Block current = start;
-        ArrayList<String> snippets = _split(snippet);
-        for (String snip : snippets) {
-            current = _create(snip, current, null);
-        }
-        current.getNexts().add(end);
-        return start;
-    }
+private Block _parse(String snippet, Block start, Block end) {
+	Block current = start;
+	ArrayList<String> snippets = _split(snippet);
+	for (String snip : snippets) {
+		current = _create(snip, current, null);
+	}
+	current.getNexts().add(end);
+	return start;
+}
 ```
 
 这边，我留了 start，end 两个节点，其实也就是链表中常用的头结点和尾节点，方便之后的递归处理。 可以想象如下的一个递归过程:
@@ -164,66 +164,66 @@ S  --------------------  E
 
 具体的代码如下:
 ```
-    private Block _create(String snippet, Block current, Block last) {
-        Block next = null;
-        if (snippet.charAt(0) == '[') {
-            Block branchStart = new Block(Type.BRANCH_START);
-            Block branchEnd = new Block(Type.BRANCH_END);
-            current.getNexts().add(branchStart);
+private Block _create(String snippet, Block current, Block last) {
+	Block next = null;
+	if (snippet.charAt(0) == '[') {
+		Block branchStart = new Block(Type.BRANCH_START);
+		Block branchEnd = new Block(Type.BRANCH_END);
+		current.getNexts().add(branchStart);
 
-            String content = snippet.substring(1, snippet.length() - 1);
-            // String[] branches = content.split("\\|");
-            // use custom split function instead
-            ArrayList<String> branches = _branches(content);
-            for (String branch : branches) {
-                if (!_check(branch)) { // check does it has inner []
-                    branchStart = _parse(branch, branchStart, branchEnd);
-                } else { // this is only branches
-                    if (branch.contains("-") && !branch.contains("\\-")) {
-                        String[] loops = branch.split("-");
-                        int start = 0, end = 0;
-                        try {
-                            start = Integer.parseInt(loops[0]);
-                        } catch (Exception e) {
-                            if (loops[0].length() == 1) {
-                                // use negative number to represent the char
-                                start = -(int) ((char) loops[0].charAt(0));
-                            } else {
-                                e.printStackTrace();
-                            }
-                        }
-                        try {
-                            end = Integer.parseInt(loops[1]);
-                        } catch (Exception e) {
-                            if (loops[1].length() == 1) {
-                                // use negative number to represent the char
-                                end = -(int) ((char) loops[1].charAt(0));
-                            } else {
-                                e.printStackTrace();
-                            }
-                        }
-                        Block loop = new Block(start, end);
-                        branchStart.getNexts().add(loop);
-                        loop.getNexts().add(branchEnd);
-                    } else {
-                        Block string = new Block(branch);
-                        string.getNexts().add(branchEnd);
-                        branchStart.getNexts().add(string);
-                    }
-                    next = branchEnd;
-                }
-            }
-        } else {
-            Block content = new Block(snippet);
-            current.getNexts().add(content);
-            next = content;
-        }
-        if (last != null) {
-            assert next != null;
-            next.getNexts().add(last);
-        }
-        return next;
-    }
+		String content = snippet.substring(1, snippet.length() - 1);
+		// String[] branches = content.split("\\|");
+		// use custom split function instead
+		ArrayList<String> branches = _branches(content);
+		for (String branch : branches) {
+			if (!_check(branch)) { // check does it has inner []
+				branchStart = _parse(branch, branchStart, branchEnd);
+			} else { // this is only branches
+				if (branch.contains("-") && !branch.contains("\\-")) {
+					String[] loops = branch.split("-");
+					int start = 0, end = 0;
+					try {
+						start = Integer.parseInt(loops[0]);
+					} catch (Exception e) {
+						if (loops[0].length() == 1) {
+							// use negative number to represent the char
+							start = -(int) ((char) loops[0].charAt(0));
+						} else {
+							e.printStackTrace();
+						}
+					}
+					try {
+						end = Integer.parseInt(loops[1]);
+					} catch (Exception e) {
+						if (loops[1].length() == 1) {
+							// use negative number to represent the char
+							end = -(int) ((char) loops[1].charAt(0));
+						} else {
+							e.printStackTrace();
+						}
+					}
+					Block loop = new Block(start, end);
+					branchStart.getNexts().add(loop);
+					loop.getNexts().add(branchEnd);
+				} else {
+					Block string = new Block(branch);
+					string.getNexts().add(branchEnd);
+					branchStart.getNexts().add(string);
+				}
+				next = branchEnd;
+			}
+		}
+	} else {
+		Block content = new Block(snippet);
+		current.getNexts().add(content);
+		next = content;
+	}
+	if (last != null) {
+		assert next != null;
+		next.getNexts().add(last);
+	}
+	return next;
+}
 ```
 
 
@@ -231,27 +231,27 @@ S  --------------------  E
 
 切分函数如下:
 ```
-  private ArrayList<String> _branches(String snippet) {
-        int count = 0;
-        int start = 0;
-        int idx = start;
-        ArrayList<String> res = new ArrayList<String>();
-        while (idx < snippet.length()) {
-            if (snippet.charAt(idx) == '[') {
-                count++;
-            } else if (snippet.charAt(idx) == ']') {
-                count--;
-            } else if (snippet.charAt(idx) == '|' && count == 0
-                        && (idx == 0 || snippet.charAt(idx - 1) != '\\'))
-            {
-                res.add(snippet.substring(start, idx));
-                start = idx + 1;
-            }
-            idx++;
-        }
-        res.add(snippet.substring(start, idx));
-        return res;
-    }
+private ArrayList<String> _branches(String snippet) {
+	int count = 0;
+	int start = 0;
+	int idx = start;
+	ArrayList<String> res = new ArrayList<String>();
+	while (idx < snippet.length()) {
+		if (snippet.charAt(idx) == '[') {
+			count++;
+		} else if (snippet.charAt(idx) == ']') {
+			count--;
+		} else if (snippet.charAt(idx) == '|' && count == 0
+					&& (idx == 0 || snippet.charAt(idx - 1) != '\\'))
+		{
+			res.add(snippet.substring(start, idx));
+			start = idx + 1;
+		}
+		idx++;
+	}
+	res.add(snippet.substring(start, idx));
+	return res;
+}
 ```
 
 当发现存在递归的节点时，将其重新进行切分。
