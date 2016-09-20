@@ -1,6 +1,9 @@
 Laravel ORM 的一个优化场景
 ---
 
+**评论中 [forehalo](http://forehalo.me) 提供了一个更 Laravel 的实现方式：[https://laravel.com/docs/5.0/eloquent#eager-loading](https://laravel.com/docs/5.0/eloquent#eager-loading)**
+
+
 Laravel 的 Eloquent 可能是最好的 PHP ORM 之一。不过，他也有所有 ORM 框架的通病，就是技术人员在不熟悉框架的情况下进行编码，很容易造成性能问题。之前遇到的一个应用场景。现在简化出来。
 
 有两张表，一张暂定为 user 表，一张为 userinfo 表，现在有个需求是将特定用户抽取出来，然后从 userinfo 表中找到他们的数据，然后显示在页面上。
