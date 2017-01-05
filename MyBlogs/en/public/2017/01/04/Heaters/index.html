@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="description" content="Heaters"/>
+
+
+
+
+  <meta name="keywords" content="Binary Search," />
+
+
+
+
+  <link rel="alternate" href="/oj-code/atom.xml" title="Mike's OJ Games">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/oj-code/favicon.ico?v=2.1.0" />
+
+
+
+<link rel="canonical" href="http://mikecoder.github.com/2017/01/04/Heaters/"/>
+
+
+<meta name="description" content="Now, you are given positions of houses and heaters on a horizontal line, find out minimum radius of heaters so that all houses could be covered by those heaters.
+So, your input will be the positions">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Heaters">
+<meta property="og:url" content="http://mikecoder.github.com/2017/01/04/Heaters/index.html">
+<meta property="og:site_name" content="Mike's OJ Games">
+<meta property="og:description" content="Now, you are given positions of houses and heaters on a horizontal line, find out minimum radius of heaters so that all houses could be covered by those heaters.
+So, your input will be the positions">
+<meta property="og:updated_time" content="2017-01-04T05:27:47.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Heaters">
+<meta name="twitter:description" content="Now, you are given positions of houses and heaters on a horizontal line, find out minimum radius of heaters so that all houses could be covered by those heaters.
+So, your input will be the positions">
+
+
+<link rel="stylesheet" type="text/css" href="/oj-code/css/style.css?v=2.1.0" />
+
+
+
+  <link rel="stylesheet" type="text/css" href="/oj-code/lib/fancybox/jquery.fancybox.css" />
+
+
+
+
+  
+
+
+
+    <title> Heaters · Mike's OJ Games </title>
+  </head>
+
+  <body>
+    <div class="container">
+      <header id="header" class="header"><div class="logo-wrapper">
+  <a href="/oj-code/." class="logo">Mike's OJ Games</a>
+</div>
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item">
+          <a class="menu-item-link" href="/oj-code/">
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item">
+          <a class="menu-item-link" href="/oj-code/archives/">
+            Archives
+          </a>
+        </li>
+      
+      
+    </ul>
+  
+</nav>
+
+<div class="mobile-navbar">
+  <div class="mobile-header">
+    <div class="mobile-header-logo">
+      <a href="/oj-code/." class="logo">Mike's OJ Games</a>
+    </div>
+
+    <div class="mobile-header-icon">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+  <nav class="mobile-menu">
+    
+      
+      <a class="mobile-menu-item" href="/oj-code/">
+        Home
+      </a>
+    
+      
+      <a class="mobile-menu-item" href="/oj-code/archives/">
+        Archives
+      </a>
+    
+  </nav>
+</div>
+      </header>
+
+      <main id="main" class="main">
+        <div class="content-wrapper">
+          <div id="content" class="content">
+            
+  
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          Heaters
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          Jan 4, 2017
+        </span>
+      </div>
+    </header>
+
+    
+
+    <div class="post-content">
+      
+        <blockquote>
+<p>Now, you are given positions of houses and heaters on a horizontal line, find out minimum radius of heaters so that all houses could be covered by those heaters.</p>
+<p>So, your input will be the positions of houses and heaters seperately, and your expected output will be the minimum radius standard of heaters.</p>
+<p>Note:</p>
+<ul>
+<li>Numbers of houses and heaters you are given are non-negative and will not exceed 25000.</li>
+<li>Positions of houses and heaters you are given are non-negative and will not exceed 10^9.</li>
+<li>As long as a house is in the heaters’ warm radius range, it can be warmed.</li>
+<li>All the heaters follow your radius standard and the warm radius will the same.</li>
+</ul>
+<p>Example 1:</p>
+<p>Input: [1,2,3],[2]<br>Output: 1<br>Explanation: The only heater was placed in the position 2, and if we use the radius 1 standard, then all the houses can be warmed.</p>
+<p>Example 2:</p>
+<p>Input: [1,2,3,4],[1,4]<br>Output: 1<br>Explanation: The two heater was placed in the position 1 and 4. We need to use radius 1 standard, then all the houses can be warmed.</p>
+</blockquote>
+<a id="more"></a>
+<p>This is Leetcode 475. As it’s descripted, we can quickly find a solution. Picture this:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">          h1   h2        h3</div><div class="line">           |    |         |</div><div class="line">......................................</div></pre></td></tr></table></figure>
+<p>If we find the min value of the radius between every two heaters, and find the max one, which will be the result.</p>
+<p>And it’s time complex is O(n*m), n is the num of the houses and m is the num of heaters.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div></pre></td><td class="code"><pre><div class="line">using namespace std;</div><div class="line"></div><div class="line">class Solution &#123;</div><div class="line">public:</div><div class="line">    int idx;</div><div class="line">    int findRadius(vector&lt;int&gt;&amp; houses, vector&lt;int&gt;&amp; heaters) &#123;</div><div class="line">        sort(houses.begin(), houses.end());</div><div class="line">        sort(heaters.begin(), heaters.end());</div><div class="line"></div><div class="line">        int res = INT_MIN;</div><div class="line">        idx = 0;</div><div class="line">        for (int i = 0; i &lt; (int)heaters.size(); i++) &#123;</div><div class="line">            if (i == 0) &#123;</div><div class="line">                res = max(res, findMinRadius(houses, -1, heaters[i]));</div><div class="line">            &#125; else if (i == (int)heaters.size()) &#123;</div><div class="line">                res = max(res, findMinRadius(houses, heaters[i - 1], -1));</div><div class="line">            &#125; else &#123;</div><div class="line">                res = max(res, findMinRadius(houses, heaters[i - 1], heaters[i]));</div><div class="line">            &#125;</div><div class="line">            std::cout &lt;&lt; res &lt;&lt; std::endl;</div><div class="line">        &#125;</div><div class="line">        return res;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    int findMinRadius(vector&lt;int&gt; houses, int heater1, int heater2) &#123;</div><div class="line">        if (heater1 == -1) &#123; // means the first one</div><div class="line">            while (houses[idx] &lt;= heater2) &#123; idx++; &#125;</div><div class="line">            return heater2 - houses[0];</div><div class="line">        &#125; else if (heater2 == -1) &#123; // means the last one</div><div class="line">            while (idx &lt; (int)houses.size()) &#123; idx++; &#125;</div><div class="line">            return houses[idx - 1] - heater1;</div><div class="line">        &#125; else &#123;</div><div class="line">            int minRadius = INT_MAX;</div><div class="line">            for (int i = idx; houses[i] &lt; heater2; i++) &#123;</div><div class="line">                // minRadius = min(max(houses[i] - heater1, heater2 - houses[i]), minRadius);</div><div class="line">                // if there are (2n-1) houses, we need to use the mid one</div><div class="line">                // if there are (2n) houses, we should use the the mid two</div><div class="line">                // here is hard to decide which to use as the standard</div><div class="line">            &#125;</div><div class="line">            return minRadius;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p>However, there is a better way to figure this problem out. The idea is to leverage decent binarySearch function.</p>
+<ul>
+<li>For each house, find its position between those heaters (thus we need the heaters array to be sorted).</li>
+<li>Calculate the distances between this house and left heater and right heater, get a MIN value of those two values. Corner cases are there is no left or right heater.</li>
+<li>Get MAX value among distances in step 2. It’s the answer.</li>
+</ul>
+<p>So, here comes the solution:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line">class Solution &#123;</div><div class="line">    public:</div><div class="line">        int findRadius(vector&lt;int&gt;&amp; houses, vector&lt;int&gt;&amp; heaters) &#123;</div><div class="line">            int house_size = houses.size();</div><div class="line">            if (house_size == 0) return 0;</div><div class="line">            sort(heaters.begin(), heaters.end());</div><div class="line"></div><div class="line">            int res = 0;</div><div class="line">            for (auto&amp; c : houses) &#123;</div><div class="line"></div><div class="line">                int idx = Bsearch(heaters, c);</div><div class="line"></div><div class="line">                if (idx == 0) &#123;</div><div class="line">                    res = max(res, heaters[idx] - c);</div><div class="line">                &#125; else if (idx &gt;= (int)heaters.size()) &#123;</div><div class="line">                    res = max(res, c - heaters.back());</div><div class="line">                &#125; else &#123;</div><div class="line">                    res = max(res, min(heaters[idx] - c, c - heaters[idx - 1]));</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">            return res;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        int Bsearch(vector&lt;int&gt;&amp; nums, int val) &#123;</div><div class="line"></div><div class="line">            int l = 0, r = nums.size() - 1;</div><div class="line">            while (l &lt;= r) &#123;</div><div class="line">                int mid = l + ((r - l) &gt;&gt; 1);</div><div class="line">                if (nums[mid] == val)</div><div class="line">                    return mid;</div><div class="line">                else if (nums[mid] &lt; val)</div><div class="line">                    l = mid + 1;</div><div class="line">                else</div><div class="line">                    r = mid - 1;</div><div class="line">            &#125;</div><div class="line">            return l;</div><div class="line">        &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p>And it’s AC.</p>
+
+      
+    </div>
+
+    
+      <footer class="post-footer">
+        <div class="post-tags">
+          
+            <a href="/oj-code/tags/Binary-Search/">Binary Search</a>
+          
+        </div>
+
+        
+  <nav class="post-nav">
+    
+      <a class="prev" href="/oj-code/2017/01/05/BattleshipsinaBoard/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">Battleships in a Board</span>
+        <span class="prev-text nav-mobile">Prev</span>
+      </a>
+    
+    
+      <a class="next" href="/oj-code/2017/01/03/132Pattern/">
+        <span class="next-text nav-default">132 Pattern</span>
+        <span class="prev-text nav-mobile">Next</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+      </footer>
+    
+  </article>
+
+
+          </div>
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2017/01/04/Heaters/"
+           data-title="Heaters" data-url="http://mikecoder.github.com/oj-code/2017/01/04/Heaters/">
+      </div>
+    
+  </div>
+
+        </div>  
+      </main>
+
+      <footer id="footer" class="footer">
+  <div class="social-links">
+    
+      
+        
+          <a href="mailto:mike@mikecoder.cn" class="iconfont icon-email" title="email"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="https://github.com/MikeCoder" class="iconfont icon-github" title="github"></a>
+        
+      
+    
+      
+    
+      
+    
+    
+    
+  </div>
+
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://hexo.io/">Hexo</a>
+  </span>
+  
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">
+    
+    &copy; 
+     
+      2015 - 
+    
+    2017
+
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">MikeCoder</span>
+  </span>
+</div>
+
+<!-- Piwik -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  // tracker methods like "setCustomDimension" should be called before "trackPageView"
+  _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+  _paq.push(["setCookieDomain", "*.mikecoder.cn"]);
+  _paq.push(["setDomains", ["*.mikecoder.cn","*.mikecoder.cn"]]);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//piwik.mikecoder.cn/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', '1']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p><img src="//piwik.mikecoder.cn/piwik.php?idsite=1&rec=1" style="border:0;" alt="" /></p></noscript>
+<!-- End Piwik Code -->
+
+
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"mikecoder-oj"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+
+
+    
+  
+
+
+
+
+
+  
+    <script type="text/javascript" src="/oj-code/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/oj-code/lib/fancybox/jquery.fancybox.pack.js"></script>
+  
+
+    <script type="text/javascript" src="/oj-code/js/src/even.js?v=2.1.0"></script>
+<script type="text/javascript" src="/oj-code/js/src/bootstrap.js?v=2.1.0"></script>
+
+  </body>
+</html>
