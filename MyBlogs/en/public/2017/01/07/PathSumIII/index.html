@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="description" content="Path Sum III"/>
+
+
+
+
+  <meta name="keywords" content="Tree," />
+
+
+
+
+  <link rel="alternate" href="/oj-code/atom.xml" title="Mike's OJ Games">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/oj-code/favicon.ico?v=2.1.0" />
+
+
+
+<link rel="canonical" href="http://mikecoder.github.com/2017/01/07/PathSumIII/"/>
+
+
+<meta name="description" content="You are given a binary tree in which each node contains an integer value.
+Find the number of paths that sum to a given value.
+The path does not need to start or end at the root or a leaf, but it must">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Path Sum III">
+<meta property="og:url" content="http://mikecoder.github.com/2017/01/07/PathSumIII/index.html">
+<meta property="og:site_name" content="Mike's OJ Games">
+<meta property="og:description" content="You are given a binary tree in which each node contains an integer value.
+Find the number of paths that sum to a given value.
+The path does not need to start or end at the root or a leaf, but it must">
+<meta property="og:updated_time" content="2017-01-07T16:00:27.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Path Sum III">
+<meta name="twitter:description" content="You are given a binary tree in which each node contains an integer value.
+Find the number of paths that sum to a given value.
+The path does not need to start or end at the root or a leaf, but it must">
+
+
+<link rel="stylesheet" type="text/css" href="/oj-code/css/style.css?v=2.1.0" />
+
+
+
+  <link rel="stylesheet" type="text/css" href="/oj-code/lib/fancybox/jquery.fancybox.css" />
+
+
+
+
+  
+
+
+
+    <title> Path Sum III · Mike's OJ Games </title>
+  </head>
+
+  <body>
+    <div class="container">
+      <header id="header" class="header"><div class="logo-wrapper">
+  <a href="/oj-code/." class="logo">Mike's OJ Games</a>
+</div>
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item">
+          <a class="menu-item-link" href="/oj-code/">
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item">
+          <a class="menu-item-link" href="/oj-code/archives/">
+            Archives
+          </a>
+        </li>
+      
+      
+    </ul>
+  
+</nav>
+
+<div class="mobile-navbar">
+  <div class="mobile-header">
+    <div class="mobile-header-logo">
+      <a href="/oj-code/." class="logo">Mike's OJ Games</a>
+    </div>
+
+    <div class="mobile-header-icon">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+  <nav class="mobile-menu">
+    
+      
+      <a class="mobile-menu-item" href="/oj-code/">
+        Home
+      </a>
+    
+      
+      <a class="mobile-menu-item" href="/oj-code/archives/">
+        Archives
+      </a>
+    
+  </nav>
+</div>
+      </header>
+
+      <main id="main" class="main">
+        <div class="content-wrapper">
+          <div id="content" class="content">
+            
+  
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          Path Sum III
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          Jan 7, 2017
+        </span>
+      </div>
+    </header>
+
+    
+
+    <div class="post-content">
+      
+        <blockquote>
+<p>You are given a binary tree in which each node contains an integer value.</p>
+<p>Find the number of paths that sum to a given value.</p>
+<p>The path does not need to start or end at the root or a leaf, but it must go downwards (traveling only from parent nodes to child nodes).</p>
+<p>The tree has no more than 1,000 nodes and the values are in the range -1,000,000 to 1,000,000.</p>
+<p>Example:</p>
+<p>root = [10,5,-3,3,2,null,11,3,-2,null,1], sum = 8</p>
+<pre><code>      10
+     /  \
+    5   -3
+   / \    \
+  3   2   11
+ / \   \
+3  -2   1
+</code></pre><p>Return 3. The paths that sum to 8 are:</p>
+<ol>
+<li>5 -&gt; 3</li>
+<li>5 -&gt; 2 -&gt; 1</li>
+<li>-3 -&gt; 11</li>
+</ol>
+</blockquote>
+<a id="more"></a>
+<p>This is Leetcode 437, easy problem, and it’s solution as following:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">class Solution &#123;</div><div class="line">    public:</div><div class="line">        int pathSum(TreeNode* root, int sum) &#123;</div><div class="line">            if(root == NULL)</div><div class="line">                return 0;</div><div class="line">            return visit(root, sum) + pathSum(root-&gt;left, sum) + pathSum(root-&gt;right, sum);</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        int visit(TreeNode* node, int sum) &#123;</div><div class="line">            int res = 0;</div><div class="line">            if(node == NULL)</div><div class="line">                return res;</div><div class="line">            if(sum == node-&gt;val)</div><div class="line">                res++;</div><div class="line">            res += visit(node-&gt;left, sum - node-&gt;val);</div><div class="line">            res += visit(node-&gt;right, sum - node-&gt;val);</div><div class="line">            return res;</div><div class="line">        &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p>It’s time complex is O(nlogn) if it’s a balanced tree while O(n^2) in the worst case.</p>
+<p>The better solution is the DP solution using a map to store all the value of the tree node.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">class Solution &#123;</div><div class="line">    public:</div><div class="line">        int help(TreeNode* root, int sum, unordered_map&lt;int, int&gt;&amp; store, int pre) &#123;</div><div class="line">            if (!root) return 0;</div><div class="line">            root-&gt;val += pre;</div><div class="line">            int res = (root-&gt;val == sum) + (store.count(root-&gt;val - sum) ? store[root-&gt;val - sum] : 0);</div><div class="line">            store[root-&gt;val]++;</div><div class="line">            res += help(root-&gt;left, sum, store, root-&gt;val) + help(root-&gt;right, sum, store, root-&gt;val);</div><div class="line">            store[root-&gt;val]--;</div><div class="line">            return res;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        int pathSum(TreeNode* root, int sum) &#123;</div><div class="line">            unordered_map&lt;int, int&gt; store;</div><div class="line">            return help(root, sum, store, 0);</div><div class="line">        &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p>That’s it.</p>
+
+      
+    </div>
+
+    
+      <footer class="post-footer">
+        <div class="post-tags">
+          
+            <a href="/oj-code/tags/Tree/">Tree</a>
+          
+        </div>
+
+        
+  <nav class="post-nav">
+    
+    
+      <a class="next" href="/oj-code/2017/01/06/PartitionEqualSubsetSum/">
+        <span class="next-text nav-default">Partition Equal Subset Sum</span>
+        <span class="prev-text nav-mobile">Next</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+      </footer>
+    
+  </article>
+
+
+          </div>
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2017/01/07/PathSumIII/"
+           data-title="Path Sum III" data-url="http://mikecoder.github.com/oj-code/2017/01/07/PathSumIII/">
+      </div>
+    
+  </div>
+
+        </div>  
+      </main>
+
+      <footer id="footer" class="footer">
+  <div class="social-links">
+    
+      
+        
+          <a href="mailto:mike@mikecoder.cn" class="iconfont icon-email" title="email"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="https://github.com/MikeCoder" class="iconfont icon-github" title="github"></a>
+        
+      
+    
+      
+    
+      
+    
+    
+    
+  </div>
+
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://hexo.io/">Hexo</a>
+  </span>
+  
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">
+    
+    &copy; 
+     
+      2015 - 
+    
+    2017
+
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">MikeCoder</span>
+  </span>
+</div>
+
+<!-- Piwik -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  // tracker methods like "setCustomDimension" should be called before "trackPageView"
+  _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+  _paq.push(["setCookieDomain", "*.mikecoder.cn"]);
+  _paq.push(["setDomains", ["*.mikecoder.cn","*.mikecoder.cn"]]);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//piwik.mikecoder.cn/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', '1']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p><img src="//piwik.mikecoder.cn/piwik.php?idsite=1&rec=1" style="border:0;" alt="" /></p></noscript>
+<!-- End Piwik Code -->
+
+
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"mikecoder-oj"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+
+
+    
+  
+
+
+
+
+
+  
+    <script type="text/javascript" src="/oj-code/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/oj-code/lib/fancybox/jquery.fancybox.pack.js"></script>
+  
+
+    <script type="text/javascript" src="/oj-code/js/src/even.js?v=2.1.0"></script>
+<script type="text/javascript" src="/oj-code/js/src/bootstrap.js?v=2.1.0"></script>
+
+  </body>
+</html>
