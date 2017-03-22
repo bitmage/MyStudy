@@ -37,7 +37,7 @@ public class Main {
 我们可以看如下的两段代码:
 
 
-###第一段代码
+#第一段代码
 ```
 class Untitled {
     public static void main(String[] args) {
@@ -88,7 +88,7 @@ class Untitled {
 }
 ```
 
-###第二段代码
+#第二段代码
 ```
 class Untitled {
     public static void main(String[] args) {
@@ -276,7 +276,7 @@ class Untitled {
 
 那么，我们的答案就很明显了。
 
-##结论
+#结论
 1. 在堆上产生的非常量新对象，采用的是引用传递。
 2. 除一之外的所有变量，都是值传递。
 
