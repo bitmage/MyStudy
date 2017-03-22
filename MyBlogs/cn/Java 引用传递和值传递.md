@@ -1,5 +1,5 @@
-#Java 引用传递和值传递
-
+Java 引用传递和值传递
+===
 
 前几天有个朋友问了我个问题，就是 Java 中什么时候是值传递什么时候是引用传递。他的理解是，基本数据类型是值传递，复杂对象是引用传递。
 
@@ -37,7 +37,7 @@ public class Main {
 我们可以看如下的两段代码:
 
 
-#第一段代码
+#### 第一段代码
 ```
 class Untitled {
     public static void main(String[] args) {
@@ -88,7 +88,7 @@ class Untitled {
 }
 ```
 
-#第二段代码
+#### 第二段代码
 ```
 class Untitled {
     public static void main(String[] args) {
@@ -144,7 +144,7 @@ class Untitled {
 
 然后，我们是不是就可以认为，Java 代码在处理对象的时候，就都是值传递？其实不然，看第三段代码就明了:
 
-#第三段
+#### 第三段
 ```
 class Untitled {
 
@@ -276,7 +276,7 @@ class Untitled {
 
 那么，我们的答案就很明显了。
 
-#结论
+## 结论
 1. 在堆上产生的非常量新对象，采用的是引用传递。
 2. 除一之外的所有变量，都是值传递。
 
