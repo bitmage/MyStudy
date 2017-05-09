@@ -42,11 +42,11 @@ Output: -1
 Explanation:
 It's impossible to make all the three washing machines have the same number of dresses.
 ```
-> <!--more-->**Note:**
+> **Note:**
 >
 > + The range of n is [1, 10000].
 > + The range of dresses number in a super washing machine is [0, 1e5].
-
+<!--more-->
 It is Leetcode No.517 and it is a hard problem. The reason it is a hard problem I think is that the solution is fully based on the Math progress.
 
 For a single machine, necessary operations is to transfer dresses from one side to another until sum of both sides and itself reaches the average number. We can calculate (contained dresses) - (required dresses) of each side as L and R:
