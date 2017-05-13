@@ -1,6 +1,6 @@
 ---
 title: Magical String
-date: 2017-05-11 23:36:25
+date: 2017-05-12 23:36:25
 tags:
     - Simulation
 ---
