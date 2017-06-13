@@ -5,7 +5,7 @@ tags:
     - Greedy
     - Dynamic Programming
     - Depth-first Search
-    - Breath-first Search
+    - Breadth-first Search
 ---
 
 
