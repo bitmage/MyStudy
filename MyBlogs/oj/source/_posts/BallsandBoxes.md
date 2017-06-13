@@ -4,8 +4,8 @@ date: 2017-05-20 12:10:43
 tags:
     - Greedy
     - Dynamic Programming
-    - Depth-First Search
-    - Breath-First Search
+    - Depth-first Search
+    - Breath-first Search
 ---
 
 
