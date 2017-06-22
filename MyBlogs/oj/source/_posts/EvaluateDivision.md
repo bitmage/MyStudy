@@ -46,7 +46,12 @@ double RES = -1.0;
 
 class Solution {
     public:
-        void dfs(string currentNode, double currentRes, string target, unordered_map<string, unordered_map<string, double> > &MAP, unordered_set<string> &visited) {
+        void dfs(string currentNode,
+                double currentRes,
+                string target,
+                unordered_map<string, unordered_map<string, double> > &MAP,
+                unordered_set<string> &visited)
+        {
             if (visited.find(currentNode) != visited.end()) {
                 return;
             }
@@ -68,8 +73,8 @@ class Solution {
 
         vector<double> calcEquation(vector<pair<string, string> > equations,
                 vector<double>& values,
-                vector<pair<string, string> > queries) {
-
+                vector<pair<string, string> > queries)
+        {
             unordered_map<string, unordered_map<string, double> > nodes;
 
             for (int idx = 0; idx < (int)equations.size(); idx++) {
