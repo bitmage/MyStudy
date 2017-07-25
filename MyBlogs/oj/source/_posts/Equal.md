@@ -111,7 +111,7 @@ int main() {
         for (int x = minNum - 4; x <= minNum; x++) {
             int tmp = 0;
             for (int j = 0; j < N; j++) {
-                tmp += calc(nums[j] - (minNum));
+                tmp += calc(nums[j] - x);
             }
             res = min(tmp, res);
         }
