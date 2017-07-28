@@ -7,6 +7,8 @@ tags:
 
 > This is one of the HackerRank Week of Code 34. You can see the [detail problem description here](https://www.hackerrank.com/contests/w34/challenges/same-occurrence/problem).
 
+<!--more-->
+
 At first, I don't have any good ideas to solve the problem. Then I use the stupid method, just bruce force.
 
 The code is:
