@@ -4,7 +4,7 @@ date: 2017-08-01 16:01:34
 tags:
     - Array
     - Stack
-    - Two Pointer
+    - Two Pointers
 ---
 
 
