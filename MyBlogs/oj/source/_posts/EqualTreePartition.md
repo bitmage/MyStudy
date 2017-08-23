@@ -19,17 +19,14 @@ Input:
 
 Output: True
 Explanation:
-        5
+     5
     /
-    10
-
-    Sum: 15
-
-    10
+   10
+Sum: 15
+     10
     /  \
-    2    3
-
-    Sum: 15
+   2    3
+Sum: 15
 ```
 > Example 2:
 ```
