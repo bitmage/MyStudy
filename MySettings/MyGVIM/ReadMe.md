@@ -1,1 +1,0 @@
-Now the project move to the new address:[k-vim](https://github.com/MikeCoder/k-vim)
