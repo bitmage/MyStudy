@@ -10,6 +10,8 @@ When a computer is switched on, the hardware will call the subroutine whose addr
 
 Then, the following code is coming: `(*(void(*)())0)();`.
 
+<!--more-->
+
 In order to understand the what the declear means. We should know the following first.
 
 Every C variable declaration has two parts: a type and a list of expression-like things called *declarators*. A declarator looks like something a expression that is expected to evaluate to the given type. The simplest declarator is a varibale: `float a, b;`.
