@@ -28,8 +28,8 @@ So, we can use  `(float (*)())` to cast a expression to a expression returns a p
 
 Now, we can divide the first expression into two parts `(* [(void(*)())0] ());`.
 
-+ (void(*)())0 which means we cast 0 into a pointer to a function which returns nothing. 0 is the address where the funciton is(which is we metioned that the hardware will call when the machine is switched on). We use fp to respresent the result of the expression.
-+ (*fp)() you would understand that *fp means the funtion. the parentheses and `;` means we invoke the function.
++ `(void(*)())0` which means we cast 0 into a pointer to a function which returns nothing. 0 is the address where the funciton is(which is we metioned that the hardware will call when the machine is switched on). We use fp to respresent the result of the expression.
++ `(*fp)()` you would understand that `*fp` means the funtion. the parentheses and `;` means we invoke the function.
 
 
 So, the expression's meaning is clear. We find the function whose address is 0, then invoked.
