@@ -1,8 +1,9 @@
 ---
-title: JournerytotheMoon
+title: Journery to the Moon
 date: 2017-11-30 14:37:31
 tags:
     - Union Find
+    - Math
 ---
 
 > This is a problem from Hackerrank. I don't find an easy way to write the problem description here so far.
